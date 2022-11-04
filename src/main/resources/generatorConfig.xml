@@ -53,7 +53,15 @@
             enableSelectByExample:Select多条语句中加入where条件查询，默认为true开启
             selectByExampleQueryId:Select单个对象语句中加入where条件查询，默认为true开启
         -->
+        <table tableName="t_category" domainObjectName="Category"/>
         <table tableName="t_order" domainObjectName="Order"></table>
+        <table tableName="t_order_item" domainObjectName="OrderItem"></table>
+        <table tableName="t_product" domainObjectName="Product"></table>
+        <table tableName="t_product_image" domainObjectName="ProductImage"></table>
+        <table tableName="t_property" domainObjectName="Property"></table>
+        <table tableName="t_property_value" domainObjectName="PropertyValue"></table>
+        <table tableName="t_review" domainObjectName="Review"></table>
+        <table tableName="t_user" domainObjectName="User"></table>
 
     </context>
 </generatorConfiguration>
