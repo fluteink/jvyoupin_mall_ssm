@@ -182,6 +182,10 @@
             <include refid="Example_Where_Clause"/>
         </if>
     </select>
+    <select id="getAllCategories" resultType="com.jyp.pojo.Category">
+        select *
+        from t_category
+    </select>
     <update id="updateByExampleSelective" parameterType="map">
         <!--
           WARNING - @mbg.generated

@@ -94,4 +94,6 @@ public interface CategoryMapper {
      * @mbg.generated Fri Nov 04 12:18:43 CST 2022
      */
     int updateByPrimaryKey(Category record);
+
+    List<Category> getAllCategories();
 }

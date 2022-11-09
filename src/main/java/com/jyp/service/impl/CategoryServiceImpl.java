@@ -6,6 +6,8 @@ import com.jyp.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -19,5 +21,10 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     public void testadd(Category category) {
         categoryMapper.insert(category);
+    }
+
+    @Override
+    public List<Category> getAllCategories() {
+        return categoryMapper.getAllCategories();
     }
 }
