@@ -7,16 +7,24 @@
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-    <a href="#" class="active">Home <i class="fa fa-home" aria-hidden="true"></i></a>
-    <a href="#">Blog <i class="fa fa-book"></i></a>
-    <a href="#">Contact <i class="fa fa-envelope"></i></a>
-    <a href="#">About <i class="fa fa-user"></i></a>
-    <div class="right-lnk">
-        <a href="#">Login / Signup</i></a>
-    </div>
+    <img style="margin:0px;height:51px ;float:left" th:src="@{img/site/logo.jpg}" height="45px">
+    <a href="#" class="active">聚优品后台 <i class="fa fa-home" aria-hidden="true"></i></a>
+    <a href="#">分类管理 <i class="fa fa-book"></i></a>
+    <a href="#">订单管理 <i class="fa fa-envelope"></i></a>
+    <a href="#">用户管理 <i class="fa fa-user"></i></a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
     </a>
 </div>
 </body>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
 </html>
