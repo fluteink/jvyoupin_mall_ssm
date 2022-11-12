@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <title>分类管理</title>
     <link rel="stylesheet" th:href="@{css/category_list.css}">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
+
+
 <body>
+
+
 <div class="topnav" id="myTopnav">
     <img style="margin-left: 10px; height:51px ;float:left" th:src="@{img/site/logo.jpg}" height="45px">
     <a href="#" class="active">聚优品后台 <i class="fa fa-home" aria-hidden="true"></i></a>
     <a href="#">分类管理 <i class="fa fa-book"></i></a>
     <a href="#">订单管理 <i class="fa fa-envelope"></i></a>
     <a href="#">用户管理 <i class="fa fa-user"></i></a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-    </a>
 </div>
 
 </body>
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
-</script>
+
+
+<!-- import Vue before Element -->
+<script th:src="@{js/vue2.js}"></script>
+<!-- import JavaScript -->
+<script th:src="@{js/element-ui.js}"></script>
 </html>
