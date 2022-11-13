@@ -18,59 +18,40 @@
     <a href="#"> 订单管理 </a>
     <a href="#"> 用户管理 </a>
 </div>
-<br><br>
+<br>
+<input type="button" value="使用@ResponseBody注解响应json格式的数据" @click="testResponseBody()"><br>
+
+<br>
 <div style="margin-left: 82px;width: 70px;height:32px">
     <div id="tag">
         <el-tag>分类管理</el-tag>
     </div>
 </div>
 <br><br>
-<div id="category_table" style="margin-left: 82px;">
-    <template>
-        <el-table
-                :data="tableData"
-                border
-                style="width: 70%">
-            <el-table-column
-                    prop="date"
-                    label="id"
-                    width="40">
-            </el-table-column>
-            <el-table-column
-                    prop="name"
-                    label="图片"
-                    width="600">
-            </el-table-column>
-            <el-table-column
-                    prop="address"
-                    label="分类名称">
-            </el-table-column>
-            <el-table-column
-                    prop="address"
-                    label="属性管理">
-            </el-table-column>
-            <el-table-column
-                    prop="address"
-                    label="产品管理">
-            </el-table-column>
-            <el-table-column
-                    fixed="right"
-                    label="操作"
-                    width="100">
-                <template slot-scope="scope">
-                    <el-button type="text" size="small">编辑</el-button>
-                    <el-button
-                            @click.native.prevent="deleteRow(scope.$index, tableData)"
-                            type="text"
-                            size="small">
-                        移除
-                    </el-button>
-                </template>
-
-            </el-table-column>
-        </el-table>
-    </template>
-</div>
+<table>
+    <tr>
+        <th colspan="6">员工列表</th>
+    </tr>
+    <tr>
+        <th>流水号</th>
+        <th>员工姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>邮箱</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="employee,status : ${page.list}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${employee.empName}"></td>
+        <td th:text="${employee.age}"></td>
+        <td th:text="${employee.gender}"></td>
+        <td th:text="${employee.email}"></td>
+        <td>
+            <a href="">删除</a>
+            <a href="">修改</a>
+        </td>
+    </tr>
+</table>
 
 </body>
 
@@ -79,5 +60,52 @@
 <script th:src="@{js/vue2.js}"></script>
 <!-- import JavaScript -->
 <script th:src="@{js/element-ui.js}"></script>
+<script th:src="@{js/axios.min.js}"></script>
 <script th:src="@{js/category_list.js}"></script>
 </html>
+<!--<div id="category_table" style="margin-left: 82px;">-->
+<!--    <template>-->
+<!--        <el-table-->
+<!--                :data="tableData"-->
+<!--                border-->
+<!--                style="width: 70%">-->
+<!--            <el-table-column-->
+<!--                    prop="id"-->
+<!--                    label="id"-->
+<!--                    width="40">-->
+<!--            </el-table-column>-->
+<!--            <el-table-column-->
+<!--                    prop="name"-->
+<!--                    label="图片"-->
+<!--                    width="600">-->
+<!--            </el-table-column>-->
+<!--            <el-table-column-->
+<!--                    prop="address"-->
+<!--                    label="分类名称">-->
+<!--            </el-table-column>-->
+<!--            <el-table-column-->
+<!--                    prop="address"-->
+<!--                    label="属性管理">-->
+<!--            </el-table-column>-->
+<!--            <el-table-column-->
+<!--                    prop="address"-->
+<!--                    label="产品管理">-->
+<!--            </el-table-column>-->
+<!--            <el-table-column-->
+<!--                    fixed="right"-->
+<!--                    label="操作"-->
+<!--                    width="100">-->
+<!--                <template slot-scope="scope">-->
+<!--                    <el-button type="text" size="small">编辑</el-button>-->
+<!--                    <el-button-->
+<!--                            @click.native.prevent="deleteRow(scope.$index, tableData)"-->
+<!--                            type="text"-->
+<!--                            size="small">-->
+<!--                        移除-->
+<!--                    </el-button>-->
+<!--                </template>-->
+
+<!--            </el-table-column>-->
+<!--        </el-table>-->
+<!--    </template>-->
+<!--</div>-->
