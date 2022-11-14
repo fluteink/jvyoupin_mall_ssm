@@ -36,8 +36,7 @@ public class CategoryController {
         Category Category1 = new Category(1001, "admin1");
         Category Category2 = new Category(1002, "admin2");
         Category Category3 = new Category(1003, "admin3");
-        List<Category> list = Arrays.asList(Category1, Category2, Category3);
-        return list;
+        return Arrays.asList(Category1, Category2, Category3);
     }
 
     @RequestMapping("addtest")
