@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -25,7 +24,7 @@ public class CategoryController {
     public String list(Model model) {
         List<Category> allCategories = categoryService.getAllCategories();
         model.addAttribute("list", allCategories);
-        allCategories.forEach(System.out::println);
+//        allCategories.forEach(System.out::println);
         return "admin/category_list";
     }
 
@@ -33,10 +32,8 @@ public class CategoryController {
     @RequestMapping("/test/ResponseBody/json")
     @ResponseBody
     public List<Category> testResponseBodyJson() {
-        Category Category1 = new Category(1001, "admin1");
-        Category Category2 = new Category(1002, "admin2");
-        Category Category3 = new Category(1003, "admin3");
-        return Arrays.asList(Category1, Category2, Category3);
+        List<Category> allCategories = categoryService.getAllCategories();
+        return allCategories;
     }
 
     @RequestMapping("addtest")
