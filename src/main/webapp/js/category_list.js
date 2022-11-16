@@ -3,6 +3,13 @@ new Vue().$mount('#tag')
 var vue = new Vue({
     el: "#category_table",
     methods: {
+        addurl(data) {
+            var url = "http://localhost:8080/jvyoupin/img/site/logo.jpg";
+            for (let item of data) {
+                item.imgurl = url;
+                console.log(item);    //item指的的就是数组每一项的值。不是索引。
+            }
+        },
         testAjax() {
             axios.post(
                 "/jvyoupin/test/ajax?id=1001",
@@ -24,8 +31,9 @@ var vue = new Vue({
         },
         testResponseBody() {
             axios.post("/jvyoupin/test/ResponseBody/json").then(response => {
-                console.log(response.data);
+                // console.log(response.data);
                 this.tableData = response.data;
+                this.addurl(this.tableData);
             });
         }
     },

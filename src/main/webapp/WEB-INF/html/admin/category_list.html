@@ -34,13 +34,15 @@
                     label="id"
                     width="60">
             </el-table-column>
+
+            <el-table-column prop="imgurl" label="图片" align="center">
+                <template slot-scope="scope">
+                    <img :src="scope.row.imgurl" min-width="70" height="70"/>
+                </template>
+            </el-table-column>
+
             <el-table-column
                     prop="name"
-                    label="图片"
-                    width="600">
-            </el-table-column>
-            <el-table-column
-                    prop="address"
                     label="分类名称">
             </el-table-column>
             <el-table-column
