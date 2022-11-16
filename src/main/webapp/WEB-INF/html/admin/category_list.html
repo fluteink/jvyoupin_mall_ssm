@@ -9,8 +9,6 @@
 
 
 <body>
-<a th:href="@{/test/ResponseBody/json}">w</a>
-
 <div class="topnav" id="myTopnav">
     <img style="margin-left: 10px; height:51px ;float:left" th:src="@{img/site/logo.jpg}" height="45px" alt="logo">
     <a href="#" class="active"> 聚优品后台 </a>
@@ -74,11 +72,11 @@
 
 </body>
 
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!-- import Vue before Element -->
 <script th:src="@{js/vue2.js}"></script>
 <!-- import JavaScript -->
 <script th:src="@{js/element-ui.js}"></script>
 <script th:src="@{js/category_list.js}"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 </html>

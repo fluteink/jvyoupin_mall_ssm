@@ -33,5 +33,8 @@ var vue = new Vue({
         return {
             tableData: []
         }
+    },
+    created: function () {
+        this.testResponseBody()
     }
 });
