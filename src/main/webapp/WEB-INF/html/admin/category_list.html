@@ -26,13 +26,14 @@
 </div>
 <br><br>
 <div id="category_table" style="margin-left: 82px;">
+    <input type="button" value="使用@ResponseBody注解响应json格式的数据" @click="testResponseBody()"><br>
     <template>
         <el-table
                 :data="tableData"
                 border
                 style="width: 70%">
             <el-table-column
-                    prop="date"
+                    prop="id"
                     label="id"
                     width="40">
             </el-table-column>
@@ -79,4 +80,5 @@
 <!-- import JavaScript -->
 <script th:src="@{js/element-ui.js}"></script>
 <script th:src="@{js/category_list.js}"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>

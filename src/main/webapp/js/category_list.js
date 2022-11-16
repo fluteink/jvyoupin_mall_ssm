@@ -1,33 +1,37 @@
 new Vue().$mount('#tag')
 
-function testResponseBody() {
-    var a;
-    axios.post("/jvyoupin/test/ResponseBody/json").then(response => {
-        console.log(response.data);
-        a = response.data;
-    });
-    return a;
-}
-
-var Main = {
+var vue = new Vue({
+    el: "#category_table",
     methods: {
-        // deleteRow(index, rows) {
-        //     rows.splice(index, 1);
-        // },
-        // testResponseBody(){
-        //     axios.post("/jvyoupin/test/ResponseBody/json").then(response=>{
-        //         console.log(response.data);
-        //         return response.data();
-        //     });
-        // }
+        testAjax() {
+            axios.post(
+                "/jvyoupin/test/ajax?id=1001",
+                {username: "admin", password: "123456"}
+            ).then(response => {
+                console.log(response.data);
+            });
+        },
+        deleteRow(index, rows) {
+            rows.splice(index, 1);
+        },
+        testRequestBody() {
+            axios.post(
+                "/jvyoupin/test/RequestBody/json",
+                {username: "admin", password: "123456", age: 23, gender: "男"}
+            ).then(response => {
+                console.log(response.data);
+            });
+        },
+        testResponseBody() {
+            axios.post("/jvyoupin/test/ResponseBody/json").then(response => {
+                console.log(response.data);
+                this.tableData = response.data;
+            });
+        }
     },
     data() {
         return {
-            tableData: [
-                testResponseBody()
-            ]
+            tableData: []
         }
     }
-}
-var Ctor = Vue.extend(Main)
-new Ctor().$mount('#category_table')
+});
