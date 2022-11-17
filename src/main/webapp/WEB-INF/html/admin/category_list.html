@@ -35,28 +35,40 @@
                     width="60">
             </el-table-column>
 
-            <el-table-column prop="imgurl" label="图片" align="center">
+            <el-table-column prop="imgurl"
+                             label="图片"
+                             align="center"
+                             width="555">
                 <template slot-scope="scope">
-                    <img :src="scope.row.imgurl" min-width="70" height="70"/>
+                    <img :src="scope.row.imgurl" min-width="666" height="70"/>
                 </template>
             </el-table-column>
 
             <el-table-column
                     prop="name"
-                    label="分类名称">
+                    label="分类名称"
+                    width="160"
+            >
+
             </el-table-column>
             <el-table-column
                     prop="address"
-                    label="属性管理">
+                    label="属性管理"
+                    width="100"
+            >
             </el-table-column>
             <el-table-column
                     prop="address"
-                    label="产品管理">
+                    label="产品管理"
+                    width="100"
+
+
+            >
             </el-table-column>
             <el-table-column
                     fixed="right"
                     label="操作"
-                    width="100">
+            >
                 <template slot-scope="scope">
                     <el-button type="text" size="small">编辑</el-button>
                     <el-button

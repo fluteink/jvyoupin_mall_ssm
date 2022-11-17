@@ -27,4 +27,9 @@ public class CategoryServiceImpl implements CategoryService {
     public List<Category> getAllCategories() {
         return categoryMapper.getAllCategories();
     }
+
+    @Override
+    public void deleteCategory(Integer id) {
+        categoryMapper.deleteByPrimaryKey(id);
+    }
 }

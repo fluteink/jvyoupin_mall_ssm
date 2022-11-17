@@ -13,4 +13,6 @@ public interface CategoryService {
     void testadd(Category category);
 
     List<Category> getAllCategories();
+
+    void deleteCategory(Integer id);
 }
