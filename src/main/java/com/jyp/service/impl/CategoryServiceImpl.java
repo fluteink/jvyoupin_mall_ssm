@@ -32,4 +32,9 @@ public class CategoryServiceImpl implements CategoryService {
     public void deleteCategory(Integer id) {
         categoryMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public void add(Category c) {
+        categoryMapper.insert(c);
+    }
 }

@@ -15,4 +15,6 @@ public interface CategoryService {
     List<Category> getAllCategories();
 
     void deleteCategory(Integer id);
+
+    void add(Category c);
 }
