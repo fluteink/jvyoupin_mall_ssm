@@ -20,7 +20,7 @@ var vue = new Vue({
         },
         deleteRow(index, rows) {
             // console.log(rows[index].id);
-            axios.get("/jvyoupin/deleteCategory/" + rows.index.id())
+            axios.get("/jvyoupin/deleteCategory/" + rows[index].id)
             rows.splice(index, 1);
         },
 
