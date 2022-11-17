@@ -10,6 +10,13 @@ var vue = new Vue({
                 console.log(item);    //item指的的就是数组每一项的值。不是索引。
             }
         },
+        notifydelete() {
+            this.$notify({
+                title: '成功',
+                message: '你已经成功删除了一个种类',
+                type: 'success'
+            });
+        },
         testAjax() {
             axios.post(
                 "/jvyoupin/test/ajax?id=1001",
@@ -22,6 +29,7 @@ var vue = new Vue({
             // console.log(rows[index].id);
             axios.get("/jvyoupin/deleteCategory/" + rows[index].id)
             rows.splice(index, 1);
+            this.notifydelete();
         },
 
         testResponseBody() {

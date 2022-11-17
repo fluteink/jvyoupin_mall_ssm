@@ -21,9 +21,11 @@ public class CategoryController {
     @Autowired
     CategoryService categoryService;
 
+    @ResponseBody
     @RequestMapping("deleteCategory/{id}")
-    public void deleteCategory(@PathVariable("id") Integer id) {
+    public int deleteCategory(@PathVariable("id") Integer id) {
         categoryService.deleteCategory(id);
+        return 200;
     }
 
     @RequestMapping("admin")
