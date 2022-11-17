@@ -52,10 +52,15 @@
 
             </el-table-column>
             <el-table-column
-                    prop="address"
                     label="属性管理"
                     width="100"
+                    align="center"
             >
+                <template slot-scope="scope"
+                >
+                    <i style="font-size:33px;" class="el-icon-tickets"></i>
+                </template>
+
             </el-table-column>
             <el-table-column
                     prop="address"
