@@ -5,6 +5,7 @@ import com.jyp.service.CategoryService;
 import com.jyp.util.ImageUtil;
 import com.jyp.util.UploadedImageFile;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,9 +31,9 @@ public class CategoryController {
 
     @ResponseBody
     @RequestMapping("deleteCategory/{id}")
-    public int deleteCategory(@PathVariable("id") Integer id) {
+    public HttpStatus deleteCategory(@PathVariable("id") Integer id) {
         categoryService.deleteCategory(id);
-        return 200;
+        return HttpStatus.OK;
     }
 
     @RequestMapping("admin")
@@ -71,5 +72,11 @@ public class CategoryController {
         ImageIO.write(img, "jpg", file);
         return "redirect:/admin";
     }
+
+    @RequestMapping("categiry/edit")
+    public String testedit() {
+        return "admin/catefory_edit";
+    }
+
 
 }
