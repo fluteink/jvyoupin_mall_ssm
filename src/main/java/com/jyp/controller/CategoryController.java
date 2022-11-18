@@ -90,7 +90,7 @@ public class CategoryController {
             BufferedImage img = ImageUtil.change2jpg(file);
             ImageIO.write(img, "jpg", file);
         }
-        return "success";
+        return "admin/category_list";
     }
 
 
