@@ -4,10 +4,10 @@ var vue = new Vue({
     el: "#category_table",
     methods: {
         addurl(data) {
-            var url = "/jvyoupin/img/site/logo.jpg";
+            var url = "/jvyoupin/img/category/";
             for (let item of data) {
-                item.imgurl = url;
-                console.log(item);    //item指的的就是数组每一项的值。不是索引。
+                item.imgurl = url + item.id + ".jpg";
+                console.log(item);
             }
         },
         notifydelete() {

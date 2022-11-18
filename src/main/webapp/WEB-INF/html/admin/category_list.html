@@ -9,7 +9,7 @@
 <body>
 <div class="topnav" id="myTopnav">
     <img style="margin-left: 10px; height:51px ;float:left" th:src="@{img/site/logo.jpg}" height="45px" alt="logo">
-    <a href="#" class="active"> 聚优品后台 </a>
+    <a href="http://localhost:8080/jvyoupin/admin" class="active"> 聚优品后台 </a>
     <a href="#"> 分类管理 </a>
     <a href="#"> 订单管理 </a>
     <a href="#"> 用户管理 </a>
@@ -38,7 +38,7 @@
                              align="center"
                              width="666">
                 <template slot-scope="scope">
-                    <img :src="scope.row.imgurl" min-width="666" height="70"/>
+                    <img :src="scope.row.imgurl" width="400" min-width="666" height="70"/>
                 </template>
             </el-table-column>
 
