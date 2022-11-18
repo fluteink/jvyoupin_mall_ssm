@@ -74,6 +74,14 @@ public class CategoryController {
         uploadedImageFile.getImage().transferTo(file);
         BufferedImage img = ImageUtil.change2jpg(file);
         ImageIO.write(img, "jpg", file);
+
+        /*
+            写入到本地硬盘
+        */
+        File outputfile = new File("D:\\jvyoupin\\src\\main\\webapp\\img\\category\\" + c.getId() + ".jpg");
+        ImageIO.write(img, "jpg", outputfile);
+
+
         return "redirect:/admin";
     }
 
@@ -89,6 +97,14 @@ public class CategoryController {
             image.transferTo(file);
             BufferedImage img = ImageUtil.change2jpg(file);
             ImageIO.write(img, "jpg", file);
+
+            /*
+            写入到本地硬盘
+             */
+            File outputfile = new File("D:\\jvyoupin\\src\\main\\webapp\\img\\category\\" + c.getId() + ".jpg");
+            ImageIO.write(img, "jpg", outputfile);
+
+
         }
         return "admin/category_list";
     }

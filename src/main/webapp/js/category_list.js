@@ -33,7 +33,8 @@ var vue = new Vue({
         },
         editRow(index, rows) {
             // console.log(rows[index].id);
-            window.open("/jvyoupin/categiry/edit/" + rows[index].id)
+            // window.open("/jvyoupin/categiry/edit/" + rows[index].id);
+            window.location.assign("/jvyoupin/categiry/edit/" + rows[index].id);
         },
 
         testResponseBody() {
