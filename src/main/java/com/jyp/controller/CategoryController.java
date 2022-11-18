@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpSession;
@@ -31,8 +32,11 @@ public class CategoryController {
 
     @ResponseBody
     @RequestMapping("deleteCategory/{id}")
-    public HttpStatus deleteCategory(@PathVariable("id") Integer id) {
+    public HttpStatus deleteCategory(@PathVariable("id") Integer id, HttpSession session) {
         categoryService.deleteCategory(id);
+        File imageFolder = new File(session.getServletContext().getRealPath("img/category"));
+        File file = new File(imageFolder, "/" + id + ".jpg");
+        file.delete();
         return HttpStatus.OK;
     }
 
@@ -73,7 +77,24 @@ public class CategoryController {
         return "redirect:/admin";
     }
 
-    @RequestMapping("categiry/edit")
+
+    @RequestMapping("admin_category_update")
+    public String update(Category c, HttpSession session, UploadedImageFile uploadedImageFile) throws IOException {
+        categoryService.update(c);
+        System.out.println(c);
+        MultipartFile image = uploadedImageFile.getImage();
+        if (null != image && !image.isEmpty()) {
+            File imageFolder = new File(session.getServletContext().getRealPath("img/category"));
+            File file = new File(imageFolder, c.getId() + ".jpg");
+            image.transferTo(file);
+            BufferedImage img = ImageUtil.change2jpg(file);
+            ImageIO.write(img, "jpg", file);
+        }
+        return "success";
+    }
+
+
+    @RequestMapping("categiry/edit/{id}")
     public String testedit() {
         return "admin/catefory_edit";
     }

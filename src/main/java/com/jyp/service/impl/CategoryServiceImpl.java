@@ -37,4 +37,16 @@ public class CategoryServiceImpl implements CategoryService {
     public void add(Category c) {
         categoryMapper.insert(c);
     }
+
+    @Override
+    public Category getCategoryByCategoryId(Integer id) {
+        Category category = categoryMapper.selectByPrimaryKey(id);
+        return category;
+    }
+
+    @Override
+    public void update(Category c) {
+        categoryMapper.updateByPrimaryKeySelective(c);
+
+    }
 }

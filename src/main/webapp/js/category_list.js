@@ -31,6 +31,10 @@ var vue = new Vue({
             rows.splice(index, 1);
             this.notifydelete();
         },
+        editRow(index, rows) {
+            // console.log(rows[index].id);
+            window.open("/jvyoupin/categiry/edit/" + rows[index].id)
+        },
 
         testResponseBody() {
             axios.post("/jvyoupin/test/ResponseBody/json").then(response => {
