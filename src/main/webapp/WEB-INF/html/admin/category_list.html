@@ -68,9 +68,15 @@
                     prop="address"
                     label="产品管理"
                     width="100"
-
-
             >
+                <template slot-scope="scope">
+                    <el-button type="primary"
+                               icon="el-icon-s-operation"
+                               style="font-size:33px;"
+                               @click.native.prevent="deleteRow(scope.$index, tableData)"
+                    >
+                    </el-button>
+                </template>
             </el-table-column>
             <el-table-column
                     fixed="right"
@@ -89,30 +95,45 @@
         </el-table>
     </template>
 </div>
-<div>
-    <div>新增分类</div>
-    <div>
-        <form method="post" id="addForm" action="admin_category_add" enctype="multipart/form-data">
-            <table>
-                <tr>
-                    <td>分类名称</td>
-                    <td><input id="name" name="name" type="text"></td>
-                </tr>
-                <tr>
-                    <td>分类图片</td>
-                    <td>
-                        <input id="categoryPic" accept="image/*" type="file" name="image"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" align="center">
-                        <button type="submit">提 交</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+<div class="container">
+    <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增分类</div>
+    <form method="post" id="addForm" action="admin_category_add" enctype="multipart/form-data">
+        <div class="classming">分类名称<input class="scanfkong" id="name" name="name" type="text"></div>
+        <div class="classpicture" style="text-align: center;font-size:35px;line-height: 60px;"><input id="categoryPic"
+                                                                                                      accept="image/*"
+                                                                                                      type="file"
+                                                                                                      name="image"/>
+        </div>
+        <div class="define">
+            <button class="btndef" type="submit">提 交</button>
+        </div>
+    </form>
+
 </div>
+<!--<div>-->
+<!--    <div>新增分类</div>-->
+<!--    <div>-->
+<!--        <form method="post" id="addForm" action="admin_category_add" enctype="multipart/form-data">-->
+<!--            <table>-->
+<!--                <tr>-->
+<!--                    <td>分类名称</td>-->
+<!--                    <td><input id="name" name="name" type="text"></td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td>分类图片</td>-->
+<!--                    <td>-->
+<!--                        <input id="categoryPic" accept="image/*" type="file" name="image"/>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                <tr>-->
+<!--                    <td colspan="2" align="center">-->
+<!--                        <button type="submit">提 交</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--            </table>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
 
 </body>
 
