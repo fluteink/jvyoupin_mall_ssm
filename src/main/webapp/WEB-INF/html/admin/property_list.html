@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>属性管理</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" th:href="@{../css/category_list.css}">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <img style="margin-left: 10px; height:51px ;float:left" th:src="@{../img/site/logo.jpg}" height="45px" alt="logo">
+    <a href="http://localhost:8080/jvyoupin/admin" class="active"> 聚优品后台 </a>
+    <a href="#"> 分类管理 </a>
+    <a href="#"> 订单管理 </a>
+    <a href="#"> 用户管理 </a>
+</div>
+<br><br>
+<div style="margin-left: 82px;width: 70px;height:32px">
+    <div id="tag">
+        <el-tag>属性管理</el-tag>
+    </div>
+</div>
+<br><br>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import Vue before Element -->
+<script th:src="@{../js/vue2.js}"></script>
+<!-- import JavaScript -->
+<script th:src="@{../js/element-ui.js}"></script>
+<script th:src="@{../js/property_list.js}"></script>
+
+</html>
