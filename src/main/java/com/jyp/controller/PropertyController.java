@@ -51,4 +51,11 @@ public class PropertyController {
         return propertyNamesById;
     }
 
+    @RequestMapping("deleteProperty/{id}")
+    @ResponseBody
+    public String deleteproperty(@PathVariable("id") Integer id) {
+        propertyService.deleteproperty(id);
+        return "200";
+    }
+
 }

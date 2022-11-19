@@ -36,7 +36,9 @@ public class CategoryController {
         categoryService.deleteCategory(id);
         File imageFolder = new File(session.getServletContext().getRealPath("img/category"));
         File file = new File(imageFolder, "/" + id + ".jpg");
+        File outputfile = new File("D:\\jvyoupin\\src\\main\\webapp\\img\\category\\" + id + ".jpg");
         file.delete();
+        outputfile.delete();
         return HttpStatus.OK;
     }
 

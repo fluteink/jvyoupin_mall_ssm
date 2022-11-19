@@ -16,4 +16,6 @@ public interface PropertyService {
     String getPropertyNamesById(Integer id);
 
     void update(Property p);
+
+    void deleteproperty(Integer id);
 }

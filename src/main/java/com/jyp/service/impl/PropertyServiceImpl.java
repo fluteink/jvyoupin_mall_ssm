@@ -37,4 +37,9 @@ public class PropertyServiceImpl implements PropertyService {
     public void update(Property p) {
         propertyMapper.updateByPrimaryKeySelective(p);
     }
+
+    @Override
+    public void deleteproperty(Integer id) {
+        propertyMapper.deleteByPrimaryKey(id);
+    }
 }
