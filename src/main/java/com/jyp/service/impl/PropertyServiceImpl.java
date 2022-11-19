@@ -42,4 +42,9 @@ public class PropertyServiceImpl implements PropertyService {
     public void deleteproperty(Integer id) {
         propertyMapper.deleteByPrimaryKey(id);
     }
+
+    @Override
+    public void addProperty(Property p) {
+        propertyMapper.insert(p);
+    }
 }

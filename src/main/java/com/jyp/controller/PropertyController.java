@@ -23,7 +23,13 @@ public class PropertyController {
     @RequestMapping("admin_property_update")
     public String update(Property p) {
         propertyService.update(p);
-        return "admin/category_list";
+        return "redirect:/admin";
+    }
+
+    @RequestMapping("admin_property_add")
+    public String addProperty(Property p) {
+        propertyService.addProperty(p);
+        return "redirect:/admin";
     }
 
 

@@ -18,4 +18,6 @@ public interface PropertyService {
     void update(Property p);
 
     void deleteproperty(Integer id);
+
+    void addProperty(Property p);
 }

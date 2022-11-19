@@ -2,13 +2,6 @@ new Vue().$mount('#tag')
 var vue = new Vue({
     el: "#property_table",
     methods: {
-        addurl(data) {
-            var url = "/jvyoupin/img/category/";
-            for (let item of data) {
-                item.imgurl = url + item.id + ".jpg";
-                console.log(item);
-            }
-        },
         notifydelete() {
             this.$notify({
                 title: '成功',

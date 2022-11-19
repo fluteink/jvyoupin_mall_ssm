@@ -62,6 +62,16 @@
         </el-table>
     </template>
 </div>
+<div class="container">
+    <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增属性</div>
+    <form method="post" id="addForm" action="../admin_property_add" enctype="multipart/form-data">
+        <div class="classming">属性名称<input class="scanfkong" id="name" name="name" type="text"></div>
+        <input id="wdnmd" name="cid" value=""/>
+        <div class="define">
+            <button class="btndef" type="submit">提 交</button>
+        </div>
+    </form>
+</div>
 
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -70,5 +80,16 @@
 <!-- import JavaScript -->
 <script th:src="@{../js/element-ui.js}"></script>
 <script th:src="@{../js/property_list.js}"></script>
+<script>
+    function getid() {
+        var elementById = document.getElementById("wdnmd");
+        var cid = window.location.href;
+        cid = cid.substring(cid.indexOf('erty/') + 5, cid.length);
+        // console.log(id);
+        elementById.value = cid;
+    }
+
+    getid();
+</script>
 
 </html>
