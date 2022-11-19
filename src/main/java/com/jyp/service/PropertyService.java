@@ -12,4 +12,6 @@ import java.util.List;
 
 public interface PropertyService {
     List<Property> getAllPropertyByCid(Integer cid);
+
+    String getPropertyNamesById(Integer id);
 }

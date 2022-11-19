@@ -26,4 +26,10 @@ public class PropertyServiceImpl implements PropertyService {
         List<Property> properties = propertyMapper.selectByExample(propertyExample);
         return properties;
     }
+
+    @Override
+    public String getPropertyNamesById(Integer id) {
+        Property property = propertyMapper.selectByPrimaryKey(id);
+        return property.getName();
+    }
 }

@@ -32,4 +32,16 @@ public class PropertyController {
         return allPropertyByCid;
     }
 
+    @RequestMapping("property/edit/{id}")
+    public String testedit() {
+        return "admin/property_edit";
+    }
+
+    @RequestMapping("findproperty/{id}")
+    @ResponseBody
+    public String findpropertyByid(@PathVariable("id") Integer id) {
+        String propertyNamesById = propertyService.getPropertyNamesById(id);
+        return propertyNamesById;
+    }
+
 }
