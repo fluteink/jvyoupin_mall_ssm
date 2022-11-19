@@ -14,4 +14,6 @@ public interface PropertyService {
     List<Property> getAllPropertyByCid(Integer cid);
 
     String getPropertyNamesById(Integer id);
+
+    void update(Property p);
 }

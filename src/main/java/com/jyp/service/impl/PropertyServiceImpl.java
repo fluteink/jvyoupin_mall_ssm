@@ -32,4 +32,9 @@ public class PropertyServiceImpl implements PropertyService {
         Property property = propertyMapper.selectByPrimaryKey(id);
         return property.getName();
     }
+
+    @Override
+    public void update(Property p) {
+        propertyMapper.updateByPrimaryKeySelective(p);
+    }
 }

@@ -20,6 +20,13 @@ public class PropertyController {
     @Autowired
     PropertyService propertyService;
 
+    @RequestMapping("admin_property_update")
+    public String update(Property p) {
+        propertyService.update(p);
+        return "admin/category_list";
+    }
+
+
     @RequestMapping("property/{id}")
     public String property() {
         return "admin/property_list";

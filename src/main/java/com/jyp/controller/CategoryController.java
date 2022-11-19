@@ -89,7 +89,7 @@ public class CategoryController {
     @RequestMapping("admin_category_update")
     public String update(Category c, HttpSession session, UploadedImageFile uploadedImageFile) throws IOException {
         categoryService.update(c);
-        System.out.println(c);
+//        System.out.println(c);
         MultipartFile image = uploadedImageFile.getImage();
         if (null != image && !image.isEmpty()) {
             File imageFolder = new File(session.getServletContext().getRealPath("img/category"));
