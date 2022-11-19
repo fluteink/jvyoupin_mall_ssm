@@ -94,4 +94,5 @@ public interface PropertyMapper {
      * @mbg.generated Fri Nov 04 12:18:43 CST 2022
      */
     int updateByPrimaryKey(Property record);
+
 }

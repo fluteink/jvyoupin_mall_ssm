@@ -1,9 +1,13 @@
 package com.jyp.service.impl;
 
 import com.jyp.mapper.PropertyMapper;
+import com.jyp.pojo.Property;
+import com.jyp.pojo.PropertyExample;
 import com.jyp.service.PropertyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author 明宇
@@ -15,4 +19,11 @@ public class PropertyServiceImpl implements PropertyService {
     @Autowired
     PropertyMapper propertyMapper;
 
+    @Override
+    public List<Property> getAllPropertyByCid(Integer cid) {
+        PropertyExample propertyExample = new PropertyExample();
+        propertyExample.createCriteria().andCidEqualTo(cid);
+        List<Property> properties = propertyMapper.selectByExample(propertyExample);
+        return properties;
+    }
 }

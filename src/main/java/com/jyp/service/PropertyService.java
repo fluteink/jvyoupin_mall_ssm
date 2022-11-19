@@ -1,5 +1,9 @@
 package com.jyp.service;
 
+import com.jyp.pojo.Property;
+
+import java.util.List;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -7,4 +11,5 @@ package com.jyp.service;
  */
 
 public interface PropertyService {
+    List<Property> getAllPropertyByCid(Integer cid);
 }
