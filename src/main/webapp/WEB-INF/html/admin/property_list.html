@@ -9,8 +9,8 @@
 <body>
 <div class="topnav" id="myTopnav">
     <img style="margin-left: 10px; height:51px ;float:left" th:src="@{../img/site/logo.jpg}" height="45px" alt="logo">
-    <a href="http://localhost:8080/jvyoupin/admin" class="active"> 聚优品后台 </a>
-    <a href="#"> 分类管理 </a>
+    <a href="/jvyoupin/admin" class="active"> 聚优品后台 </a>
+    <a href="/jvyoupin/admin"> 分类管理 </a>
     <a href="#"> 订单管理 </a>
     <a href="#"> 用户管理 </a>
 </div>
@@ -65,8 +65,10 @@
 <div class="container">
     <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增属性</div>
     <form method="post" id="addForm" action="../admin_property_add" enctype="multipart/form-data">
-        <div class="classming">属性名称<input class="scanfkong" id="name" name="name" type="text"></div>
-        <input id="wdnmd" name="cid" value=""/>
+        <div class="classming" style="border-radius: 0 0 50px 50px;text-align: center;">属性名称<input class="scanfkong"
+                                                                                                   id="name" name="name"
+                                                                                                   type="text"></div>
+        <input id="wdnmd" name="cid" value="" type="hidden"/>
         <div class="define">
             <button class="btndef" type="submit">提 交</button>
         </div>
