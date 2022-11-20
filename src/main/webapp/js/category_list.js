@@ -41,6 +41,11 @@ var vue = new Vue({
             // window.open("/jvyoupin/categiry/edit/" + rows[index].id);
             window.location.assign("/jvyoupin/property/" + rows[index].id);
         },
+        product(index, rows) {
+            // console.log(rows[index].id);
+            // window.open("/jvyoupin/categiry/edit/" + rows[index].id);
+            window.location.assign("/jvyoupin/product/" + rows[index].id);
+        },
 
         testResponseBody() {
             axios.post("/jvyoupin/test/ResponseBody/json").then(response => {

@@ -2,14 +2,14 @@
 <html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>分类管理</title>
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <link rel="stylesheet" th:href="@{css/category_list.css}">
+    <title>商品管理</title>
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/category_list.css}">
 </head>
 <body>
 <div class="topnav" id="myTopnav">
-    <img style="margin-left: 10px; height:51px ;float:left" th:src="@{img/site/logo.jpg}" height="45px" alt="logo">
-    <a href="http://localhost:8080/jvyoupin/admin" class="active"> 聚优品后台 </a>
+    <img alt="logo" height="45px" style="margin-left: 10px; height:51px ;float:left" th:src="@{../img/site/logo.jpg}">
+    <a class="active" href="/jvyoupin/admin"> 聚优品后台 </a>
     <a href="/jvyoupin/admin"> 分类管理 </a>
     <a href="#"> 订单管理 </a>
     <a href="#"> 用户管理 </a>
@@ -17,63 +17,86 @@
 <br><br>
 <div style="margin-left: 82px;width: 70px;height:32px">
     <div id="tag">
-        <el-tag>分类管理</el-tag>
+        <el-tag>属性管理</el-tag>
     </div>
 </div>
 <br><br>
-<div id="category_table" style="margin-left: 82px;">
+<div id="product_table" style="margin-left: 82px;">
     <template>
         <el-table
                 :data="tableData"
                 border
                 style="width: 93%">
             <el-table-column
-                    prop="id"
                     label="id"
+                    prop="id"
                     width="60">
             </el-table-column>
 
-            <el-table-column prop="imgurl"
+            <el-table-column align="center"
                              label="图片"
-                             align="center"
-                             width="666">
+                             prop="imgurl"
+                             width="70">
                 <template slot-scope="scope">
-                    <img :src="scope.row.imgurl" width="400" min-width="666" height="70"/>
+                    <img :src="scope.row.imgurl" height="70" min-width="7" width="70"/>
                 </template>
             </el-table-column>
 
             <el-table-column
+                    label="商品名称"
                     prop="name"
-                    label="分类名称"
-                    width="160"
+                    width="660"
             >
-
             </el-table-column>
             <el-table-column
-                    label="属性管理"
+                    label="商品小标题"
+                    prop="name"
                     width="100"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="原价格"
+                    prop="name"
+                    width="66"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="优惠价格"
+                    prop="name"
+                    width="66"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="库存数量"
+                    prop="name"
+                    width="66"
+            >
+            </el-table-column>
+            <el-table-column
                     align="center"
+                    label="图片管理"
+                    width="100"
             >
                 <template slot-scope="scope">
-                    <el-button type="primary"
+                    <el-button @click.native.prevent="property(scope.$index, tableData)"
                                icon="el-icon-tickets"
                                style="font-size:33px;"
-                               @click.native.prevent="property(scope.$index, tableData)"
+                               type="primary"
                     >
                     </el-button>
                 </template>
 
             </el-table-column>
             <el-table-column
+                    label="设置属性"
                     prop="address"
-                    label="产品管理"
                     width="100"
             >
                 <template slot-scope="scope">
-                    <el-button type="primary"
+                    <el-button @click.native.prevent="product(scope.$index, tableData)"
                                icon="el-icon-s-operation"
                                style="font-size:33px;"
-                               @click.native.prevent="product(scope.$index, tableData)"
+                               type="primary"
                     >
                     </el-button>
                 </template>
@@ -84,14 +107,14 @@
             >
                 <template slot-scope="scope">
                     <el-button @click.native.prevent="editRow(scope.$index, tableData)"
-                               type="text"
                                size="small"
+                               type="text"
                     >编辑
                     </el-button>
                     <el-button
                             @click.native.prevent="deleteRow(scope.$index, tableData)"
-                            type="text"
-                            size="big">
+                            size="big"
+                            type="text">
                         移除
                     </el-button>
                 </template>
@@ -99,28 +122,23 @@
         </el-table>
     </template>
 </div>
-<div class="container">
-    <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增分类</div>
-    <form method="post" id="addForm" action="admin_category_add" enctype="multipart/form-data">
-        <div class="classming">分类名称<input class="scanfkong" id="name" name="name" type="text"></div>
-        <div class="classpicture" style="text-align: center;font-size:35px;line-height: 60px;"><input id="categoryPic"
-                                                                                                      accept="image/*"
-                                                                                                      type="file"
-                                                                                                      name="image"/>
-        </div>
-        <div class="define">
-            <button class="btndef" type="submit">提 交</button>
-        </div>
-    </form>
 
-</div>
 </body>
-
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!-- import Vue before Element -->
-<script th:src="@{js/vue2.js}"></script>
+<script th:src="@{../js/vue2.js}"></script>
 <!-- import JavaScript -->
-<script th:src="@{js/element-ui.js}"></script>
-<script th:src="@{js/category_list.js}"></script>
+<script th:src="@{../js/element-ui.js}"></script>
+<script th:src="@{../js/product_list.js}"></script>
+<script>
+    function getid() {
+        var elementById = document.getElementById("wdnmd");
+        var cid = window.location.href;
+        cid = cid.substring(cid.indexOf('product/') + 8, cid.length);
+        console.log(id);
+        elementById.value = cid;
+    }
 
+    getid();
+</script>
 </html>
