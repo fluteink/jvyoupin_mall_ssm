@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" th:href="@{css/initial.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{css/gdcard.css}" type="text/css">
+    <script th:src="@{js/windowLoad.js}"></script>
+    <title>gdcard</title>
+</head>
+
+<body>
+<div class="all">
+    <header class="head">
+        <div class="head_info">
+            <div class="info_item">欢迎来到聚优品</div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+            <div class="info_item">
+                <!-- <img src="../img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
+            </div>
+
+        </div>
+        <div class="head_search">
+            <div class="logo">
+                <img class="logo_img" height="100%" src="../img/logo.jpg" width="20%">
+            </div>
+            <div class="search_item">
+                <div class="search_item_clear">
+                    <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                    <span><input class="sch_btn" type="button" value="搜索"></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <table border="0" cellspacing="0" id="shoppingcartinfo">
+                <thead>
+                <tr>
+                    <th height="42px" width="75px">
+                        <label for="checkall">
+                            <input class="checkall" id="checkall" name="checkall" onclick="selectAll()" type="checkbox">
+                            <span></span>全选
+                        </label>
+                    </th>
+                    <th height="42px" width="400px">商品</th>
+                    <th height="42px" width="135px">单价</th>
+                    <th height="42px" width="230px">购买数量</th>
+                    <th height="42px" width="150px">小计</th>
+                    <th height="42px" width="200px">操作</th>
+                </tr>
+                </thead>
+                <tbody id="gdcart_tablebody">
+                <tr>
+                    <td align="left" class="pt20" colspan="2" height="90px" valign="top" width="75px">
+                        <label for="checkall1">
+                            <input class="checkall" id="checkall1" name="checkall" onclick="selectOne()"
+                                   type="checkbox">
+                            <span class="checkallspan fl"></span>
+                        </label>
+                        <img alt="cosmetics" class="shoppingitem fl" src="../img/购物车商品/粉色化妆刷.jpg">
+                        <div class="shoppingdesc fl">
+                            黛末烁影系列26支化妆刷子套装眼
+                            <br><br>
+                            <b>颜色分类:粉红&nbsp;&nbsp;刷毛材质:人造纤维</b>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </td>
+                    <td align="center" class="price pt20" height="90px" valign="top" width="135px">￥109.00</td>
+                    <td align="center" class="purchasenum pt20" height="90px" valign="top" width="230px">
+                        <input min="1" onblur="SUMUP()" step="1" type="number" value="1">
+                    </td>
+                    <td align="center" class="pt20 sumup" height="90px" valign="top" width="150px">￥318.00</td>
+                    <td align="left" class="pt20 pl85 operation" height="90px" valign="top" width="115px">
+                        <strong onclick="deleteGoods()">删除</strong><br>
+                        <strong>移入收藏夹</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="pt20" colspan="2" height="90px" valign="top" width="75px">
+                        <label for="checkall2">
+                            <input class="checkall" id="checkall2" name="checkall" onclick="selectOne()"
+                                   type="checkbox">
+                            <span class="checkallspan fl"></span>
+                        </label>
+                        <img alt="laundry" class="shoppingitem fl" src="../img/购物车商品/白猫洗衣液.jpg">
+                        <div class="shoppingdesc fl">
+                            白猫无磷洗衣液3kg*4瓶整箱装
+                            <br><br>
+                            <b>颜色分类:蓝色&nbsp;&nbsp;版本:洁净柔香</b>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </td>
+                    <td align="center" class="price pt20" height="90px" valign="top" width="135px">￥20.00</td>
+                    <td align="center" class="purchasenum pt20" height="90px" valign="top" width="230px">
+                        <input min="1" onblur="SUMUP()" step="1" type="number" value="1">
+                    </td>
+                    <td align="center" class="pt20 sumup" height="90px" valign="top" width="150px">￥80.00</td>
+                    <td align="left" class="pt20 pl85 operation" height="90px" valign="top" width="115px">
+                        <strong onclick="deleteGoods()">删除</strong><br>
+                        <strong>移入收藏夹</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="pt20" colspan="2" height="90px" valign="top" width="75px">
+                        <label for="checkall3">
+                            <input class="checkall" id="checkall3" name="checkall" onclick="selectOne()"
+                                   type="checkbox">
+                            <span class="checkallspan fl"></span>
+                        </label>
+                        <img alt="kettle" class="shoppingitem fl" src="../img/购物车商品/苏泊尔电热水器.jpg">
+                        <div class="shoppingdesc fl">
+                            苏泊尔电热水壶家用不锈钢防烫大容量自动断电
+                            <br><br>
+                            <b>颜色分类:玫瑰金&nbsp;&nbsp;服务: 全面保修2年</b>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </td>
+                    <td align="center" class="price pt20" height="90px" valign="top" width="135px">￥99.00</td>
+                    <td align="center" class="purchasenum pt20" height="90px" valign="top" width="230px">
+                        <input min="1" onblur="SUMUP()" step="1" type="number" value="1">
+                    </td>
+                    <td align="center" class="pt20 sumup" height="90px" valign="top" width="150px">￥99.00</td>
+                    <td align="left" class="pt20 pl85 operation" height="90px" valign="top" width="115px">
+                        <strong onclick="deleteGoods()">删除</strong><br>
+                        <strong>移入收藏夹</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" class="pt20" colspan="2" height="90px" valign="top" width="75px">
+                        <label for="checkall4">
+                            <input class="checkall" id="checkall4" name="checkall" onclick="selectOne()"
+                                   type="checkbox">
+                            <span class="checkallspan fl"></span>
+                        </label>
+                        <img alt="huaweiphone" class="shoppingitem fl" src="../img/购物车商品/华为手机.jpg">
+                        <div class="shoppingdesc fl">
+                            HUAWEI nova8 SE 5G 超清四摄
+                            <br><br>
+                            <b>颜色分类:天空蓝&nbsp;&nbsp;版本:6GB+128GB</b>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </td>
+                    <td align="center" class="price pt20" height="90px" valign="top" width="135px">￥2599.00</td>
+                    <td align="center" class="purchasenum pt20" height="90px" valign="top" width="230px">
+                        <input min="1" onblur="SUMUP()" step="1" type="number" value="1">
+                    </td>
+                    <td align="center" class="pt20 sumup" height="90px" valign="top" width="150px">￥2599.00</td>
+                    <td align="left" class="pt20 pl85 operation" height="90px" valign="top" width="115px">
+                        <strong onclick="deleteGoods()">删除</strong><br>
+                        <strong>移入收藏夹</strong>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="paddingpanel clearfix">
+                <div class="conclude clearfix">
+                    <div class="concludeleft fl">
+                        <label for="checkall5">
+                            <!-- <input type="checkbox" name="checkall" id="checkall" class="checkall" onclick="selectAll()">
+                            <span></span>全选 -->
+                        </label>
+                        <a href="" onclick="deleteGoods()" style="text-decoration: none;color:crimson">删除选中商品</a>
+                    </div>
+                    <div class="concluderight fr">
+                        <span class="fl">已选择<strong>1</strong>件商品</span>
+                        <dl class="fl">
+                            <dt></dt>
+                            <dd id="dd_sumup">总价：￥3096.00</dd>
+                            <dd id="dd_yh">优惠：￥200.00</dd>
+                            <dd id="dd_sum">合计：<strong id="s_sum">￥2886.00</strong></dd>
+                        </dl>
+                        <div style="clear:both"></div>
+                    </div>
+                </div>
+                <div class="continueorsubmit fr">
+                    <button class="continue" type="button">继续购物</button>
+                    <button class="submit" type="submit">提交订单</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <footer class="foot"></footer>
+</div>
+<script>
+    //全选
+    function selectAll() {
+        //选择全部商品
+        var checkAll = document.getElementById("checkall");
+        var checkArr = [
+            document.getElementById("checkall1"),
+            document.getElementById("checkall2"),
+            document.getElementById("checkall3"),
+            document.getElementById("checkall4"),
+        ];
+        if (checkAll.checked) {
+            for (var i = 0; i < checkArr.length; i++) {
+                checkArr[i].checked = true;
+            }
+        } else {
+            for (var i = 0; i < checkArr.length; i++) {
+                checkArr[i].checked = false;
+            }
+        }
+        //显示已选择的商品数量
+        var gdsum = 0;
+        for (var i = 0; i < checkArr.length; i++) {
+            if (checkArr[i].checked) {
+                gdsum++;
+            }
+        }
+        document.querySelector(".concluderight strong").innerHTML = gdsum;
+        //显示总价
+        var sumupArr = document.querySelectorAll(".sumup");
+        var sumup = 0;
+        for (var i = 0; i < sumupArr.length; i++) {
+            if (checkArr[i].checked) {
+                sumup += parseFloat(sumupArr[i].innerHTML.slice(1));
+                sumup = Math.round(sumup * 100) / 100;
+
+            }
+        }
+
+        document.getElementById("dd_sumup").innerHTML = "总价：￥" + sumup + ".00";
+        //显示合计
+        var sum = document.getElementById("dd_sum");
+        var yh = document.getElementById("dd_yh");
+        if (sumup >= 200) {
+            yh.innerHTML = "优惠：￥200.00";
+            sum.innerHTML = "合计：<strong>￥" + (sumup - 200) + ".00</strong>";
+        } else {
+            yh.innerHTML = "优惠：￥0.00";
+            sum.innerHTML = "合计：<strong>￥" + sumup + ".00</strong>";
+        }
+
+    }
+
+    //小计
+    function SUMUP() {
+        var sumupArr = document.getElementsByClassName("sumup");
+        var purchasenumArr = document.getElementsByClassName("purchasenum");
+        var priceArr = document.getElementsByClassName("price");
+        for (var i = 0; i < sumupArr.length; i++) {
+            sumupArr[i].innerHTML = "￥" + (purchasenumArr[i].children[0].value * priceArr[i].innerHTML.slice(1)).toFixed(2);
+        }
+    }
+
+    //每次加载页面时，调用一次小计函数和全选函数
+    window.onload = function () {
+        SUMUP();
+        selectAll();
+    }
+
+    //单个商品选中的时候
+    function selectOne() {
+        var checkArr = [
+            document.getElementById("checkall1"),
+            document.getElementById("checkall2"),
+            document.getElementById("checkall3"),
+            document.getElementById("checkall4"),
+        ];
+        var checkAll = document.getElementById("checkall");
+        var gdsum = 0;
+        for (var i = 0; i < checkArr.length; i++) {
+            if (checkArr[i].checked) {
+                gdsum++;
+            }
+        }
+        document.querySelector(".concluderight strong").innerHTML = gdsum;
+        if (gdsum == checkArr.length) {
+            checkAll.checked = true;
+        } else {
+            checkAll.checked = false;
+        }
+        //显示总价
+        var sumupArr = document.querySelectorAll(".sumup");
+        var sumup = 0;
+        for (var i = 0; i < sumupArr.length; i++) {
+            if (checkArr[i].checked) {
+                sumup += parseFloat(sumupArr[i].innerHTML.slice(1));
+                sumup = Math.round(sumup * 100) / 100;
+
+            }
+        }
+
+        document.getElementById("dd_sumup").innerHTML = "总价：￥" + sumup + ".00";
+        //显示合计
+        var sum = document.getElementById("dd_sum");
+        var yh = document.getElementById("dd_yh");
+        if (sumup >= 200) {
+            yh.innerHTML = "优惠：￥200.00";
+            sum.innerHTML = "合计：<strong>￥" + (sumup - 200) + ".00</strong>";
+        } else {
+            yh.innerHTML = "优惠：￥0.00";
+            sum.innerHTML = "合计：<strong>￥" + sumup + ".00</strong>";
+        }
+    }
+
+    //删除商品
+    function deleteGoods() {
+        var checkArr = [
+            document.getElementById("checkall1"),
+            document.getElementById("checkall2"),
+            document.getElementById("checkall3"),
+            document.getElementById("checkall4"),
+        ];
+        var goodsArr = document.getElementsByClassName("goods");
+        for (var i = 0; i < checkArr.length; i++) {
+            if (checkArr[i].checked) {
+                goodsArr[i].remove();
+            }
+        }
+        SUMUP();
+        selectAll();
+    }
+
+</script>
+</body>
+
+</html>

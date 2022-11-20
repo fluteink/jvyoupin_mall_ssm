@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" th:href="@{css/initial.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{css/goodsdetails.css}" type="text/css">
+    <title>goodsdetails</title>
+    <!-- 在html文件里面引入进来就可以，后面有给你举的例子 -->
+    <script th:src="@{js/windowLoad.js}"></script>
+    <script th:src="@{js/imgClick.js}"></script>
+    <script th:src="@{js/ajax.js}"></script>
+</head>
+<body>
+<div class="all">
+    <header class="head">
+        <div class="head_info">
+            <div class="info_item">欢迎来到聚优品</div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+            <div class="info_item">
+                <!-- <img src="@{img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
+            </div>
+
+        </div>
+        <div class="head_search">
+            <div class="logo">
+                <img class="logo_img" height="100%" th:src="@{img/site/logo.jpg}" width="20%">
+            </div>
+            <div class="search_item">
+                <div class="search_item_clear">
+                    <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                    <span><input class="sch_btn" type="button" value="搜索"></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="shop_name">
+            <h1>魅 列 斯 顿 杯 子 专 卖 店</h1>
+            <span class="shop_name_span">
+                    <a href="" id="shop_name_a" onclick="shopFocus()" style="text-decoration:none">+关注</a>
+                    
+                </span>
+            <p>用心做好每一个杯子，让您有舒心的喝水体验<br>
+                Carefully make each cup,let you have a comfortable drinking experience.
+            </p>
+        </div>
+        <div class="goods_page">
+            <div class="imgandinfo">
+                <div class="goods_img">
+                    <img alt="" class="bigimg" height="70%" id="bigimg" src="@{img/杯子/1.jpg" width="70%">
+                    <div class="smallimg">
+                        <!-- onclick="IMG()" -->
+                        <!-- <img src="@{img/杯子/1.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%" >
+                        <img src="@{img/杯子/2.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
+                        <img src="@{img/杯子/3.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
+                        <img src="@{img/杯子/4.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
+                        <img src="@{img/杯子/5.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%"> -->
+                    </div>
+
+                </div>
+                <div class="goods_info">
+                    <div class="goods_title">魅列斯顿杯子 便携杯子 男女学生杯子</div>
+                    <div class="goods_subtitle">高颜值ins手提便携杯2022新款网红单层水杯</div>
+                    <div class="goods_price">
+                        <div class="juhuasuan">
+                            <span class="juhuasuan_big">聚划算</span>
+                            <span class="juhuasuan_small">此商品可参加聚划算，
+                                    <span class="juhuasuan_red">0天14小时</span>
+                                    后开始
+                                </span>
+                        </div>
+                        <div class="goods_price_item">
+                            <div class="gouwuquan">
+                                <img height="10%" src="@{img/购物券2.png" width="12%">
+                                <span class="gouwuquan_content">下单立减20%全商品通用</span>
+                            </div>
+                            <div class="original_price">
+                                <span class="original_price_content grey_c">原价</span>&emsp;&emsp;
+                                <span class="original_price_￥">￥</span>
+                                <span class="original_price_num" id="original_price_num">79.00</span>
+                            </div>
+                            <div class="now_price">
+                                <span class="now_price_content grey_c">现价</span>&emsp;&nbsp;&nbsp;
+                                <span class="now_price_￥">￥</span>
+                                <span class="now_price_num" id="now_price_num">29.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="SV_EV">
+                        <div class="SV">销量<span class="SV_num" id="SV_num"
+                                                style="color: red;font-weight: 700;">23</span></div>
+                        <div class="EV">累计评价<span class="EV_num" id="EV_num"
+                                                  style="color: red;font-weight: 700;">0</span></div>
+                    </div>
+                    <div class="goods_num">
+                        <span class="grey_c">数量</span>
+                        <span class="up grey_c" id="up">
+                            <input class="up_btn" onclick="gooodsNumChange()" type="button" value="+">
+                        </span>
+                        <span class="goods_input">
+                            <input class="goods_num_input" id="goods_num_input" maxlength="5" type="text" value="1">
+                        </span>
+                        <span class="down grey_c" id="down">
+                            <input class="down_btn" onclick="gooodsNumChange()" type="button" value="-">
+                        </span>
+                        <span class="grey_c">件</span>
+                        <span class="grey_c">库存
+                            <span class="goods_num_kucun grey_c" id="goods_num_kucun">100</span>
+                            件
+                        </span>
+                    </div>
+                    <div class="service_content">
+                        <span class="service_content_title grey_c">服务承诺</span>&emsp;
+                        <span class="service_content_item"><a class="service_a" href="">正品保证</a></span>&emsp;
+                        <span class="service_content_item"><a class="service_a" href="">极速退款</a></span>&emsp;
+                        <span class="service_content_item"><a class="service_a" href="">赠运费险</a></span>&emsp;
+                        <span class="service_content_item"><a class="service_a" href="">七天无理由退货</a></span>
+                    </div>
+                    <div class="buy">
+                        <div class="buy_item">
+                            <a class="buy_a" href=""><input class="buy_btn" type="button" value="立即购买"></a>
+                        </div>
+                        <div class="addcart_item">
+                            <a class="addcart_a" href="gdcart.html"><input class="addcart_btn" type="button"
+                                                                           value="加入购物车"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="goodsdetail">
+                    <div class="goodsdetail_top">
+                        <div class="goodsdetail_top_item">
+                            <span class="goodsdetail_top_left"><a class="goodsdetail_top_a" href="">商品详情</a></span>
+                            <span class="goodsdetail_top_right"><a class="goodsdetail_top_a" href="">累计评价</a>0</span>
+
+                        </div>
+                    </div>
+                    <div class="goodsdetail_content">
+                        <div class="goodsdetail_content_item">
+                            <span>产品参数:</span>
+                            <span></span>
+                            <span></span>
+                            <span>品牌:魅列斯顿</span>
+                            <span>材质：耐热硅胶</span>
+                            <span>风格:韩式</span>
+                            <span>形状：圆柱形</span>
+                            <span>产地：中国大陆</span>
+                            <span>流行元素：小清新</span>
+                            <span>适用场景：宿舍</span>
+                            <span>适用人群：成人</span>
+                            <span>产品尺寸：长*宽*高:10*10*10cm</span>
+                            <span>产品重量:0.2kg</span>
+                            <span>包装清单:1*魅列斯顿耐热硅胶圆柱形烘焙模具</span>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <footer class="foot"></footer>
+</div>
+<script>
+    // 尝试引入的值 ----- 直接使用变量名
+    console.log(imgArr, '---imgArr')
+    console.log(currentId, '---currentId')
+    // 事件委托：事件加在父组件上面，点击时e.target就是点击的那个子组件
+    var imgBox = document.getElementsByClassName('smallimg')[0]
+    // 父盒子中循环加入子级，这样的方法可以在很多地方用到，通过一个循环可以同时往页面上写出很多的内容
+    imgArr.forEach(element => {
+        var img = document.createElement('img')
+        img.src = element.src
+        img.id = 'item' + element.id
+        // img.width = '15%'
+        // img.height = '15%'
+        img.style.cssText = 'width: 15%; height: 15%'
+        img.className = 'smallimg_item'
+        imgBox.appendChild(img)
+    });
+    imgBox.addEventListener('click', function (e) {
+        // 调用js文件中的方法----直接使用方法名字，以后可以直接把方法写在js文件里面然后调用
+        currentId = imgClick(e)
+        let bigimg = document.getElementById('bigimg')
+        bigimg.src = `@{img/杯子/${currentId}.jpg`
+    })
+
+    //店铺关注
+    function shopFocus() {
+        var shopFocus = document.getElementById("shop_name_a");
+        if (shopFocus.innerHTML == "+关注") {
+            shopFocus.innerHTML = "已关注";
+        }
+    }
+
+
+    //商品数量加减
+    function gooodsNumChange() {
+        var goodsNum = document.getElementById("goods_num_input").value;
+        goodsNum = parseInt(goodsNum);
+        if (event.target.value == "+") {
+            goodsNum++;
+        } else {
+            goodsNum--;
+        }
+        if (goodsNum < 1) {
+            goodsNum = 1;
+        }
+        document.getElementById("goods_num_input").value = goodsNum;
+    }
+
+
+</script>
+</body>
+</html>

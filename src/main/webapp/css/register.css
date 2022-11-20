@@ -1,0 +1,51 @@
+.main .regist_info {
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+}
+
+.regist_main {
+    background-image: url('../img/背景-3.jpg');
+}
+
+.regist_tab {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-top: 0;
+    justify-content: center;
+    align-self: center;
+    background-color: white;
+    opacity: 80%;
+    border-radius: 15px;
+}
+
+.regist_in {
+    width: 80%;
+    height: 60%;
+    position: relative;
+    margin-top: 0;
+    margin-left: 0;
+    justify-content: center;
+    align-self: center;
+    border: 1px solid;
+    outline: none;
+}
+
+.in_item {
+    text-align: right;
+    size: 15px;
+    color: rgb(78, 74, 74);
+}
+
+.regist_btn {
+    width: 15%;
+    left: 30%;
+    height: 60%;
+    background-color: #efb5b5;
+    border: 0;
+    box-shadow: #efb5b5 0 0 15px;
+}

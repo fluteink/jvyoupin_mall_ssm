@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" th:href="@{css/initial.css}" type="text/css">
+    <link rel="stylesheet" th:href="@{css/register.css}" type="text/css">
+    <script th:src="@{js/windowLoad.js}"></script>
+    <title>regist.html</title>
+</head>
+<body>
+<div class="all">
+
+    <header class="head">
+        <div class="head_info">
+            <div class="info_item">欢迎来到聚优品</div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+            <div class="info_item">
+                <!-- <img src="img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
+            </div>
+
+        </div>
+        <div class="head_search">
+            <div class="logo">
+                <img class="logo_img" height="100%" src="img/logo.jpg" width="20%">
+            </div>
+            <div class="search_item">
+                <div class="search_item_clear">
+                    <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                    <span><input class="sch_btn" type="button" value="搜索"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <main class="main regist_main">
+        <div class="regist_info">
+            <table class="regist_tab">
+                <tr>
+                    <td>设置用户名</td>
+                </tr>
+                <tr>
+                    <td class="in_item">用户名</td>
+                    <td><input class="user_name regist_in" id="user_name" placeholder="请输入用户名" type="text"></td>
+                </tr>
+                <tr>
+                    <td>设置登录密码</td>
+                    <td><span id="pwdSpan" style="color: red;font-family: 楷体"></span></td>
+
+                </tr>
+                <tr>
+                    <td class="in_item">登录密码</td>
+                    <td><input class="user_pwd regist_in" id="user_pwd" onblur="isPwd()" placeholder="请输入登录密码"
+                               type="text"></td>
+
+                </tr>
+                <tr>
+                    <td class="in_item">确认密码</td>
+                    <td><input class="user_repwd regist_in" id="user_repwd" onblur="isCom()" placeholder="请再次输入登录密码"
+                               type="text"></td>
+
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="regist_btn" id="regist_btn" src="" type="button" value="提交"></td>
+                </tr>
+
+            </table>
+        </div>
+    </main>
+    <footer class="foot"></footer>
+</div>
+
+
+<script>
+    //密码校验
+    function isPwd() {
+        var text = document.getElementById("user_pwd").value;
+        var re = /^(?=.*[a-z])(?=.*\d)[^]{8,16}$/;
+        var result = re.test(text);
+        if (!result) {
+            document.getElementById("pwdSpan").innerHTML = "密码必须包含数字,字母,且不少于8位";
+            return false;
+        } else {
+            document.getElementById("pwdSpan").innerHTML = "";
+            return true;
+        }
+    };
+
+    //确认密码
+    function isCom() {
+        var text1 = document.getElementById("user_pwd").value;
+        var text2 = document.getElementById("user_repwd").value;
+        if (text2 == text1) {
+            document.getElementById("pwdSpan").innerHTML = "";
+            return true;
+        } else {
+            document.getElementById("pwdSpan").innerHTML = "两次输入的密码不一致";
+            return false;
+        }
+    }
+</script>
+
+
+</body>
+</html>

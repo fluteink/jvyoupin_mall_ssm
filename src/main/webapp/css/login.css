@@ -1,0 +1,183 @@
+.all {
+    width: 1250px;
+    height: 1000px;
+}
+
+.main {
+    margin-top: 120px;
+    padding: 0;
+    /* background-image: url("../img/雪景.jpg") ; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    clear: both;
+}
+
+
+.all .main .main_div {
+    width: 30%;
+    height: 60%;
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    opacity: .7;
+    border-radius: 15px;
+
+
+}
+
+.main {
+    background-image: url('../img/夜景-山.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 680px;
+}
+
+.login_form {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login_content {
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    color: rgb(26, 25, 25);
+    display: grid;
+    font-family: '粗体';
+    justify-content: left;
+    align-items: center;
+}
+
+.login_name {
+    width: 100%;
+    height: 100%;
+}
+
+.login_name_item {
+    color: darkgray;
+    width: 80%;
+    height: 40%;
+    border: 1px solid rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+    overflow: hidden;
+}
+
+.loginInputIcon {
+    width: 15%;
+    height: 100%;
+}
+
+#name {
+    width: 85%;
+    height: 100%;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('https://www.iconfont.cn/');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 25px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+.login_pwd {
+    width: 100%;
+    height: 100%;
+}
+
+.login_pwd_item {
+    color: darkgray;
+    width: 80%;
+    height: 40%;
+    border: 1px solid rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+    overflow: hidden;
+}
+
+#password {
+    width: 85%;
+    height: 100%;
+    outline: none;
+}
+
+.login_valcode {
+    width: 100%;
+    height: 100%;
+}
+
+.login_valcode_item {
+    color: darkgray;
+    width: 80%;
+    height: 40%;
+    border: 1px solid rgb(15, 15, 15);
+    display: flex;
+    align-items: center;
+    margin-left: 7.5%;
+    overflow: hidden;
+}
+
+#valcode {
+    width: 50%;
+    height: 100%;
+    outline: none;
+    padding: 0;
+}
+
+.logina {
+    text-decoration: none;
+    color: darkgray;
+    font-size: 15px;
+    align-items: center;
+}
+
+.left_a {
+    margin-left: 15%;
+    text-align: left;
+}
+
+.right_a {
+    text-align: right;
+    margin-right: 25%;
+}
+
+.login_foot {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(2, 1fr);
+}
+
+.login_btn {
+    width: 100%;
+    height: 100%;
+}
+
+.redButton {
+    color: white;
+    width: 80%;
+    height: 40%;
+    background-color: #efb5b5;
+    font-size: 15px;
+    font-family: '粗体';
+    border: 0;
+    margin-left: 10%;
+}
+

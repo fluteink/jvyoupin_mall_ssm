@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" th:href="@{css/login.css}">
+    <link rel="stylesheet" th:href="@{css/initial.css}">
+    <script th:src="@{js/windowLoad.js}"></script>
+    <title>login</title>
+</head>
+<body>
+<div class="all">
+    <header class="head">
+        <div class="head_info">
+            <div class="info_item">欢迎来到聚优品</div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+            <div class="info_item">
+                <!-- <img src="@{img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
+            </div>
+
+        </div>
+        <div class="head_search">
+            <div class="logo">
+                <img class="logo_img" height="100%" src="@{img/logo.jpg" width="20%">
+            </div>
+            <div class="search_item">
+                <div class="search_item_clear">
+                    <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                    <span><input class="sch_btn" type="button" value="搜索"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <div class="main_div">
+            <form action="" class="login_form" method="post">
+                <div class="login_content">账户登录</div>
+                <div class="login_name">
+                    <div class="login_name_item">
+                        <span class="loginInputIcon ">
+                            <!-- <span class=" glyphicon glyphicon-user"></span> -->
+                            <i class="iconfont icon-yonghu">&#xe612;</i>
+                        </span>
+                        <input id="name" name="name" placeholder="手机/会员名/邮箱" type="text">
+                    </div>
+                </div>
+                <div class="login_pwd">
+                    <div class="login_pwd_item">
+                        <span class="loginInputIcon ">
+                            <span class=" glyphicon glyphicon-lock"></span>
+                            <i class="iconfont icon-yonghu">&#xe612;</i>
+                        </span>
+                        <input id="password" name="password" placeholder="密码" type="password">
+                    </div>
+                </div>
+                <div class="login_valcode">
+                    <div class="login_valcode_item">
+                            <span class="loginInputIcon ">
+                                <span class=" glyphicon glyphicon-lock"></span>
+                                <i class="iconfont icon-yonghu">&#xe612;</i>
+                            </span>
+                        <input class="valcode" id="valcode" onblur="myFunction()" placeholder="请输入验证码" type="text">
+                        <canvas height="30" id="canvas" onclick="YZ()" style="margin-left: 10px;" width="110"></canvas>
+                    </div>
+                </div>
+                <div class="login_foot">
+                    <a class="left_a logina" href="">忘记密码</a>
+                    <a class="right_a logina" href="regist.html">免费注册</a>
+                </div>
+                <div class="login_btn">
+                    <button class="redButton" type="submit">登录</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="foot"></footer>
+
+</div>
+
+
+<script type="text/javascript">
+    var result = ""
+
+    function YZM(selector, w, h) {
+        // var result="";
+        // 随机生成数字
+        function rn(min, max) {
+            return parseInt(Math.random() * (max - min) + min);
+        }
+
+        //生成随机颜色
+        function rc(min, max) {
+            var r = rn(min, max);
+            var g = rn(min, max);
+            var b = rn(min, max);
+            return `rgb(${r},${g},${b})`;
+        }
+
+        //填充背景颜色
+        var w = w;
+        var h = h;
+        var canvas = document.querySelector(selector);
+        //querySelector()方法返回文档中匹配指定CSS选择器的一个元素。
+        //querySelector()方法仅仅返回匹配指定选择器的第一个元素。如果你想要返回所有的元素，请使用querySelectorAll()方法代替。
+        // var ctx=canvas.getContext('2d');
+        // getContext()方法返回一个用于在画布上绘图的环境
+        //语法：canvas.getContext(contextID)
+        //参数contextID指定了您想要在画布上绘制的类型。当前唯一合法的值是"2d",它指定了二维绘图，并且导致该方法返回一个环境对象，该对象导出一个二维绘图API。
+        // ctx.fillRect(0,0,w,h);
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = rc(180, 230);
+        //fillStyle属性设置或者返回用于填充的颜色、渐变哦或者模式。
+        ctx.fillRect(0, 0, w, h);
+        //fillRect()方法绘制"已填色"的矩形，默认的填充颜色是黑色。
+        //语法：context.fillRect(x,y,width,height);
+
+        //随机字符串
+        var pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        //取出随机数字
+        for (var i = 0; i < 4; i++) {
+            var c = pool[rn(0, pool.length)];
+            //随机字体大小
+            var fs = rn(18, 40);
+            //随机字母数字的旋转角度
+            var deg = rn(-30, 30);
+            ctx.font = fs + "px Simhei";
+            ctx.textBaseline = 'top';
+            //设置字体的填充颜色
+            ctx.fillStyle = rc(80, 150);
+            ctx.save();
+            //save()保存当前的绘图状态
+            ctx.translate(30 * i + 15, 15);
+            ctx.rotate(deg * Math.PI / 180);
+            ctx.fillText(c, -10, -10);
+            //context.fillText(text,x,y,maxWidth)----text是在画布上输出的文本，x和y是坐标，maxWidth是最大文本宽度
+            ctx.restore();
+            //restore()恢复之前保存的绘图状态
+            result += c;
+            // console.log(c);
+        }
+
+        //随机生成40个小的干扰圆点
+        for (var i = 0; i < 40; i++) {
+            ctx.beginPath();
+            ctx.arc(rn(0, w), rn(0, h), 1, 0, 2 * Math.PI);
+            //arc()方法创建弧/曲线(用于创建圆或者部分圆)
+            ctx.closePath();
+            ctx.fillStyle = rc(150, 200);
+            ctx.fill();
+        }
+        return result;
+        console.log(result);
+    }
+
+    let yzm = YZM("#canvas", 120, 40);
+    console.log(yzm);
+
+    function YZ() {
+        let yzm = YZM("#canvas", 120, 40);
+        console.log(yzm);
+    }
+
+    //验证验证码是否正确
+    function myFunction() {
+        var mycode = document.getElementById("valcode").value;
+        if (mycode == result) {
+            alert("验证成功");
+        } else {
+            alert("验证成功");
+            YZ();
+            document.getElementById("valcode").value = "";
+        }
+        console.log(mycode);
+    }
+</script>
+
+
+</body>
+</html>
