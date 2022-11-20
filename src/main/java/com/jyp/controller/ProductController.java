@@ -37,4 +37,31 @@ public class ProductController {
         productService.addProduct(p);
         return "redirect:/product/" + p.getCid();
     }
+
+    @RequestMapping("deleteProduct/{id}")
+    @ResponseBody
+    public String deleteProduct(@PathVariable("id") Integer id) {
+        productService.deleteProductById(id);
+        return "200";
+    }
+
+    @RequestMapping("editProduct/{pid}")
+    public String editProduct() {
+        return "admin/product_edit";
+    }
+
+    @RequestMapping("findproduct/{pid}")
+    @ResponseBody
+    public Product findproductByPid(@PathVariable("pid") Integer pid) {
+        Product product = productService.findproductByPid(pid);
+        return product;
+    }
+
+    @RequestMapping("admin_product_update")
+    public String update(Product p) {
+        System.out.println(p);
+        productService.update(p);
+        Product product = productService.selectByid(p.getId());
+        return "redirect:/product/" + product.getCid();
+    }
 }

@@ -13,4 +13,12 @@ public interface ProductService {
     List<Product> getProductsByCid(Integer cid);
 
     void addProduct(Product p);
+
+    void deleteProductById(Integer id);
+
+    Product findproductByPid(Integer pid);
+
+    void update(Product p);
+
+    Product selectByid(Integer id);
 }

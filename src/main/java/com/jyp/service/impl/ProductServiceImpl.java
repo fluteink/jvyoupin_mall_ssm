@@ -31,4 +31,26 @@ public class ProductServiceImpl implements ProductService {
     public void addProduct(Product p) {
         productMapper.insert(p);
     }
+
+    @Override
+    public void deleteProductById(Integer id) {
+        productMapper.deleteByPrimaryKey(id);
+    }
+
+    @Override
+    public Product findproductByPid(Integer pid) {
+        Product product = productMapper.selectByPrimaryKey(pid);
+        return product;
+    }
+
+    @Override
+    public void update(Product p) {
+        productMapper.updateByPrimaryKeySelective(p);
+    }
+
+    @Override
+    public Product selectByid(Integer id) {
+        Product product = productMapper.selectByPrimaryKey(id);
+        return product;
+    }
 }

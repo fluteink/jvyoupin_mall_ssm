@@ -78,8 +78,8 @@
                     width="100"
             >
                 <template slot-scope="scope">
-                    <el-button @click.native.prevent="property(scope.$index, tableData)"
-                               icon="el-icon-tickets"
+                    <el-button @click.native.prevent="image(scope.$index, tableData)"
+                               icon="el-icon-picture"
                                style="font-size:33px;"
                                type="primary"
                     >
@@ -93,7 +93,7 @@
                     width="100"
             >
                 <template slot-scope="scope">
-                    <el-button @click.native.prevent="product(scope.$index, tableData)"
+                    <el-button @click.native.prevent="productproperty(scope.$index, tableData)"
                                icon="el-icon-s-operation"
                                style="font-size:33px;"
                                type="primary"
