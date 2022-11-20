@@ -33,7 +33,8 @@ public class ProductController {
     }
 
     @RequestMapping("admin_product_add")
-    public String addProduct() {
-        return "redirect:/admin";
+    public String addProduct(Product p) {
+        productService.addProduct(p);
+        return "redirect:/product/" + p.getCid();
     }
 }

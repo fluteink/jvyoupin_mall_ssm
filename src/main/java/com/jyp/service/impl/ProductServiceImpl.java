@@ -26,4 +26,9 @@ public class ProductServiceImpl implements ProductService {
         List<Product> products = productMapper.selectByExample(productExample);
         return products;
     }
+
+    @Override
+    public void addProduct(Product p) {
+        productMapper.insert(p);
+    }
 }

@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface ProductService {
     List<Product> getProductsByCid(Integer cid);
+
+    void addProduct(Product p);
 }

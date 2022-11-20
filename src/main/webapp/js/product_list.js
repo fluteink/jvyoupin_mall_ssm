@@ -29,7 +29,7 @@ var vue = new Vue({
         testResponseBody() {
             var cid = window.location.href;
             cid = cid.substring(cid.indexOf('product/') + 8, cid.length);
-            console.log(cid);
+            // console.log(cid);
             axios.post("/jvyoupin/listproduct/" + cid).then(response => {
                 // console.log(response.data);
                 this.tableData = response.data;
