@@ -20,4 +20,6 @@ public interface PropertyService {
     void deleteproperty(Integer id);
 
     void addProperty(Property p);
+
+    Property selectByid(Integer id);
 }

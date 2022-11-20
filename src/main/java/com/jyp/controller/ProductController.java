@@ -31,4 +31,9 @@ public class ProductController {
         List<Product> productsByCid = productService.getProductsByCid(cid);
         return productsByCid;
     }
+
+    @RequestMapping("admin_product_add")
+    public String addProduct() {
+        return "redirect:/admin";
+    }
 }

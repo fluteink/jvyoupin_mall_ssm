@@ -23,13 +23,17 @@ public class PropertyController {
     @RequestMapping("admin_property_update")
     public String update(Property p) {
         propertyService.update(p);
-        return "redirect:/admin";
+        System.out.println("Property{id=111");
+        System.out.println(p);
+        Property property = propertyService.selectByid(p.getId());
+        return "redirect:/property/" + property.getCid();
     }
 
     @RequestMapping("admin_property_add")
     public String addProperty(Property p) {
         propertyService.addProperty(p);
-        return "redirect:/admin";
+//        System.out.println(p);
+        return "redirect:/property/" + p.getCid();
     }
 
 

@@ -36,9 +36,9 @@
             <el-table-column align="center"
                              label="图片"
                              prop="imgurl"
-                             width="70">
+                             width="90">
                 <template slot-scope="scope">
-                    <img :src="scope.row.imgurl" height="70" min-width="7" width="70"/>
+                    <img :src="scope.row.imgurl" height="70" min-width="80" width="70"/>
                 </template>
             </el-table-column>
 
@@ -122,7 +122,26 @@
         </el-table>
     </template>
 </div>
-
+<div class="container">
+    <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增商品</div>
+    <form action="../admin_product_add" enctype="multipart/form-data" id="addForm" method="post">
+        <div class="classming" style="text-align: center;">商品名称<input class="scanfkong" id="name" name="name"
+                                                                      type="text"></div>
+        <div class="classming" style="text-align: center;">商品小标题<input class="scanfkong" id="subtitle" name="subTitle"
+                                                                       type="text"></div>
+        <div class="classming" style="text-align: center;">原价格<input class="scanfkong" id="original_price"
+                                                                     name="originalPrice" type="text"></div>
+        <div class="classming" style="text-align: center;">优惠价格<input class="scanfkong" id="promote_price"
+                                                                      name="promotePrice" type="text"></div>
+        <div class="classming" style="text-align: center;border-radius: 0 0 50px 50px;">库存<input class="scanfkong"
+                                                                                                 id="stock" name="stock"
+                                                                                                 type="text"></div>
+        <input id="wdnmd" name="cid" type="hidden" value=""/>
+        <div class="define">
+            <button class="btndef" type="submit">提 交</button>
+        </div>
+    </form>
+</div>
 </body>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <!-- import Vue before Element -->
@@ -141,4 +160,74 @@
 
     getid();
 </script>
+<style>
+
+    .container {
+        width: 600px;
+        height: 400px;
+        /*border: 1px solid #e1d298;*/
+        margin: 0 auto;
+        /*border-radius:20px;*/
+    }
+
+    .addclasses {
+        border-radius: 50px 50px 0 0;
+        width: 600px;
+        height: 60px;
+        /*border: 1px solid #deb929;*/
+        background-color: #deb929;
+        line-height: 100px;
+        color: #b64646;
+    }
+
+    .classming {
+        width: 600px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #efb5b5;
+        text-align: center;
+    }
+
+    .scanfkong {
+        width: 200px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 20px;
+        /*border: 1px solid #a9afad;*/
+    }
+
+    .classpicture {
+        width: 600px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #78d5c0;
+        border-radius: 0 0 50px 50px;
+
+    }
+
+    .selectfile {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: 20px;
+        /*border: 1px solid #a9afad;*/
+        font-size: 15px;
+    }
+
+    .define {
+        width: 600px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    .btndef {
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #409eff;
+        /*border: 1px solid #a9afad;*/
+        font-size: 2em;
+    }
+</style>
 </html>

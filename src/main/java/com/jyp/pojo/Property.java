@@ -90,4 +90,13 @@ public class Property {
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "id=" + id +
+                ", cid=" + cid +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

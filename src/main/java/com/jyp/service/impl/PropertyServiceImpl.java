@@ -47,4 +47,10 @@ public class PropertyServiceImpl implements PropertyService {
     public void addProperty(Property p) {
         propertyMapper.insert(p);
     }
+
+    @Override
+    public Property selectByid(Integer id) {
+        Property property = propertyMapper.selectByPrimaryKey(id);
+        return property;
+    }
 }
