@@ -2,6 +2,26 @@ new Vue().$mount('#tag')
 var vue = new Vue({
     el: "#product_table",
     methods: {
+        findPicture(pid) {
+            axios.post("/jvyoupin/findFirstProductImageId/" + pid).then(response => {
+                // console.log(response.data);
+                this.tableData1 = response.data;
+                console.log(this.tableData1)
+
+            })
+        },
+        addUrl(data) {
+            var url = "/jvyoupin/img/productSingle/";
+            var count = 0;
+            for (let item of data) {
+                this.findPicture(item.id)
+            }
+            for (let item of data) {
+                item.imgurl = url + this.tableData1[count] + ".jpg";
+                count++;
+                // console.log(item);
+            }
+        },
         notifydelete() {
             this.$notify({
                 title: '成功',
@@ -34,13 +54,15 @@ var vue = new Vue({
             axios.post("/jvyoupin/listproduct/" + cid).then(response => {
                 // console.log(response.data);
                 this.tableData = response.data;
-                // this.addurl(this.tableData);
+                this.addUrl(this.tableData);
             });
         }
     },
     data() {
         return {
-            tableData: []
+            tableData: [],
+            tableData1: []
+
         }
     },
     created: function () {

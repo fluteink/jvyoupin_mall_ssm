@@ -44,4 +44,14 @@ public class ProductImageServiceImpl implements ProductImageService {
     public void addImage(ProductImage p) {
         productImageMapper.insert(p);
     }
+
+    @Override
+    public String findFirstProductImageId(Integer pid) {
+        List<ProductImage> singleImageByPid = this.findSingleImageByPid(pid);
+        if (singleImageByPid.isEmpty()) {
+            return "0";
+        } else {
+            return "" + singleImageByPid.get(0).getId();
+        }
+    }
 }

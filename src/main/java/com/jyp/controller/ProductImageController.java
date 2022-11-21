@@ -29,6 +29,13 @@ public class ProductImageController {
     @Autowired
     ProductImageService productImageService;
 
+    @RequestMapping("findFirstProductImageId/{pid}")
+    @ResponseBody
+    public String findFirstProductImageId(@PathVariable("pid") Integer pid) {
+        String firstProductImageId = productImageService.findFirstProductImageId(pid);
+        return firstProductImageId;
+    }
+
     @RequestMapping("image/{pid}")//pid是productId
     public String ProductImage() {
         return "admin/productimage_edit";
@@ -54,6 +61,7 @@ public class ProductImageController {
         productImageService.deleteImage(piid);
         return HttpStatus.OK;
     }
+
 
     @RequestMapping("admin_ProductImage_add")
     public String addImage(ProductImage p, HttpSession session, UploadedImageFile uploadedImageFile) throws IOException {

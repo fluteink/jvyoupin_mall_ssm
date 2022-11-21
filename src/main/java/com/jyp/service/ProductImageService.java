@@ -17,4 +17,6 @@ public interface ProductImageService {
     void deleteImage(Integer piid);
 
     void addImage(ProductImage p);
+
+    String findFirstProductImageId(Integer pid);
 }
