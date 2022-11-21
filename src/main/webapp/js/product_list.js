@@ -6,10 +6,11 @@ var vue = new Vue({
             axios.post("/jvyoupin/findFirstProductImageId/" + pid).then(response => {
                 // console.log(response.data);
                 this.tableData1 = response.data;
-                console.log(this.tableData1)
+                // console.log(this.tableData1)
 
             })
         },
+
         addUrl(data) {
             var url = "/jvyoupin/img/productSingle/";
             var count = 0;
