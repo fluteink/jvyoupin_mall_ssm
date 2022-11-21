@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>属性编辑</title>
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/category_list.css}">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <img alt="logo" height="45px" style="margin-left: 10px; height:51px ;float:left"
+         th:src="@{../img/site/logo.jpg}">
+    <a class="active" href="http://localhost:8080/jvyoupin/admin"> 聚优品后台 </a>
+    <a href="/jvyoupin/admin"> 分类管理 </a>
+    <a href="#"> 订单管理 </a>
+    <a href="#"> 用户管理 </a>
+</div>
+<br><br>
+<div style="margin-left: 217px;width: 70px;height:32px">
+    <div id="tag">
+        <el-tag>图片编辑</el-tag>
+    </div>
+</div>
+<div style="width: 65%;display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 100% ;
+">
+    <div id="single_table" style="margin-left: 82px;">
+        <template>
+            <el-table
+                    :data="singleTableData"
+                    border
+                    style="width: 311px">
+                <el-table-column
+                        label="id"
+                        prop="id"
+                        width="60">
+                </el-table-column>
+
+                <el-table-column align="center"
+                                 label="单个图片"
+                                 prop="imgurl"
+                                 width="150">
+                    <template slot-scope="scope">
+                        <img :src="scope.row.imgurl" height="70" min-width="80" width="70"/>
+                    </template>
+                </el-table-column>
+
+                <el-table-column
+                        align="center"
+                        label="删除图片"
+                        width="100"
+                >
+                    <template slot-scope="scope">
+                        <el-button @click.native.prevent="deleteSingleImage(scope.$index, singleTableData)"
+                                   icon="el-icon-delete"
+                                   style="font-size:33px;"
+                                   type="primary"
+                        >
+                        </el-button>
+                    </template>
+
+                </el-table-column>
+
+            </el-table>
+        </template>
+    </div>
+    <div id="detail_table" style="margin-left: 82px;">
+        <template>
+            <el-table
+                    :data="detailTableData"
+                    border
+                    style="width: 311px">
+                <el-table-column
+                        label="id"
+                        prop="id"
+                        width="60">
+                </el-table-column>
+
+                <el-table-column align="center"
+                                 label="详情图片"
+                                 prop="imgurl"
+                                 width="150">
+                    <template slot-scope="scope">
+                        <img :src="scope.row.imgurl" height="70" min-width="80" width="70"/>
+                    </template>
+                </el-table-column>
+
+                <el-table-column
+                        align="center"
+                        label="删除图片"
+                        width="100"
+                >
+                    <template slot-scope="scope">
+                        <el-button @click.native.prevent="deleteDetailImage(scope.$index, detailTableData)"
+                                   icon="el-icon-delete"
+                                   style="font-size:33px;"
+                                   type="primary"
+                        >
+                        </el-button>
+                    </template>
+
+                </el-table-column>
+
+            </el-table>
+        </template>
+    </div>
+
+</div>
+<br><br>
+<div style="width: 65%;display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    height: 100% ;
+">
+    <div style="margin-left: 130px;height:32px">
+        <div id="tag1">
+            <el-tag effect="dark">-----------新增产品 单个 图片--------------</el-tag>
+        </div>
+    </div>
+    <div style="margin-right: 260px;height:32px">
+        <div id="tag2">
+            <el-tag effect="dark" type="danger">-----------新增产品 详情 图片--------------</el-tag>
+        </div>
+    </div>
+
+</div>
+<div style="width: 65%;display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+   height: 100% ;
+">
+    <div class="container">
+        <form action="../admin_ProductImage_add" enctype="multipart/form-data" method="post">
+            <input id="wdnmd" name="pid" type="hidden" value=""/>
+            <input name="type" type="hidden" value="type_single"/>
+            <div class="classpicture" style="text-align: center;font-size:35px;line-height: 60px;"><input
+                    accept="image/*"
+                    id="categoryPic"
+                    name="image"
+                    type="file"/>
+            </div>
+            <div class="define">
+                <button class="btndef" type="submit">提 交</button>
+            </div>
+        </form>
+    </div>
+    <div class="container">
+        <form action="../admin_ProductImage_add" enctype="multipart/form-data" method="post">
+            <input id="wdnmd1" name="pid" type="hidden" value=""/>
+            <input name="type" type="hidden" value="type_detail"/>
+            <div class="classpicture" style="text-align: center;font-size:35px;line-height: 60px;"><input
+                    accept="image/*"
+                    id="categoryPic1"
+                    name="image"
+                    type="file"/>
+            </div>
+            <div class="define">
+                <button class="btndef" type="submit">提 交</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import Vue before Element -->
+<script th:src="@{../js/vue2.js}"></script>
+<!-- import JavaScript -->
+<script th:src="@{../js/element-ui.js}"></script>
+<script th:src="@{../js/productimage_edit.js}"></script>
+<script>
+    new Vue().$mount('#tag');
+    new Vue().$mount('#tag1');
+    new Vue().$mount('#tag2');
+
+    function getpid() {
+        var elementById = document.getElementById("wdnmd");
+        var elementById1 = document.getElementById("wdnmd1");
+        var pid = window.location.href;
+        pid = pid.substring(pid.indexOf('image/') + 6, pid.length);
+        console.log(pid);
+        elementById.value = pid;
+        elementById1.value = pid;
+
+    }
+
+    getpid()
+</script>
+<style>
+
+    .container {
+        width: 470px;
+        height: 201px;
+        /*border: 1px solid #e1d298;*/
+        margin-left: 85px;
+        /*border-radius:20px;*/
+    }
+
+    .addclasses {
+        border-radius: 50px 50px 0 0;
+        width: 600px;
+        height: 60px;
+        /*border: 1px solid #deb929;*/
+        background-color: #deb929;
+        line-height: 100px;
+        color: #b64646;
+    }
+
+    .classming {
+        width: 600px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #efb5b5;
+        text-align: center;
+    }
+
+    .scanfkong {
+        width: 200px;
+        height: 40px;
+        border-radius: 20px;
+        margin-left: 20px;
+        /*border: 1px solid #a9afad;*/
+    }
+
+    .classpicture {
+        width: 350px;
+        height: 100px;
+        line-height: 100px;
+        background-color: #78d5c0;
+        border-radius: 50px 50px 50px 50px;
+
+    }
+
+    .selectfile {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: 20px;
+        /*border: 1px solid #a9afad;*/
+        font-size: 15px;
+    }
+
+    .define {
+        width: 350px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+
+    .btndef {
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: #409eff;
+        /*border: 1px solid #a9afad;*/
+        font-size: 2em;
+    }
+</style>
+
+</html>

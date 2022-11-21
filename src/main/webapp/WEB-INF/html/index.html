@@ -18,6 +18,20 @@
 <a th:href="@{categiry/edit}">
     编辑分类
 </a>
+<form action="admin_ProductImage_add" enctype="multipart/form-data" id="addForm" method="post">
+    <input id="wdnmd" name="pid" value=""/>
+    <input name="type" value="type_single"/>
+    <div class="classpicture" style="text-align: center;font-size:35px;line-height: 60px;"><input
+            accept="image/*"
+            id="categoryPic"
+            name="image"
+            type="file"/>
+    </div>
+    <div class="define">
+        <button class="btndef" type="submit">提 交</button>
+    </div>
+</form>
+
 </body>
 <!-- import Vue before Element -->
 <script th:src="@{js/vue2.js}"></script>
