@@ -1,9 +1,13 @@
 package com.jyp.service.impl;
 
 import com.jyp.mapper.UserMapper;
+import com.jyp.pojo.User;
+import com.jyp.pojo.UserExample;
 import com.jyp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author 明宇
@@ -14,4 +18,11 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     UserMapper userMapper;
+
+    @Override
+    public List<User> getAllUsers() {
+
+        List<User> users = userMapper.selectByExample(new UserExample());
+        return users;
+    }
 }
