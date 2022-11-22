@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>属性管理</title>
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{../css/category_list.css}">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <img alt="logo" height="45px" style="margin-left: 10px; height:51px ;float:left" th:src="@{../img/site/logo.jpg}">
+    <a class="active" href="/jvyoupin/admin"> 聚优品后台 </a>
+    <a href="/jvyoupin/admin"> 分类管理 </a>
+    <a href="#"> 订单管理 </a>
+    <a href="#"> 用户管理 </a>
+</div>
+<br><br>
+<div style="margin-left: 82px;width: 70px;height:32px">
+    <div id="tag">
+        <el-tag>属性管理</el-tag>
+    </div>
+</div>
+<br><br>
+<div id="property_table" style="margin-left: 82px;">
+    <template>
+        <el-table
+                :data="propertys"
+                border
+                style="width: 93%">
+
+            <el-table-column
+                    label="id"
+                    prop="id"
+                    width="60">
+            </el-table-column>
+
+            <el-table-column
+                    label="属性名称"
+                    prop="name"
+                    width="160"
+            >
+            </el-table-column>
+
+            <el-table-column
+                    fixed="right"
+                    label="操作"
+            >
+                <template slot-scope="scope">
+                    <el-button @click.native.prevent="editRow(scope.$index, tableData)"
+                               size="small"
+                               type="text"
+                    >编辑
+                    </el-button>
+                    <el-button
+                            @click.native.prevent="deleteRow(scope.$index, tableData)"
+                            size="big"
+                            type="text">
+                        移除
+                    </el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+    </template>
+</div>
+<div class="container">
+    <div class="addclasses" style="text-align: center;font-size:35px;line-height: 60px;">新增属性</div>
+    <form action="../admin_property_add" enctype="multipart/form-data" id="addForm" method="post">
+        <div class="classming" style="border-radius: 0 0 50px 50px;text-align: center;">属性名称<input class="scanfkong"
+                                                                                                   id="name" name="name"
+                                                                                                   type="text"></div>
+        <input id="wdnmd" name="cid" type="hidden" value=""/>
+        <div class="define">
+            <button class="btndef" type="submit">提 交</button>
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import Vue before Element -->
+<script th:src="@{../js/vue2.js}"></script>
+<!-- import JavaScript -->
+<script th:src="@{../js/element-ui.js}"></script>
+<script th:src="@{../js/Property_value_list.js}"></script>
+<script>
+    function getid() {
+        var elementById = document.getElementById("wdnmd");
+        var cid = window.location.href;
+        cid = cid.substring(cid.indexOf('erty/') + 5, cid.length);
+        // console.log(id);
+        elementById.value = cid;
+    }
+
+    getid();
+</script>
+
+</html>

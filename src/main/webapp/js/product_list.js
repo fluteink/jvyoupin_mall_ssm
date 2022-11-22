@@ -1,12 +1,13 @@
 new Vue().$mount('#tag')
+let tableData1;
 var vue = new Vue({
     el: "#product_table",
     methods: {
         findPicture(pid) {
             axios.post("/jvyoupin/findFirstProductImageId/" + pid).then(response => {
                 // console.log(response.data);
-                this.tableData1 = response.data;
-                // console.log(this.tableData1)
+                tableData1 = response.data;
+                console.log(tableData1)
 
             })
         },
@@ -16,11 +17,9 @@ var vue = new Vue({
             var count = 0;
             for (let item of data) {
                 this.findPicture(item.id)
-            }
-            for (let item of data) {
-                item.imgurl = url + this.tableData1[count] + ".jpg";
+                item.imgurl = url + tableData1 + ".jpg";
                 count++;
-                // console.log(item);
+                console.log(item);
             }
         },
         notifydelete() {
@@ -62,7 +61,6 @@ var vue = new Vue({
     data() {
         return {
             tableData: [],
-            tableData1: []
 
         }
     },
