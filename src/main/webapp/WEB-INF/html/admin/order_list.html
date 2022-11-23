@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>分类管理</title>
+    <link href="https://unpkg.com/element-ui/lib/theme-chalk/index.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{css/category_list.css}">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <img alt="logo" height="45px" style="margin-left: 10px; height:51px ;float:left" th:src="@{img/site/logo.jpg}">
+    <a class="active" href="http://localhost:8080/jvyoupin/admin"> 聚优品后台 </a>
+    <a href="/jvyoupin/admin"> 分类管理 </a>
+    <a href="/jvyoupin/OrderList"> 订单管理 </a>
+    <a href="/jvyoupin/user"> 用户管理 </a>
+</div>
+<br><br>
+<div style="margin-left: 82px;width: 70px;height:32px">
+    <div id="tag">
+        <el-tag>订单管理</el-tag>
+    </div>
+</div>
+<br><br>
+<div id="order_table" style="margin-left: 82px;">
+    <template>
+        <el-table
+                :data="tableData"
+                border
+                style="width: 93%">
+            <el-table-column
+                    label="id"
+                    prop="id"
+                    width="60">
+            </el-table-column>
+
+
+            <el-table-column
+                    label="状态"
+                    prop="status"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="金额"
+                    prop="name"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="商品数量"
+                    prop="name"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="买家名称"
+                    prop="name"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="创建时间"
+                    pattern="yyyy-MM-dd HH:mm:ss"
+                    prop="createDate="
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="支付时间"
+                    prop="payDate"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="发货时间"
+                    prop="deliveryDate"
+                    width="160"
+            >
+            </el-table-column>
+            <el-table-column
+                    label="确认收获时间"
+                    prop="confirmDate"
+                    width="160"
+            >
+            </el-table-column>
+
+            <el-table-column
+                    fixed="right"
+                    label="操作"
+            >
+                <template slot-scope="scope">
+                    <el-button @click.native.prevent="editRow(scope.$index, tableData)"
+                               size="small"
+                               type="text"
+                    >发货
+                    </el-button>
+                </template>
+            </el-table-column>
+        </el-table>
+    </template>
+</div>
+</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import Vue before Element -->
+<script th:src="@{js/vue2.js}"></script>
+<!-- import JavaScript -->
+<script th:src="@{js/element-ui.js}"></script>
+<script th:src="@{js/order_list.js}"></script>
+
+</html>
