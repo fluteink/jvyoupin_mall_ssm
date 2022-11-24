@@ -1,0 +1,39 @@
+.total {
+    width: 1200px;
+    margin-left: 100px;
+}
+
+ul {
+    display: flex;
+    flex-flow: row;
+    width: 1200px;
+    margin: 0px 20px;
+
+    justify-items: center;
+    border: 1px solid pink;
+}
+
+li {
+    margin: 15px;
+    list-style: none;
+}
+
+img {
+    height: 50px;
+}
+
+.firstline {
+    background-color: rgb(252, 242, 242);
+    height: 50px;
+}
+
+a {
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    color: #000;
+}
+
+.start {
+    color: rgb(123, 120, 120);
+}

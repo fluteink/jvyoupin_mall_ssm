@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>评价</title>
+    <link rel="stylesheet" th:href="@{/css/evalute.css}">
+
+</head>
+
+<body>
+<div class="total">
+    <div class="goodinfo">
+        <img alt="" src="/聚1.png">
+        <div class="info">
+            <h3>商品详细名称</h3><br>
+            <div><span>价格：</span>&nbsp <span style="color: red;font-size: 25px">415</span>&nbsp元</div>
+            <br>
+            <div>
+                <span>配送：</span>&nbsp <span>快递：</span><span>0.00</span>元
+            </div>
+            <br>
+            <div>
+                <span>评价：</span>&nbsp
+                <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                     width="128" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                          fill="#f0e932" p-id="3003"></path>
+                </svg>
+                <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                     width="128" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                          fill="#f0e932" p-id="3003"></path>
+                </svg>
+                <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                     width="128" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                          fill="#f0e932" p-id="3003"></path>
+                </svg>
+                <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                     width="128" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                          fill="#f0e932" p-id="3003"></path>
+                </svg>
+                <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                     width="128" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                          fill="#f0e932" p-id="3003"></path>
+                </svg>
+                <span>4.8</span><span>分</span>
+                <span> (累计评价<span class="evalurenum">234554</span>)</span>
+            </div>
+            <br>
+            <br>
+            <div>
+                <span>分类：</span>&nbsp
+                <span>不知道</span>
+            </div>
+        </div>
+
+    </div>
+    <div><br>
+        <div class="evalutehead">累计评价</div>
+        <div class="evalutehead1">
+            <div style="margin-left: 30px;">
+                <h5>与描述相符</h5>
+                <h2 style="color: rgb(246, 148, 148);">4.8</h2>
+                <div>
+                    <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                         width="128" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                              fill="#f0e932" p-id="3003"></path>
+                    </svg>
+                    <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                         width="128" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                              fill="#f0e932" p-id="3003"></path>
+                    </svg>
+                    <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                         width="128" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                              fill="#f0e932" p-id="3003"></path>
+                    </svg>
+                    <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                         width="128" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                              fill="#f0e932" p-id="3003"></path>
+                    </svg>
+                    <svg class="icon" height="128" p-id="3002" t="1668849880717" version="1.1" viewBox="0 0 1056 1024"
+                         width="128" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M489.72845 32.177681c20.819595-42.896749 54.843563-42.896749 75.663157 0l100.150633 206.519198c20.819595 42.896749 75.907682 83.6277 122.43738 90.509344l223.950369 33.11573c46.529697 6.881645 57.044292 39.857647 23.369645 73.252835l-162.050501 160.723077c-33.674646 33.395188-54.703833 99.31226-46.774223 146.435805l38.250765 226.989471c7.964543 47.158477-19.596967 67.523953-61.201224 45.237206l-200.336198-107.172006c-41.604257-22.251815-109.722057-22.251815-151.326314 0l-200.336198 107.172006c-41.604257 22.286747-69.165767 1.921271-61.201224-45.237206l38.250765-226.989471c7.964543-47.123545-13.099578-113.040617-46.774223-146.435805l-162.085434-160.723077c-33.674646-33.395188-23.12512-66.336258 23.369645-73.252835l223.985301-33.11573c46.529697-6.881645 101.617786-47.612596 122.43738-90.509344L489.72845 32.177681z"
+                              fill="#f0e932" p-id="3003"></path>
+                    </svg>
+                </div>
+
+            </div>
+            <div class="evalutecontent" style="margin: 50px;">
+                <span style="border-color: red; color: red">价格便宜（ <b>34</b> ）</span>
+                <span style="border-color: red; color: red">做工好（ <b>34</b> ）</span>
+                <span style="border-color: red; color: red">和图片一样（ <b>34</b> ）</span>
+                <span style="border-color: green; color: green">看着一般（ <b>34</b> ）</span>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="evalutemain">
+            <div>
+                <H2 style="color: rgb(246, 148, 148);">其他买家，需要您的建议！</H2>
+                <br>
+
+                <div style="display: flex;flex-flow:row;">
+                    <div class="input">
+                        <span>商品评价:</span>&nbsp&nbsp
+                        <textarea cols="45" id="" maxlength="Surplus" name="" rows="6"></textarea>
+                        <br>
+                        <span>评价服务:</span>&nbsp&nbsp
+                        <input type="textarea">
+                        <span> 您的图片:</span>&nbsp&nbsp
+                    </div>
+                    <div id="wrap">
+                        <div id="mark">
+                            <div class="pic" id="pic1" onmouseover="comments(1)">
+                                <strong>描述相符</strong>
+                                <img data-index="1" name="star1" src="/五角星 (1).png">
+                                <img data-index="2" name="star2" src="/五角星 (1).png">
+                                <img data-index="3" name="star3" src="/五角星 (1).png">
+                                <img data-index="4" name="star4" src="/五角星 (1).png">
+                                <img data-index="5" name="star5" src="/五角星 (1).png">
+                                <span id="txt1">	</span>
+                            </div>
+                            <div class="pic" id="pic2" onmouseover="comments(2)">
+                                <strong>物流服务</strong>
+                                <img data-index="1" name="star1" src="/五角星 (1).png">
+                                <img data-index="2" name="star2" src="/五角星 (1).png">
+                                <img data-index="3" name="star3" src="/五角星 (1).png">
+                                <img data-index="4" name="star4" src="/五角星 (1).png">
+                                <img data-index="5" name="star5" src="/五角星 (1).png">
+                                <span id="txt2">	</span>
+                            </div>
+                            <div class="pic" id="pic3" onmouseover="comments(3)">
+                                <strong>服务评价</strong>
+                                <img data-index="1" name="star1" src="/五角星 (1).png">
+                                <img data-index="2" name="star2" src="/五角星 (1).png">
+                                <img data-index="3" name="star3" src="/五角星 (1).png">
+                                <img data-index="4" name="star4" src="/五角星 (1).png">
+                                <img data-index="5" name="star5" src="/五角星 (1).png">
+                                <span id="txt3"></span>
+                            </div>
+
+                            <br>
+                        </div><!--end mark-->
+
+                    </div>
+                </div>
+
+                <div style="height: auto; width:400px;margin-top: -50px;">
+                    <div class="top">
+                        <div class="left">
+                            <form enctype="multipart/form-data" method="get"><img src="/照片加载失败.png"
+                                                                                  style="height: 80px;"/>
+                                <label class="button" for="inputFile">
+                                    <div style="line-height: 40px; margin: auto; width: 300px;height: 40px;color: #FFFFFF;background: #eda3af;border: none;border-radius: 3px;">
+                                        点击选择文件
+                                    </div>
+                                </label>
+                                <input id="inputFile" multiple="multiple" style="display: none; " type="file"></form>
+
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                    <div style="width: 200px;height: 45px; background: #FFFFFF;border: 0px solid #CCCCCC;line-height: 45px;">
+                        <span id="wenjian"></span>
+                        <label class="button" for="inputFile">
+                            <span style="line-height: 40px; text-align: center; width: 70px;height: 40px; background: white;border: 1px solid #CCCCCC;border-radius: 3px;display: inline-block;">继续选择</span>
+                        </label>
+                        <input id="inputFile" multiple="multiple" style="display: none; " type="file">
+                        <button onclick="sub()"
+                                style="border:none;background:#eda3af ;color: white;width: 70px;height: 35px;">开始上传
+                        </button>
+                    </div>
+                    <div id="imgDiv" style="margin-top: 20px;"></div>
+                </div>
+
+                <div style="margin-top:0px">
+                    <input style="background-color: rgb(230, 96, 96); " type="radio">
+                    <span>匿名评价</span>
+                    <button class="float_r" onClick="submit()" type="button">提交评价</button>
+                </div>
+
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="evalutepices">
+            <div class="firstline" style="background-color: rgb(246, 232, 232); height: 50px;">
+                <input type="radio"><span>全部评论</span>
+
+            </div>
+            <br>
+            <div class="evalutepice">
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span>我也不知道</span>
+
+                <div>
+                    <img alt="" src="/聚.png">
+                    <img alt="" src="/聚1.png">
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+
+            </div>
+            <div class="evalutepice">
+
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span style="width: 600;">我也真的不知道</span>
+                <div>
+                    <img alt="" src="/聚.png">
+                    <img alt="" src="/聚1.png">
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+            </div>
+            <div class="evalutepice">
+
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span style="width: 600px;">我也真的不知道</span>
+                <div>
+
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+            </div>
+            <div class="evalutepice">
+
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span style="width: 600px;">我也真的不知道</span>
+                <div>
+
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+
+            </div>
+            <div class="evalutepice">
+
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span style="width: 600;">我也真的不知道</span>
+                <div>
+                    <img alt="" src="/聚.png">
+                    <img alt="" src="/聚1.png">
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+            </div>
+            <div class="evalutepice">
+
+                <div>
+                    <span style="width: 200px;margin-left: 600px;">分类：</span>
+                    <span>白色</span>&nbsp
+                    <span>M</span>
+                    <span style="margin-left: 100px;">昵称</span>
+                </div>
+                <span style="width: 600;">我也真的不知道</span>
+                <div>
+                    <img alt="" src="/聚.png">
+                    <img alt="" src="/聚1.png">
+                </div>
+                <span style="margin-left: 800px;">2022-11-19</span>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let imgarr = []
+    var file = document.getElementById("inputFile");
+    let imgDiv = document.getElementById("imgDiv");
+    let size1
+
+
+    function sub() {
+        for (var i = 0; i < file.files.length; i++) {
+            let reader = new FileReader();
+            var file1 = file.files[i];
+            reader.readAsDataURL(file1);
+            reader.onload = function (result) {
+
+                imgDiv.innerHTML += '<img src="' + reader.result + '" alt=""/>'
+                // console.log(reader.result)
+            }
+        }
+        console.log(file.files)
+    }
+
+
+    function read() {
+        for (var i = 0; i < file.files.length; i++) {
+            let reader = new FileReader();
+            var file1 = file.files[i];
+            reader.readAsDataURL(file1);
+            reader.onload = function (result) {
+                //reader对象的result属性存储流读取的数据
+                imgDiv.innerHTML += '<img src="' + reader.result + '" alt=""    />'
+                console.log(reader.result) // 打印出转换后的base64
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    function comments(num) {
+        var pic = document.getElementById("pic" + num);
+        var imgList = pic.getElementsByTagName("img");
+        var comments = ["非常差", "差", "一般", "好", "非常好"];
+        var txt = document.getElementById("txt" + num);
+        var flag = false;
+        for (var i = 0; i < imgList.length; i++) {
+            imgList[i].onmouseover = function () {
+                if (!flag) {
+                    var index = this.getAttribute("data-index");
+                    for (var j = 0; j < index; j++) {
+                        imgList[j].setAttribute("src", "/五角星.png");
+                    } //index之前的黄色星
+
+                    txt.innerHTML = comments[index - 1];
+                } else {
+                    return;
+                }
+            }
+            imgList[i].onmouseout = function () {
+                if (!flag) {
+                    var index = this.getAttribute("data-index");
+                    for (var j = 0; j < imgList.length; j++) {
+                        imgList[j].src = "/五角星 (1).png";
+                    }
+                    txt.innerHTML = "";
+                } else {
+                    return;
+                }
+            }
+            imgList[i].onclick = function () {
+                flag = !flag;
+                var index = this.getAttribute("data-index");
+                for (var k = index; k < imgList.length; k++) {
+                    imgList[k].setAttribute("src", "/五角星 (1).png");
+                }  //index之后的置成白色星
+            }
+        }
+    }
+
+    function submit() {
+        document.write('谢谢您的评价!');
+    }
+
+</script>
+
+</body>
+</html>

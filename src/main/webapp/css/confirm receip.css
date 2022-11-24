@@ -1,0 +1,53 @@
+.pro {
+
+    margin-top: 10%;
+    margin-left: 5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.pro img {
+    width: 40px;
+    height: 40px;
+    padding: 1px 15px;
+}
+
+.goodinfo {
+    height: 200px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.info {
+    background-color: rgb(224, 219, 219);
+    height: 150px;
+    padding: 10px;
+    width: 1400px;
+
+    display: flex;
+    flex-flow: row;
+}
+
+td img {
+    width: 50px;
+}
+
+table {
+    border-color: #efb5b5;
+    width: 1400px;
+    height: 300px;
+    margin-top: 60px;
+}
+
+button {
+    color: rgba(19, 17, 17, 0.951);
+    background-color: #efb5b5;
+    width: 80px;
+    height: 50px;
+    margin-left: 70%;
+}

@@ -1,0 +1,114 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background-color: #efb5b5;
+    margin: 0 auto;
+}
+
+.topbox {
+    width: 1000px;
+    height: 600px;
+    background-color: #14e3cb;
+    margin: 0px;
+}
+
+.left {
+    width: 200px;
+    height: 600px;
+    background-color: #d3b57e;
+}
+
+.left .title {
+    color: #d94b4b;
+}
+
+.left ul li {
+    list-style: none;
+}
+
+.left ul li a {
+    color: black;
+}
+
+.left ul li a:hover {
+    color: #63dabb;
+}
+
+#swiper {
+    width: 800px;
+    height: 600px;
+    margin-left: 200px;
+    margin-top: -600px;
+    background-color: yellowgreen;
+    padding: 0px 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#imgList {
+    list-style: none;
+    width: 4920px;
+    position: absolute;
+}
+
+#imgList li {
+    float: left;
+    margin: 0px 20px;
+}
+
+#navDiv {
+    position: absolute;
+    bottom: 10px;
+}
+
+#navDiv a {
+    float: left;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    margin: 0 5px;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+/*设置鼠标移入的效果*/
+#navDiv a:hover {
+    background-color: black;
+}
+
+#goods {
+    width: 1020px;
+    height: 1300px;
+    margin-top: 0px;
+    margin-left: 430px;
+    background-color: rgba(236, 158, 211, 0.87);
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.good {
+    width: 215px;
+    height: 319px;
+}
+
+.goods p {
+    line-height: 22px;
+    font-size: 16px;
+    height: 44px;
+    overflow: hidden;
+}
+
+.price {
+    color: #f40;
+    font-size: 20px;
+    line-height: 30px;
+}

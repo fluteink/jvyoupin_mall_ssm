@@ -1,0 +1,112 @@
+.hea {
+    width: 100%;
+    height: 60px;
+    background-color: #e56a3e;
+}
+
+.title {
+    width: 100px;
+    heigth: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 500px;
+}
+
+.mydeta {
+    width: 1000px;
+    height: 70px;
+    background-color: #8771b0;
+    margin: 0 auto;
+}
+
+.headsculp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.accname {
+    width: 150px;
+    height: 70px;
+    margin-left: 180px;
+    line-height: 70px;
+    margin-top: -70px;
+}
+
+.accname a {
+    text-decoration: none;
+    color: black;
+}
+
+.accname a:hover {
+    color: blue;
+}
+
+.cargo {
+    width: 1000px;
+    height: 70px;
+    margin: -17px auto;
+    background-color: #9d89c4;
+}
+
+.cargo ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.cargo ul li a:hover {
+    color: blue;
+}
+
+.cargo ul li {
+    float: left;
+    list-style: none;
+    width: 300px;
+    height: 70px;
+    line-height: 70px;
+}
+
+.command {
+    width: 100px;
+    height: 60px;
+    background-color: #d3b57e;
+    margin-left: 430px;
+    margin-top: 40px;
+    line-height: 60px;
+    font-size: 20px;
+    color: #e71010;
+}
+
+.goodscommand {
+    width: 1000px;
+    height: 1300px;
+    background-color: #ea8686;
+    margin-top: 10px;
+    margin-left: 430px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.good {
+    width: 215px;
+    height: 319px;
+}
+
+.goods p {
+    line-height: 22px;
+    font-size: 16px;
+    height: 44px;
+    overflow: hidden;
+}
+
+.price {
+    color: #f40;
+    font-size: 20px;
+    line-height: 30px;
+}

@@ -1,0 +1,53 @@
+.logoposition {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin-left: 400px;
+}
+
+.logoposition img {
+    width: 200px;
+    height: 200px;
+}
+
+.paybox {
+    width: 200px;
+    height: 230px;
+    /*border:1px solid #2ba481;*/
+    margin: 0px auto;
+    /* text-align:center;*/
+}
+
+.scanword {
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+    /*  border:1px solid #b64646;*/
+}
+
+.scanword span {
+    color: #e0a840;
+    font-size: 2em;
+}
+
+.paybox img {
+    margin: 0 auto;
+}
+
+.paybtnbox {
+    width: 200px;
+    height: 100px;
+    /*border:1px solid #efb5b5;*/
+    margin: 0 auto;
+    text-align: center;
+}
+
+.paybtn {
+    margin: 10px auto;
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #33968a;
+    border: none;
+    font-size: 20px;
+}

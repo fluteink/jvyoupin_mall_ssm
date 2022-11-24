@@ -1,6 +1,6 @@
 import org.junit.Test;
 
-import java.io.IOException;
+import java.util.Date;
 
 /**
  * @author 明宇
@@ -10,11 +10,8 @@ import java.io.IOException;
 
 public class ProductImageTeat {
     @Test
-    public void testadd() throws IOException {
-//        ProductImage productImage = new ProductImage();
-//        productImage.setPid(1);
-//        productImage.setType("type_single");
-//        ProductImageController productImageController = new ProductImageController();
-//        productImageController.addImage(productImage);
+    public void testadd() throws Exception {
+        Date date = new Date();
+        System.out.println(date);
     }
 }

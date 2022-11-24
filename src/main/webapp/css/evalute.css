@@ -1,0 +1,143 @@
+.total {
+    width: 1000px;
+    margin: 50px 200px;
+}
+
+.goodinfo img {
+    width: 350px;
+    border: 2px solid pink;
+    margin-left: 150px;
+    margin-right: 50px;
+}
+
+.goodinfo {
+    display: flex;
+    flex-flow: row;
+}
+
+svg {
+    width: 20px;
+    margin: -50px 0px;
+    cursor: pointer;
+}
+
+.evalutehead1 {
+    display: flex;
+    flex-flow: row;
+    border: 2px solid rgb(248, 181, 181);
+
+}
+
+.evalutecontent span {
+    border: 2px solid;
+    border-radius: 10%;
+    margin-right: 20px;
+
+}
+
+.evalutehead {
+    background-color: rgb(246, 232, 232);
+    width: 100px;
+    height: 40px;
+    font-size: 24px;
+    margin-left: 30px;
+    border: 2px solid rgb(248, 181, 181);
+    border-bottom: 0px;
+    border-top-left-radius: 10px;
+
+}
+
+.evalutemain {
+    border: 2px solid rgb(248, 181, 181);
+    height: auto;
+
+
+}
+
+.evalutemain div {
+    margin: 20px 30px;
+
+}
+
+.input input {
+
+    width: 26em;
+    height: 50px;
+
+}
+
+.float_r {
+    margin-left: 500px;
+    background-color: rgb(237, 149, 149);
+    border: 2px solid pink;
+    height: 35px;
+    width: 80px;
+}
+
+.firstline input {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.evalutepices div img {
+    height: 40px;
+}
+
+.evalutepices div {
+    margin-left: 10px;
+}
+
+.evalutepice {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#mark {
+    width: 360px;
+}
+
+#mark img {
+    width: 20px;
+    height: 20px;
+}
+
+.pic {
+    font-size: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0 atuo;
+}
+
+.top {
+    height: 125px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    text-align: center;
+    width: 400px;
+    height: 125px;
+    border: 1px dashed #cccccc;
+    background: #efefef;
+}
+
+.right {
+    width: 50px;
+    height: 100px;
+    border: 1px dashed #cccccc;
+    background: white;
+}
+
+#imgDiv {
+    width: 60vw;
+    height: auto;
+}
+
+#imgDiv img {
+    width: 10vw;
+    height: 10vh;
+}

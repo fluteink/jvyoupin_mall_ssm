@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>所有订单</title>
+    <link rel="stylesheet" th:href="@{css/forebought.css}">
+</head>
+<body>
+<div class="total">
+    <br>
+    <br>
+    <div>
+        <a href="./forebought.html">所有订单</a>&nbsp|&nbsp
+        <a href="./nppay.html">待付款</a>&nbsp|&nbsp
+        <a href="./nodelivery.html">待发货</a>&nbsp|&nbsp
+        <a href="./noreceipt.html">待收货</a>&nbsp|&nbsp
+        <a href="" style="color: red;">待评价</a>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <ul class="firstline">
+        <li style="width: 800px;">宝贝</li>
+        <li style="width: 100px;">单价</li>
+        <li style="width: 100px;">数量</li>
+        <li style="width: 100px;">实付款</li>
+        <li style="width: 100px;">交易操作</li>
+
+    </ul>
+    <br><br>
+    <ul class="firstline">
+        <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
+        <li>天猫商城</li>
+        <br>
+
+    </ul>
+    <ul>
+        <li style="width: 100px;"><span><img alt="" src="/聚.png"></span></li>
+        <li style="width: 700px;">宝贝</li>
+        <li style="width: 100px;">
+            <s>$ <span class="start">500</span></s><br>
+            $ <span>415</span>
+        </li>
+        <li style="width: 100px;">1</li>
+        <li style="width: 100px;">415</li>
+        <li style="width: 100px;">
+            <button href="./evalute.html" style="background-color: pink;">前往评价</button>
+        </li>
+    </ul>
+    <br><br>
+    <ul class="firstline">
+        <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
+        <li>天猫商城</li>
+        <br>
+
+    </ul>
+    <ul>
+        <li style="width: 100px;"><span><img alt="" src="/聚.png"></span></li>
+        <li style="width: 700px;">宝贝</li>
+        <li style="width: 100px;">
+            <s>$ <span class="start">500</span></s><br>
+            $ <span>415</span>
+        </li>
+        <li style="width: 100px;">1</li>
+        <li style="width: 100px;">415</li>
+        <li style="width: 100px;">
+            <button style="background-color: pink;">前往评价</button>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

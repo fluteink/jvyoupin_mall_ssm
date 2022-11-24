@@ -1,0 +1,62 @@
+.pro {
+
+    margin-top: 10%;
+    margin-left: 5%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.pro img {
+    width: 40px;
+    height: 40px;
+    padding: 1px 15px;
+}
+
+.mainbody {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+td img {
+    width: 50px;
+}
+
+table {
+
+    border: 2px solid palevioletred;
+    width: 1200px;
+
+    height: 150px;
+    margin-top: 10px;
+}
+
+table tr td {
+    border: 0px;
+}
+
+button {
+    color: rgba(19, 17, 17, 0.951);
+    background-color: #efb5b5;
+    width: 80px;
+    height: 50px;
+    margin-left: 70%;
+}
+
+h5 {
+    width: 1200px;
+}
+
+hr {
+    width: 1300px;
+}
+
+h4 {
+    margin-left: 1000px;
+}
