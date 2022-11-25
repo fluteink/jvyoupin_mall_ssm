@@ -16,7 +16,7 @@
         <!--数据库链接地址账号密码-->
         <!-- 数据库连接信息：驱动类、连接地址、用户名、密码 -->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/jyp?serverTimezone=UTC" userId="root"
+                        connectionURL="jdbc:mysql://8.142.209.13:3306/jyp?serverTimezone=UTC" userId="root"
                         password="2722715723my">
         </jdbcConnection>
         <!-- 默认 false，把 JDBC DECIMAL 和 NUMERIC 类型解析为 Integer
