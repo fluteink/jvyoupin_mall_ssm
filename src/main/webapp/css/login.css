@@ -6,7 +6,7 @@
 .main {
     margin-top: 120px;
     padding: 0;
-    /* background-image: url("../img/雪景.jpg") ; */
+
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -28,7 +28,7 @@
 }
 
 .main {
-    background-image: url('../img/夜景-山.jpg');
+    background-image: url('../img/site/雪景.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 680px;
