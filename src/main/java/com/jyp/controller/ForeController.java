@@ -68,7 +68,7 @@ public class ForeController {
 
     @RequestMapping("new首页")
     public String newfirstpage() {
-        return "fore/new首页";
+        return "fore/newfirstpage";
     }
 
     @RequestMapping("nodelivery")
