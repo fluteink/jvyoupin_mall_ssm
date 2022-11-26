@@ -1,3 +1,126 @@
+.all {
+    width: 1250px;
+    height: 200px;
+    /* background-color: rgb(241, 246, 246); */
+    top: 0%;
+    margin: 0 auto;
+}
+
+.all .head {
+    width: 100%;
+    height: 60%;
+    /* background-color: rgb(215, 224, 221); */
+    position: relative;
+    top: 0;
+}
+
+.all .main {
+    width: 100%;
+    height: 50%;
+    /* background-color: rgba(244, 225, 225, 0.584); */
+    /* background-image: url('../img/动漫路.jpg'); */
+    background-size: cover;
+    /* opacity: 70%; */
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 0;
+}
+
+.all .foot {
+    width: 100%;
+    height: 0%;
+    background-color: burlywood;
+    position: relative;
+    margin-top: 0;
+}
+
+.all .head .head_info {
+    width: 100%;
+    height: 30%;
+    background-color: rgb(227, 224, 224);
+    position: relative;
+    margin-top: 0;
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(9, 1fr);
+    justify-content: center;
+    align-self: center;
+
+}
+
+.all .head .head_info .info_item {
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    align-self: center;
+    color: darkgrey;
+    font-size: 14px;
+    /* background-color: rgb(210, 25, 108); */
+}
+
+.all .head .head_info .info_item .hd_a {
+    text-decoration: none;
+    color: darkgrey;
+}
+
+.all .head .head_info .info_item .hd_a:hover {
+    color: red;
+}
+
+.all .head .head_search {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin-top: 0;
+    /* background-color: rgb(199, 194, 194); */
+    background-color: white;
+}
+
+.all .head .head_search .logo {
+    width: 40%;
+    height: 150%;
+    /* background-color: rgb(55, 118, 218); */
+    position: absolute;
+    margin-top: 0;
+    margin-left: 20%;
+
+}
+
+.logo_img {
+    width: 40%;
+    height: 100%;
+    margin-left: 20%;
+    padding: 0;
+    z-index: -1;
+}
+
+.all .head .head_search .search_item {
+    width: 60%;
+    height: 100%;
+    /* background-color: rgb(209, 70, 209); */
+    position: absolute;
+    margin-top: 0;
+    margin-left: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sch_inp {
+    width: 400px;
+    height: 30px;
+    outline: none;
+}
+
+.sch_btn {
+    width: 60px;
+    height: 30px;
+    background-color: #efb5b5;
+    border: 0;
+    border-radius: 30px;
+    /* box-shadow: #e97b7b 0 0 15px; */
+}
+
+
 .container {
     width: 1000px;
     height: 400px;
@@ -45,4 +168,86 @@
 
 .span2 {
     color: #d94b4b;
+}
+
+.foot {
+    height: 250px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: 100px;
+}
+
+.foot1 {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.foot1 .item {
+    width: 300px;
+    height: 200px;
+}
+
+.foot3 {
+    width: 100%;
+    height: 200px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.foot31 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.foot32 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.foot33 {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.foot a {
+    text-decoration: none;
+    color: black;
+}
+
+.foot a:hover {
+    color: #2ba481;
+}
+
+.foothr {
+    width: 100%;
+    color: #a9afad;
+}
+
+.bac {
+    width: 60px;
+    height: 60px;
+    /*将行内元素转化为块级元素*/
+    display: block;
+    background-color: #78d5c0;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /*使用固定定位*/
+    position: fixed;
+    right: 30px; /*离右边30像素*/
+    bottom: 100px; /*离下面100像素*/
 }
