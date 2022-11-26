@@ -6,69 +6,104 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>所有订单</title>
     <link href="http://localhost:8080/jvyoupin/css/forebought.css" rel="stylesheet">
+    <link href="http://localhost:8080/jvyoupin/css/initial.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost:8080/jvyoupin/css/footer.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-<div class="total">
-    <br>
-    <br>
-    <div>
-        <a href="" style="color: red;">所有订单</a>&nbsp|&nbsp
-        <a href="./nppay.html">待付款</a>&nbsp|&nbsp
-        <a href="./nodelivery.html">待发货</a>&nbsp|&nbsp
-        <a href="./noreceipt.html">待收货</a>&nbsp|&nbsp
-        <a href="./noevaluate.html">待评价</a>
+<div class="all">
+    <header class="head">
+        <div class="head_info">
+            <div class="info_item">欢迎来到聚优品</div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"></div>
+            <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+            <div class="info_item">
+                <!--                 <img src="../img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
+            </div>
+
+        </div>
+        <div class="head_search">
+            <div class="logo">
+                <img class="logo_img" height="80px" src="/jvyoupin/img/site/logo.jpg" width="80px">
+            </div>
+            <div class="search_item">
+                <div class="search_item_clear">
+                    <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                    <span><input class="sch_btn" type="button" value="搜索"></span>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+    <div class="total">
+        <br>
+        <br>
+        <div>
+            <a href="" style="color: red;">所有订单</a>&nbsp|&nbsp
+            <a href="./nppay.html">待付款</a>&nbsp|&nbsp
+            <a href="./nodelivery.html">待发货</a>&nbsp|&nbsp
+            <a href="./noreceipt.html">待收货</a>&nbsp|&nbsp
+            <a href="./noevaluate.html">待评价</a>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <br>
+        <ul class="firstline">
+            <li style="width: 800px;">宝贝</li>
+            <li style="width: 100px;">单价</li>
+            <li style="width: 100px;">数量</li>
+            <li style="width: 100px;">实付款</li>
+            <li style="width: 100px;">交易操作</li>
+
+        </ul>
+        <br><br>
+        <ul class="firstline">
+            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
+            <li>天猫商城</li>
+            <br>
+
+        </ul>
+        <ul>
+            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
+            <li style="width: 700px;">宝贝</li>
+            <li style="width: 100px;">
+                <s>$ <span class="start">500</span></s><br>
+                $ <span>415</span>
+            </li>
+            <li style="width: 100px;">1</li>
+            <li style="width: 100px;">415</li>
+            <li style="width: 100px;">待发货</li>
+        </ul>
+        <br><br>
+        <ul class="firstline">
+            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
+            <li>天猫商城</li>
+            <br>
+
+        </ul>
+        <ul>
+            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
+            <li style="width: 700px;">宝贝</li>
+            <li style="width: 100px;">
+                <s>$ <span class="start">500</span></s><br>
+                $ <span>415</span>
+            </li>
+            <li style="width: 100px;">1</li>
+            <li style="width: 100px;">415</li>
+            <li style="width: 100px;">
+                <button style="background-color: pink;">确认收货</button>
+            </li>
+        </ul>
     </div>
-    <br>
-    <hr>
-    <br>
-    <br>
-    <ul class="firstline">
-        <li style="width: 800px;">宝贝</li>
-        <li style="width: 100px;">单价</li>
-        <li style="width: 100px;">数量</li>
-        <li style="width: 100px;">实付款</li>
-        <li style="width: 100px;">交易操作</li>
-
-    </ul>
-    <br><br>
-    <ul class="firstline">
-        <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-        <li>天猫商城</li>
-        <br>
-
-    </ul>
-    <ul>
-        <li style="width: 100px;"><span><img alt="" src="/聚.png"></span></li>
-        <li style="width: 700px;">宝贝</li>
-        <li style="width: 100px;">
-            <s>$ <span class="start">500</span></s><br>
-            $ <span>415</span>
-        </li>
-        <li style="width: 100px;">1</li>
-        <li style="width: 100px;">415</li>
-        <li style="width: 100px;">代发货</li>
-    </ul>
-    <br><br>
-    <ul class="firstline">
-        <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-        <li>天猫商城</li>
-        <br>
-
-    </ul>
-    <ul>
-        <li style="width: 100px;"><span><img alt="" src="/聚.png"></span></li>
-        <li style="width: 700px;">宝贝</li>
-        <li style="width: 100px;">
-            <s>$ <span class="start">500</span></s><br>
-            $ <span>415</span>
-        </li>
-        <li style="width: 100px;">1</li>
-        <li style="width: 100px;">415</li>
-        <li style="width: 100px;">
-            <button style="background-color: pink;">确认收货</button>
-        </li>
-    </ul>
 </div>
-
 </body>
 </html>

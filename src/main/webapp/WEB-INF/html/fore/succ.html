@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>交易成功</title>
     <style>
-        div {
+        .div {
             height: 150px;
             width: 700px;
             background-color: rgb(225, 226, 227);
@@ -22,7 +22,7 @@
 
         }
 
-        span {
+        .span {
             color: rgb(48, 47, 47);
             margin-left: 30px;
             font-size: 28px;
@@ -30,16 +30,48 @@
             margin-top: 55px;
         }
     </style>
-</head>
-<body>
-<div>
+    <link href="http://localhost:8080/jvyoupin/css/initial.css" rel="stylesheet" type="text/css">
+    <div class="all">
+        <header class="head">
+            <div class="head_info">
+                <div class="info_item">欢迎来到聚优品</div>
+                <div class="info_item"><a class="hd_a" href="">首页</a></div>
+                <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+                <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
+                <div class="info_item"></div>
+                <div class="info_item"></div>
+                <div class="info_item"></div>
+                <div class="info_item"><a class="hd_a" href="">我的订单</a></div>
+                <div class="info_item">
+                    <!--                 <img src="../img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                    <a class="hd_a cart" href="gdcart.html">购物车</a>
+                </div>
 
-    <svg class="icon" height="128" p-id="3597" t="1668861845033" version="1.1" viewBox="0 0 1024 1024" width="128"
-         xmlns="http://www.w3.org/2000/svg">
-        <path d="M512 1024a512 512 0 1 1 0-1024 512 512 0 0 1 0 1024z m-71.318588-361.411765a29.334588 29.334588 0 0 0 20.48-8.252235L774.625882 349.364706a27.708235 27.708235 0 0 0 0-39.936 29.575529 29.575529 0 0 0-41.08047 0l-292.74353 284.912941L290.454588 448.150588a29.575529 29.575529 0 0 0-41.08047 0 27.708235 27.708235 0 0 0 0 39.996236l170.706823 166.128941a29.274353 29.274353 0 0 0 20.540235 8.252235z"
-              fill="#33A954" p-id="3598"></path>
-    </svg>
-    <span>交易已经成功，卖家将收到您的货款。</span>
-</div>
-</body>
+            </div>
+            <div class="head_search">
+                <div class="logo">
+                    <img class="logo_img" height="80px" src="/jvyoupin/img/site/logo.jpg" width="80px">
+                </div>
+                <div class="search_item">
+                    <div class="search_item_clear">
+                        <span><input class="sch_inp" placeholder="请输入搜索内容" type="search"></span>
+
+                        <span><input class="sch_btn" type="button" value="搜索"></span>
+                    </div>
+
+                </div>
+            </div>
+
+        </header>
+        <div class="div">
+
+            <svg class="icon" height="128" p-id="3597" t="1668861845033" version="1.1" viewBox="0 0 1024 1024"
+                 width="128"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path d="M512 1024a512 512 0 1 1 0-1024 512 512 0 0 1 0 1024z m-71.318588-361.411765a29.334588 29.334588 0 0 0 20.48-8.252235L774.625882 349.364706a27.708235 27.708235 0 0 0 0-39.936 29.575529 29.575529 0 0 0-41.08047 0l-292.74353 284.912941L290.454588 448.150588a29.575529 29.575529 0 0 0-41.08047 0 27.708235 27.708235 0 0 0 0 39.996236l170.706823 166.128941a29.274353 29.274353 0 0 0 20.540235 8.252235z"
+                      fill="#33A954" p-id="3598"></path>
+            </svg>
+            <span class="span">交易已经成功，卖家将收到您的货款。</span>
+        </div>
+        </body>
 </html>
