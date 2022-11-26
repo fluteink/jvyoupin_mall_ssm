@@ -1,5 +1,8 @@
 package com.jyp.controller;
 
+import com.jyp.pojo.User;
+import com.jyp.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -10,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class ForeController {
+    @Autowired
+    UserService userService;
+
     @RequestMapping("confirmpay")
     public String confirmpay() {
         return "fore/confirmpay";
@@ -123,6 +129,12 @@ public class ForeController {
     @RequestMapping("首页")
     public String firstPage22() {
         return "fore/首页";
+    }
+
+    @RequestMapping("adduser")
+    public String addUser(User u) {
+        userService.addUser(u);
+        return "redirect:/new首页";
     }
 
 }
