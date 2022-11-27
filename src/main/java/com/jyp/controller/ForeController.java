@@ -134,7 +134,7 @@ public class ForeController {
     @RequestMapping("adduser")
     public String addUser(User u) {
         userService.addUser(u);
-        return "redirect:/new首页";
+        return "redirect:/newfirstpage";
     }
 
 }
