@@ -151,7 +151,7 @@ public class ForeController {
             u = loginselect.get(0);
             return "redirect:/newfirstpage/" + u.getId();
         } else {
-            return "error";
+            return "admin/error";
         }
     }
 }
