@@ -113,9 +113,9 @@ public class ForeController {
         return "fore/succreceip";
     }
 
-    @RequestMapping("个人中心")
+    @RequestMapping("Personalcenter")
     public String PersonalCenter() {
-        return "fore/个人中心";
+        return "fore/Personalcenter";
     }
 
     @RequestMapping("分类页面")
