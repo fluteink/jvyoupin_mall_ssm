@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="all">
+<div class="all" id="app">
     <header class="head">
         <div class="head_info">
             <div class="info_item">欢迎来到聚优品</div>
@@ -20,7 +20,7 @@
             <div class="info_item"></div>
             <div class="info_item"></div>
             <div class="info_item"><a class="hd_a" href="/jvyoupin/forebought">我的订单</a></div>
-            <div class="info_item">
+            <div class="info_item"><a :href="" class="hd_a">个人中心</a>
                 <!-- <img src="@{img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
                 <a class="hd_a cart" href="/jvyoupin/gdcart">购物车</a>
             </div>
@@ -386,4 +386,19 @@
 <a class="bac" href="#">返回<br/>顶部</a>
 
 </body>
+<script>
+    var vue = new Vue({
+        el: "#app",
+        methods: {
+            Personalcenter() {
+                var uid = window.location.href;
+                uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
+                var a = document.getElementById("Personalcenter");
+                a.href = "/jvyoupin/Personalcenter/" + uid;
+                // axios.get();
+                event.preventDefault();
+            }
+        }
+    });
+</script>
 </html>

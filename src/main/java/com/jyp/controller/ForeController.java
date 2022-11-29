@@ -118,6 +118,11 @@ public class ForeController {
         return "fore/Personalcenter";
     }
 
+    @RequestMapping("Personalcenter/{uid}")
+    public String PersonalCenter1() {
+        return "fore/Personalcenter";
+    }
+
     @RequestMapping("分类页面")
     public String foreCategory() {
         return "fore/分类页面";
