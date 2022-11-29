@@ -30,4 +30,12 @@ public class UserServiceImpl implements UserService {
     public void addUser(User u) {
         userMapper.insert(u);
     }
+
+    @Override
+    public List<User> loginselect(User u) {
+        UserExample userExample = new UserExample();
+        userExample.createCriteria().andNameEqualTo(u.getName()).andPasswordEqualTo(u.getPassword());
+        List<User> users = userMapper.selectByExample(userExample);
+        return users;
+    }
 }

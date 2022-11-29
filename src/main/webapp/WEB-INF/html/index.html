@@ -19,7 +19,7 @@
 <a th:href="@{gdcart}">购物车gdcart</a>
 <a th:href="@{goodsdetails}">商品详情goodsdetails</a><br>
 <!--<a th:href="@{header}">header</a>-->
-<a th:href="@{new首页}">newfirstpage</a>
+<a th:href="@{newfirstpage}">首页newfirstpage</a>
 <a th:href="@{nodelivery}">待发货nodelivery</a><br>
 <a th:href="@{noevaluate}">待评价noevaluate</a>
 <a th:href="@{noreceipt}">待收货noreceipt</a><br>
@@ -42,6 +42,11 @@
 <!--    编辑分类-->
 <!--</a>-->
 <form action="adduser" enctype="multipart/form-data" id="addUser" method="post">
+    <input name="name" value=""/>
+    <input name="password" value=""/>
+    <button class="btndef" type="submit">提 交</button>
+</form>
+<form action="userlogin" enctype="multipart/form-data" id="login" method="post">
     <input name="name" value=""/>
     <input name="password" value=""/>
     <button class="btndef" type="submit">提 交</button>

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -66,8 +68,13 @@ public class ForeController {
         return "fore/login";
     }
 
-    @RequestMapping("new首页")
+    @RequestMapping("newfirstpage")
     public String newfirstpage() {
+        return "fore/newfirstpage";
+    }
+
+    @RequestMapping("newfirstpage/{id}")
+    public String newfirstpage1() {
         return "fore/newfirstpage";
     }
 
@@ -137,4 +144,14 @@ public class ForeController {
         return "redirect:/newfirstpage";
     }
 
+    @RequestMapping("userlogin")
+    public String UserLogin(User u) {
+        List<User> loginselect = userService.loginselect(u);
+        if (!loginselect.isEmpty()) {
+            u = loginselect.get(0);
+            return "redirect:/newfirstpage/" + u.getId();
+        } else {
+            return "error";
+        }
+    }
 }

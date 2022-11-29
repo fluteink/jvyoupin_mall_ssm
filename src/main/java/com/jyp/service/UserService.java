@@ -13,4 +13,6 @@ public interface UserService {
     List<User> getAllUsers();
 
     void addUser(User u);
+
+    List<User> loginselect(User u);
 }
