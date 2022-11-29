@@ -8,7 +8,7 @@
     <link href="http://localhost:8080/jvyoupin/css/register.css" rel="stylesheet" type="text/css">
     <link href="http://localhost:8080/jvyoupin/css/footer.css" rel="stylesheet" type="text/css">
     <script src="http://localhost:8080/jvyoupin/js/windowLoad.js"></script>
-    <title>regist.html</title>
+    <title>注册</title>
 </head>
 <body>
 <div class="all">
@@ -44,38 +44,42 @@
         </div>
 
     </header>
-
+    <form action="adduser"></form>
     <main class="main regist_main">
         <div class="regist_info">
             <table class="regist_tab">
-                <tr>
-                    <td>设置用户名</td>
-                </tr>
-                <tr>
-                    <td class="in_item">用户名</td>
-                    <td><input class="user_name regist_in" id="user_name" placeholder="请输入用户名" type="text"></td>
-                </tr>
-                <tr>
-                    <td>设置登录密码</td>
-                    <td><span id="pwdSpan" style="color: red;font-family: 楷体"></span></td>
+                <form action="adduser" enctype="multipart/form-data" id="addUser" method="post">
+                    <tr>
+                        <td>设置用户名</td>
+                    </tr>
+                    <tr>
+                        <td class="in_item">用户名</td>
+                        <td><input class="user_name regist_in" id="user_name" name="name" placeholder="请输入用户名"
+                                   type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>设置登录密码</td>
+                        <td><span id="pwdSpan" style="color: red;font-family: 楷体"></span></td>
 
-                </tr>
-                <tr>
-                    <td class="in_item">登录密码</td>
-                    <td><input class="user_pwd regist_in" id="user_pwd" onblur="isPwd()" placeholder="请输入登录密码"
-                               type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="in_item">登录密码</td>
+                        <td><input class="user_pwd regist_in" id="user_pwd" onblur="isPwd()" placeholder="请输入登录密码"
+                                   type="text"></td>
 
-                </tr>
-                <tr>
-                    <td class="in_item">确认密码</td>
-                    <td><input class="user_repwd regist_in" id="user_repwd" onblur="isCom()" placeholder="请再次输入登录密码"
-                               type="text"></td>
+                    </tr>
+                    <tr>
+                        <td class="in_item">确认密码</td>
+                        <td><input class="user_repwd regist_in" id="user_repwd" name="password" onblur="isCom()"
+                                   placeholder="请再次输入登录密码"
+                                   type="text"></td>
 
-                </tr>
-                <tr>
-                    <td colspan="2"><input class="regist_btn" id="regist_btn" src="" type="button" value="提交"></td>
-                </tr>
+                    </tr>
 
+                    <tr>
+                        <td colspan="2"><input class="regist_btn" id="regist_btn" src="" type="submit" value="提交"></td>
+                    </tr>
+                </form>
             </table>
         </div>
     </main>

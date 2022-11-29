@@ -141,7 +141,7 @@ public class ForeController {
     @RequestMapping("adduser")
     public String addUser(User u) {
         userService.addUser(u);
-        return "redirect:/newfirstpage";
+        return "redirect:/login";
     }
 
     @RequestMapping("userlogin")
