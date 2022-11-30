@@ -73,7 +73,7 @@ public class ForeController {
         return "fore/newfirstpage";
     }
 
-    @RequestMapping("newfirstpage/{id}")
+    @RequestMapping("newfirstpage/{uid}")
     public String newfirstpage1() {
         return "fore/newfirstpage";
     }

@@ -6,6 +6,7 @@
     <link href="http://localhost:8080/jvyoupin/css/newpage1.css" rel="stylesheet" type="text/css">
     <script src="http://localhost:8080/jvyoupin/js/tool.js" type="text/javascript"></script>
     <script src="http://localhost:8080/jvyoupin/js/tools.js" type="text/javascript"></script>
+    <script src="http://localhost:8080/jvyoupin/js/vue2.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -20,7 +21,8 @@
             <div class="info_item"></div>
             <div class="info_item"></div>
             <div class="info_item"><a class="hd_a" href="/jvyoupin/forebought">我的订单</a></div>
-            <div class="info_item"><a :href="" class="hd_a">个人中心</a>
+            <div class="info_item"><a class="hd_a" href="/jvyoupin/Personalcenter" id="Personal">个人中心</a>
+                <!--            <div class="info_item"><a href="{PersonalcenterUrl}" class="hd_a">个人中心</a>-->
                 <!-- <img src="@{img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
                 <a class="hd_a cart" href="/jvyoupin/gdcart">购物车</a>
             </div>
@@ -387,18 +389,28 @@
 
 </body>
 <script>
-    var vue = new Vue({
-        el: "#app",
-        methods: {
-            Personalcenter() {
-                var uid = window.location.href;
-                uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
-                var a = document.getElementById("Personalcenter");
-                a.href = "/jvyoupin/Personalcenter/" + uid;
-                // axios.get();
-                event.preventDefault();
-            }
-        }
-    });
+    var uid = window.location.href;
+    uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
+    console.log(uid);
+    var elementById = document.getElementById('Personal');
+    elementById.href = '/jvyoupin/Personalcenter/' + uid;
+    // var vue = new Vue({
+    //     el: "#app",
+    //     methods: {
+    //         Personalcenter() {
+    //             var uid = window.location.href;
+    //             uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
+    //             console.log(uid);
+    //             this.Personalcenter="/jvyoupin/Personalcenter/"+uid;
+    //
+    //         }
+    //     },
+    //     data(){
+    //         PersonalcenterUrl;
+    //     },
+    //     created: function () {
+    //         this.Personalcenter()
+    //     }
+    // });
 </script>
 </html>
