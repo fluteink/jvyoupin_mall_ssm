@@ -39,19 +39,20 @@
 
     </header>
 </div>
-
-<div class="hea">
-    <div class="title">个人中心</div>
-</div>
-<div class="mydeta">
-    <div class="accname">
-        <a href="#">蓝灰色的丹椒</a>
+<div id="app">
+    <div class="hea">
+        <div class="title">个人中心</div>
     </div>
-</div>
-<div class="cargo">
-    <ul>
-        <li><a href="#">修改密码</a></li>
-    </ul>
+    <div class="mydeta">
+        <div class="accname">
+            <a href="#">{{user.name}}</a>
+        </div>
+    </div>
+    <div class="cargo">
+        <ul>
+            <li><a href="#">修改密码</a></li>
+        </ul>
+    </div>
 </div>
 <div class="command">推荐商品</div>
 <div class="goodscommand">
@@ -195,4 +196,8 @@
 <a class="bac" href="#">返回<br/>顶部</a>
 
 </body>
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+<script src="/jvyoupin/js/personalcenter.js"></script>
 </html>
