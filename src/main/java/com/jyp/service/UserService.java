@@ -15,4 +15,6 @@ public interface UserService {
     void addUser(User u);
 
     List<User> loginselect(User u);
+
+    User finduserbyid(Integer uid);
 }

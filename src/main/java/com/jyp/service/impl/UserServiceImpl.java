@@ -38,4 +38,10 @@ public class UserServiceImpl implements UserService {
         List<User> users = userMapper.selectByExample(userExample);
         return users;
     }
+
+    @Override
+    public User finduserbyid(Integer uid) {
+        User user = userMapper.selectByPrimaryKey(uid);
+        return user;
+    }
 }
