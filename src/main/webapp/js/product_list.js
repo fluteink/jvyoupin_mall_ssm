@@ -61,7 +61,6 @@ var vue = new Vue({
     data() {
         return {
             tableData: [],
-
         }
     },
     created: function () {
