@@ -128,6 +128,11 @@ public class ForeController {
         return "fore/分类页面";
     }
 
+    @RequestMapping("Category1/{uid}/{cid}")
+    public String foreCategory1() {
+        return "fore/分类页面";
+    }
+
     @RequestMapping("支付成功界面")
     public String paysuccess() {
         return "fore/支付成功界面";

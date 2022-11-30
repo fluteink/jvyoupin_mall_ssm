@@ -152,7 +152,7 @@
                         <path d="M320 160a32 32 0 0 0-32 32v96a32 32 0 0 0 64 0V192a32 32 0 0 0-32-32zM325.344 768a32 32 0 0 0 32-32v-96a32 32 0 0 0-64 0v96a32 32 0 0 0 32 32z"
                               p-id="6240"></path>
                     </svg>
-                    <a href="#">大家电</a> / <a href="#">生活电器</a></li>
+                    <a href="#">电视</a> / <a href="#">生活电器</a></li>
                 <li>
                     <svg class="icon" height="30" p-id="7142" t="1666281540533" version="1.1" viewBox="0 0 1024 1024"
                          width="30" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +169,7 @@
                         <path d="M720 313.6h-2.4c-28-4.8-52-20.8-68-44.8-20.8-31.2-25.6-74.4-15.2-119.2C654.4 71.2 720.8 8.8 788.8 4c5.6 0 10.4 1.6 13.6 5.6 3.2 4 4.8 8.8 3.2 14.4L736 301.6c-2.4 7.2-8.8 12-16 12zM768 40c-45.6 14.4-88.8 61.6-102.4 117.6-8.8 35.2-4.8 69.6 10.4 93.6 8 12.8 19.2 21.6 32 26.4L768 40z"
                               p-id="7148"></path>
                     </svg>
-                    <a href="#">家具</a> / <a href="#">灯具</a> / <a href="#">卫浴</a></li>
+                    <a href="" id="TV">家具</a> / <a href="#">灯具</a> / <a href="#">卫浴</a></li>
                 <li>
                     <svg class="icon" height="30" p-id="8131" t="1666281700405" version="1.1" viewBox="0 0 1024 1024"
                          width="30" xmlns="http://www.w3.org/2000/svg">
@@ -391,8 +391,9 @@
 <script>
     var uid = window.location.href;
     uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
-    console.log(uid);
     var elementById = document.getElementById('Personal');
     elementById.href = '/jvyoupin/Personalcenter/' + uid;
+    var elementById1 = document.getElementById("TV");
+    elementById1.href = '/jvyoupin/Category1/' + uid + '/' + '2';
 </script>
 </html>
