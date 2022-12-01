@@ -11,4 +11,6 @@ import java.util.List;
  */
 public interface OrderService {
     List<Order> findAllOrder();
+
+    void addOrder(Order o);
 }

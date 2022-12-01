@@ -1,6 +1,8 @@
 package com.jyp.controller;
 
+import com.jyp.pojo.Order;
 import com.jyp.pojo.User;
+import com.jyp.service.OrderService;
 import com.jyp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +21,8 @@ import java.util.List;
 public class ForeController {
     @Autowired
     UserService userService;
+    @Autowired
+    OrderService orderService;
 
     @RequestMapping("confirmpay")
     public String confirmpay() {
@@ -153,6 +157,12 @@ public class ForeController {
     @RequestMapping("adduser")
     public String addUser(User u) {
         userService.addUser(u);
+        return "redirect:/login";
+    }
+
+    @RequestMapping("addOrder")
+    public String addOrder(Order o) {
+        orderService.addOrder(o);
         return "redirect:/login";
     }
 

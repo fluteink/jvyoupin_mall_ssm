@@ -24,4 +24,9 @@ public class OrderServiceImpl implements OrderService {
         List<Order> orders = orderMapper.selectByExample(new OrderExample());
         return orders;
     }
+
+    @Override
+    public void addOrder(Order o) {
+        orderMapper.insert(o);
+    }
 }
