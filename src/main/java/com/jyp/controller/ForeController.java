@@ -173,4 +173,9 @@ public class ForeController {
         User finduserbyid = userService.finduserbyid(uid);
         return finduserbyid;
     }
+
+    @RequestMapping("product1/{uid}/{pid}")
+    public String tgooddetail() {
+        return "fore/goodsdetails";
+    }
 }
