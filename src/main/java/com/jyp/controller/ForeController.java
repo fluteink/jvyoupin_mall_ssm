@@ -163,7 +163,7 @@ public class ForeController {
     @RequestMapping("addOrder")
     public String addOrder(Order o) {
         orderService.addOrder(o);
-        return "redirect:/login";
+        return "redirect:/nppay/" + o.getUid() + "/";
     }
 
     @RequestMapping("userlogin")
