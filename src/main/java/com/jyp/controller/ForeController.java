@@ -3,6 +3,7 @@ package com.jyp.controller;
 import com.jyp.pojo.Order;
 import com.jyp.pojo.OrderItem;
 import com.jyp.pojo.User;
+import com.jyp.service.OrderItemService;
 import com.jyp.service.OrderService;
 import com.jyp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class ForeController {
     UserService userService;
     @Autowired
     OrderService orderService;
+    @Autowired
+    OrderItemService orderItemService;
 
     @RequestMapping("confirmpay")
     public String confirmpay() {
@@ -164,6 +167,7 @@ public class ForeController {
     @RequestMapping("addOrder")
     public String addOrder(OrderItem oi) {
         oi.setNumber(1);
+        orderItemService.addoi(oi);
         Order o = new Order();
         o.setUid(oi.getUid());
         orderService.addOrder(o);
