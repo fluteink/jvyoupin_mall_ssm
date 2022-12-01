@@ -1,6 +1,7 @@
 package com.jyp.controller;
 
 import com.jyp.pojo.Order;
+import com.jyp.pojo.OrderItem;
 import com.jyp.pojo.User;
 import com.jyp.service.OrderService;
 import com.jyp.service.UserService;
@@ -161,9 +162,12 @@ public class ForeController {
     }
 
     @RequestMapping("addOrder")
-    public String addOrder(Order o) {
+    public String addOrder(OrderItem oi) {
+        oi.setNumber(1);
+        Order o = new Order();
+        o.setUid(oi.getUid());
         orderService.addOrder(o);
-        return "redirect:/nppay/" + o.getUid() + "/";
+        return "redirect:/nppay/" + oi.getUid() + "/" + oi.getPid();
     }
 
     @RequestMapping("userlogin")
