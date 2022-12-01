@@ -12,6 +12,7 @@
     <script src="http://localhost:8080/jvyoupin/js/windowLoad.js"></script>
     <script src="http://localhost:8080/jvyoupin/js/imgClick.js"></script>
     <script src="http://localhost:8080/jvyoupin/js/ajax.js"></script>
+
 </head>
 <body>
 <div class="all">
@@ -45,7 +46,7 @@
             </div>
         </div>
     </header>
-    <main class="main">
+    <main class="main" id="app">
         <div class="shop_name">
             <h1>魅 列 斯 顿 杯 子 专 卖 店</h1>
             <span class="shop_name_span">
@@ -71,8 +72,12 @@
 
                 </div>
                 <div class="goods_info">
-                    <div class="goods_title">魅列斯顿杯子 便携杯子 男女学生杯子</div>
-                    <div class="goods_subtitle">高颜值ins手提便携杯2022新款网红单层水杯</div>
+                    <div class="goods_title">
+                        <a href="#">{{goods.name}}}</a>
+                    </div>
+                    <div class="goods_subtitle">
+                        <a href="#">{{goods.sub_title}}}</a>
+                    </div>
                     <div class="goods_price">
                         <div class="juhuasuan">
                             <span class="juhuasuan_big">聚划算</span>
@@ -89,12 +94,16 @@
                             <div class="original_price">
                                 <span class="original_price_content grey_c">原价</span>&emsp;&emsp;
                                 <span class="original_price_￥">￥</span>
-                                <span class="original_price_num" id="original_price_num">79.00</span>
+                                <span class="original_price_num" id="original_price_num">
+                                    <a href="#">{{goods.original_price}}}</a>
+                                </span>
                             </div>
                             <div class="now_price">
                                 <span class="now_price_content grey_c">现价</span>&emsp;&nbsp;&nbsp;
                                 <span class="now_price_￥">￥</span>
-                                <span class="now_price_num" id="now_price_num">29.00</span>
+                                <span class="now_price_num" id="now_price_num">
+                                    <a href="#">{{goods.promote_price}}}</a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -117,7 +126,9 @@
                         </span>
                         <span class="grey_c">件</span>
                         <span class="grey_c">库存
-                            <span class="goods_num_kucun grey_c" id="goods_num_kucun">100</span>
+                            <span class="goods_num_kucun grey_c" id="goods_num_kucun">
+                                <a href="#">{{goods.stock}}}</a>
+                            </span>
                             件
                         </span>
                     </div>
@@ -169,6 +180,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </main>
 
     <footer class="foot">
@@ -246,6 +258,11 @@
         <a class="bac" href="#">返回<br/>顶部</a>
     </footer>
 </div>
+
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+
 <script>
     // 尝试引入的值 ----- 直接使用变量名
     console.log(imgArr, '---imgArr')
@@ -297,4 +314,5 @@
 
 </script>
 </body>
+<script src="/jvyoupin/js/goodsdetail.js"></script>
 </html>
