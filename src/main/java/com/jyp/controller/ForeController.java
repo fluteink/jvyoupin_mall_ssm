@@ -197,6 +197,13 @@ public class ForeController {
         return finduserbyid;
     }
 
+    @RequestMapping("findorderItem/{uid}")
+    @ResponseBody
+    public List<OrderItem> findorderItem(@PathVariable("uid") Integer uid) {
+        List<OrderItem> orderItems = orderItemService.findorderItem(uid);
+        return orderItems;
+    }
+
     @RequestMapping("product1/{uid}/{pid}")
     public String tgooddetail() {
         return "fore/goodsdetails";

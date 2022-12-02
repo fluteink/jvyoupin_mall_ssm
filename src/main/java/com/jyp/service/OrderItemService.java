@@ -2,6 +2,8 @@ package com.jyp.service;
 
 import com.jyp.pojo.OrderItem;
 
+import java.util.List;
+
 /**
  * @author 明宇
  * @version 1.0
@@ -9,4 +11,6 @@ import com.jyp.pojo.OrderItem;
  */
 public interface OrderItemService {
     void addoi(OrderItem oi);
+
+    List<OrderItem> findorderItem(Integer uid);
 }
