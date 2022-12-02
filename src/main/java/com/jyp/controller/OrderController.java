@@ -4,6 +4,7 @@ import com.jyp.pojo.Order;
 import com.jyp.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -29,5 +30,12 @@ public class OrderController {
     public List<Order> findAllOrder() {
         List<Order> allOrder = orderService.findAllOrder();
         return allOrder;
+    }
+
+    @RequestMapping("findOrderByUid/{uid}")
+    @ResponseBody
+    public List<Order> findOrderByUid(@PathVariable("uid") Integer uid) {
+        List<Order> orderByUid = orderService.findOrderByUid(uid);
+        return orderByUid;
     }
 }

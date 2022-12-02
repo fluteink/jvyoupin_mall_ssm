@@ -13,4 +13,6 @@ public interface OrderService {
     List<Order> findAllOrder();
 
     void addOrder(Order o);
+
+    List<Order> findOrderByUid(Integer uid);
 }

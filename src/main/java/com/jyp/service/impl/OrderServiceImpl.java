@@ -29,4 +29,12 @@ public class OrderServiceImpl implements OrderService {
     public void addOrder(Order o) {
         orderMapper.insert(o);
     }
+
+    @Override
+    public List<Order> findOrderByUid(Integer uid) {
+        OrderExample orderExample = new OrderExample();
+        orderExample.createCriteria().andUidEqualTo(uid);
+        List<Order> orders = orderMapper.selectByExample(orderExample);
+        return orders;
+    }
 }
