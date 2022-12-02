@@ -208,4 +208,9 @@ public class ForeController {
     public String tgooddetail() {
         return "fore/goodsdetails";
     }
+
+    @RequestMapping("changepassword/{uid}")
+    public String changepassword() {
+        return "changepassword";
+    }
 }
