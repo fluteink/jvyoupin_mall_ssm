@@ -58,6 +58,11 @@ public class ForeController {
         return "fore/forebought";
     }
 
+    @RequestMapping("forebought/{uid}")
+    public String forebought1() {
+        return "fore/forebought";
+    }
+
     @RequestMapping("gdcart")
     public String gdcart() {
         return "fore/gdcart";
