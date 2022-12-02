@@ -213,4 +213,10 @@ public class ForeController {
     public String changepassword() {
         return "changepassword";
     }
+
+    @RequestMapping("changepwd")
+    public String changepwd(User u) {
+        userService.update(u);
+        return "redirect:/Personalcenter/" + u.getId();
+    }
 }

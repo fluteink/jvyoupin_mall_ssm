@@ -17,4 +17,6 @@ public interface UserService {
     List<User> loginselect(User u);
 
     User finduserbyid(Integer uid);
+
+    void update(User u);
 }
