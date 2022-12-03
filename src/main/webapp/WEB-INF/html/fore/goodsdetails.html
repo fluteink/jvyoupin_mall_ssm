@@ -48,26 +48,32 @@
     </header>
     <main class="main" id="app">
         <div class="shop_name">
-            <h1>魅 列 斯 顿 杯 子 专 卖 店</h1>
+            <h1>DGPOSY 马 桶 专 卖 店</h1>
             <span class="shop_name_span">
                     <a href="" id="shop_name_a" onclick="shopFocus()" style="text-decoration:none">+关注</a>
                     
                 </span>
-            <p>用心做好每一个杯子，让您有舒心的喝水体验<br>
-                Carefully make each cup,let you have a comfortable drinking experience.
+            <p>用心做好每一个马桶，让您有舒心的体验<br>
+                Carefully make each closestool,let you have a comfortable experience.
             </p>
         </div>
         <div class="goods_page">
             <div class="imgandinfo">
-                <div class="goods_img">
-                    <img alt="" class="bigimg" height="70%" id="bigimg" src="@{img/杯子/1.jpg}" width="70%">
+                <div class="goods_img" id="imgs">
+                    <img alt="" class="bigimg" height="70%" id="bigimg" src="/jvyoupin/img/productSingle/1.jpg"
+                         width="70%">
                     <div class="smallimg">
                         <!-- onclick="IMG()" -->
-                        <!-- <img src="@{img/杯子/1.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%" >
-                        <img src="@{img/杯子/2.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
-                        <img src="@{img/杯子/3.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
-                        <img src="@{img/杯子/4.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%">
-                        <img src="@{img/杯子/5.jpg" alt="" class="smallimg_item" id="item" width="15%" height="15%"> -->
+                        <img alt="" class="smallimg_item" height="15%" id="item1"
+                             src="/jvyoupin/img/productSingle/1.jpg" width="15%">
+                        <img alt="" class="smallimg_item" height="15%" id="item2"
+                             src="/jvyoupin/img/productSingle/2.jpg" width="15%">
+                        <img alt="" class="smallimg_item" height="15%" id="item3"
+                             src="/jvyoupin/img/productSingle/3.jpg" width="15%">
+                        <img alt="" class="smallimg_item" height="15%" id="item4"
+                             src="/jvyoupin/img/productSingle/4.jpg" width="15%">
+                        <img alt="" class="smallimg_item" height="15%" id="item5"
+                             src="/jvyoupin/img/productSingle/5.jpg" width="15%">
                     </div>
 
                 </div>
@@ -88,7 +94,7 @@
                         </div>
                         <div class="goods_price_item">
                             <div class="gouwuquan">
-                                <img height="10%" src="@{/jvyoupin/img/site/购物券2.png" width="12%">
+                                <img height="10%" src="/jvyoupin/img/site/购物券2.png" width="12%">
                                 <span class="gouwuquan_content">下单立减20%全商品通用</span>
                             </div>
                             <div class="original_price">
@@ -263,6 +269,7 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="/jvyoupin/js/vue2.js"></script>
 <script src="/jvyoupin/js/goodsdetail.js"></script>
+<script src="/jvyoupin/js/goodsdetailsimg.js"></script>
 
 <script>
     // 尝试引入的值 ----- 直接使用变量名
@@ -271,21 +278,21 @@
     // 事件委托：事件加在父组件上面，点击时e.target就是点击的那个子组件
     var imgBox = document.getElementsByClassName('smallimg')[0]
     // 父盒子中循环加入子级，这样的方法可以在很多地方用到，通过一个循环可以同时往页面上写出很多的内容
-    imgArr.forEach(element => {
-        var img = document.createElement('img')
-        img.src = element.src
-        img.id = 'item' + element.id
-        // img.width = '15%'
-        // img.height = '15%'
-        img.style.cssText = 'width: 15%; height: 15%'
-        img.className = 'smallimg_item'
-        imgBox.appendChild(img)
-    });
+    // imgArr.forEach(element => {
+    //     var img = document.createElement('img')
+    //     img.src = element.src
+    //     img.id = 'item' + element.id
+    //     // img.width = '15%'
+    //     // img.height = '15%'
+    //     img.style.cssText = 'width: 15%; height: 15%'
+    //     img.className = 'smallimg_item'
+    //     imgBox.appendChild(img)
+    // });
     imgBox.addEventListener('click', function (e) {
         // 调用js文件中的方法----直接使用方法名字，以后可以直接把方法写在js文件里面然后调用
         currentId = imgClick(e)
         let bigimg = document.getElementById('bigimg')
-        bigimg.src = `@{img/杯子/${currentId}.jpg`
+        bigimg.src = `/jvyoupin/img/productSingle/${currentId}.jpg`
     })
 
     //店铺关注

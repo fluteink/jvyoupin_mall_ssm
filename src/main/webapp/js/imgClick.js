@@ -1,23 +1,44 @@
+// var data;
+// vue= new Vue({
+//     el: "#imgs",
+//     methods: {
+//         getData() {
+//             var pid = window.location.href;
+//             var p = new Array();
+//             p = pid.split('/');
+//             pid = p[6];
+//             pid = parseInt(pid);
+//             console.log(pid);
+//             axios.post("/jvyoupin/findSingleImageByPid/" + pid).then(response => {
+//                 this.data = response.data;
+//                 console.log(this.data);
+//             });
+//
+//         },
+//     },
+// });
+
+
 var imgArr = [
     {
         id: 1,
-        src: '../img/杯子/1.jpg',
+        src: '/jvyoupin/img/productSingle/1.jpg'
     },
     {
         id: 2,
-        src: '../img/杯子/2.jpg',
+        src: '/jvyoupin/img/productSingle/2.jpg',
     },
     {
         id: 3,
-        src: '../img/杯子/3.jpg',
+        src: '/jvyoupin/img/productSingle/3.jpg',
     },
     {
         id: 4,
-        src: '../img/杯子/4.jpg',
+        src: '/jvyoupin/img/productSingle/4.jpg',
     },
     {
         id: 5,
-        src: '../img/杯子/5.jpg',
+        src: '/jvyoupin/img/productSingle/5.jpg',
     },
 ]
 var currentId = 1
