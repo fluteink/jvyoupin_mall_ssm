@@ -247,7 +247,7 @@
 <div id="goods">
     <div class="good">
         <img src="/jvyoupin/img/productSingle/1.jpg" style="width:200px;height:200px;">
-        <a class="goddet" href="#">纳蒂兰卡 1082浴洁具 钻石切边 坐便器 虹吸式抽水马桶 座便器</a>
+        <a class="goddet" href="/jvyoupin/product1">纳蒂兰卡 1082浴洁具 钻石切边 坐便器 虹吸式抽水马桶 座便器</a>
         <p class="price">￥1710</p>
     </div>
     <div class="good">
@@ -386,4 +386,14 @@
 <a class="bac" href="#">返回<br/>顶部</a>
 
 </body>
+<script>
+    var uid = window.location.href;
+    uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
+    var elementById = document.getElementById('Personal');
+    elementById.href = '/jvyoupin/Personalcenter/' + uid;
+    var elementById1 = document.getElementById("TV");
+    elementById1.href = '/jvyoupin/Category1/' + uid + '/' + '2';
+    var elementById3 = document.getElementById('product1');
+    elementById3.href = '/jvyoupin/product1/' + uid + '/' + '2';
+</script>
 </html>
