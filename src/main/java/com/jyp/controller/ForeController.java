@@ -216,6 +216,7 @@ public class ForeController {
 
     @RequestMapping("changepwd")
     public String changepwd(User u) {
+        System.out.println(u);
         userService.update(u);
         return "redirect:/Personalcenter/" + u.getId();
     }
