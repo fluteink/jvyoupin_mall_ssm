@@ -6,25 +6,23 @@
     <link href="http://localhost:8080/jvyoupin/css/newpage1.css" rel="stylesheet" type="text/css">
     <script src="http://localhost:8080/jvyoupin/js/tool.js" type="text/javascript"></script>
     <script src="http://localhost:8080/jvyoupin/js/tools.js" type="text/javascript"></script>
-    <script src="http://localhost:8080/jvyoupin/js/vue2.js" type="text/javascript"></script>
 </head>
 <body>
 
-<div class="all" id="app">
+<div class="all">
     <header class="head">
         <div class="head_info">
             <div class="info_item">欢迎来到聚优品</div>
-            <div class="info_item"><a class="hd_a" href="/jvyoupin/newfirstpage">首页</a></div>
-            <div class="info_item"><a class="hd_a" href="/jvyoupin/login">请登录</a></div>
-            <div class="info_item"><a class="hd_a" href="/jvyoupin/regist">免费注册</a></div>
+            <div class="info_item"><a class="hd_a" href="">首页</a></div>
+            <div class="info_item"><a class="hd_a" href="login.html">请登录</a></div>
+            <div class="info_item"><a class="hd_a" href="regist.html">免费注册</a></div>
             <div class="info_item"></div>
             <div class="info_item"></div>
             <div class="info_item"></div>
-            <div class="info_item"><a class="hd_a" href="/jvyoupin/forebought/1">我的订单</a></div>
-            <div class="info_item"><a class="hd_a" href="/jvyoupin/Personalcenter" id="Personal">个人中心</a>
-                <!--            <div class="info_item"><a href="{PersonalcenterUrl}" class="hd_a">个人中心</a>-->
-                <!-- <img src="@{img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
-                <a class="hd_a cart" href="/jvyoupin/gdcart">购物车</a>
+            <div class="info_item"><a class="hd_a" href="#">我的订单</a></div>
+            <div class="info_item">
+                <!-- <img src="../img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
+                <a class="hd_a cart" href="gdcart.html">购物车</a>
             </div>
 
         </div>
@@ -152,7 +150,7 @@
                         <path d="M320 160a32 32 0 0 0-32 32v96a32 32 0 0 0 64 0V192a32 32 0 0 0-32-32zM325.344 768a32 32 0 0 0 32-32v-96a32 32 0 0 0-64 0v96a32 32 0 0 0 32 32z"
                               p-id="6240"></path>
                     </svg>
-                    <a href="#">电视</a> / <a href="#">生活电器</a></li>
+                    <a href="#">大家电</a> / <a href="#">生活电器</a></li>
                 <li>
                     <svg class="icon" height="30" p-id="7142" t="1666281540533" version="1.1" viewBox="0 0 1024 1024"
                          width="30" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +167,7 @@
                         <path d="M720 313.6h-2.4c-28-4.8-52-20.8-68-44.8-20.8-31.2-25.6-74.4-15.2-119.2C654.4 71.2 720.8 8.8 788.8 4c5.6 0 10.4 1.6 13.6 5.6 3.2 4 4.8 8.8 3.2 14.4L736 301.6c-2.4 7.2-8.8 12-16 12zM768 40c-45.6 14.4-88.8 61.6-102.4 117.6-8.8 35.2-4.8 69.6 10.4 93.6 8 12.8 19.2 21.6 32 26.4L768 40z"
                               p-id="7148"></path>
                     </svg>
-                    <a href="" id="TV">家具</a> / <a href="#">灯具</a> / <a href="#">卫浴</a></li>
+                    <a href="#">家具</a> / <a href="#">灯具</a> / <a href="#">卫浴</a></li>
                 <li>
                     <svg class="icon" height="30" p-id="8131" t="1666281700405" version="1.1" viewBox="0 0 1024 1024"
                          width="30" xmlns="http://www.w3.org/2000/svg">
@@ -249,7 +247,7 @@
 <div id="goods">
     <div class="good">
         <img src="https://gw.alicdn.com/bao/upload/i3/6000000007863/O1CN01oCQ34I27xIu1eCgpI_!!6000000007863-0-yinhe.jpg_220x10000Q75.jpg_.webp">
-        <a href="/jvyoupin/product1" id="product1">2222222</a>
+        <p>维达超韧手帕纸4层8张18包小包餐巾纸卫生纸巾面巾纸抽</p>
         <p class="price">￥13.9</p>
     </div>
     <div class="good">
@@ -388,15 +386,4 @@
 <a class="bac" href="#">返回<br/>顶部</a>
 
 </body>
-<script>
-    var uid = window.location.href;
-    uid = uid.substring(uid.indexOf('newfirstpage/') + 13, uid.length);
-    var elementById = document.getElementById('Personal');
-    elementById.href = '/jvyoupin/Personalcenter/' + uid;
-    var elementById1 = document.getElementById("TV");
-    elementById1.href = '/jvyoupin/Category1/' + uid + '/' + '2';
-    var elementById3 = document.getElementById('product1');
-    elementById3.href = '/jvyoupin/product1/' + uid + '/' + '2';
-</script>
-
 </html>

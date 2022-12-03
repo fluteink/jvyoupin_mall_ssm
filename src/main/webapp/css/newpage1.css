@@ -216,6 +216,15 @@
     justify-content: space-between;
 }
 
+.good .goddet {
+    color: black;
+    text-decoration: none;
+}
+
+.good .goddet:hover {
+    color: #619891;
+}
+
 .good {
     width: 215px;
     height: 319px;
