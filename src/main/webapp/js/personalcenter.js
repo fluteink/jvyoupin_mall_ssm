@@ -1,4 +1,8 @@
 var user;
+var id = window.location.href;
+id = id.substring(id.indexOf('Personalcenter/') + 15, id.length);
+var ele = document.getElementById("changepassword");
+ele.href = '/jvyoupin/changepassword/' + id;
 var vue = new Vue({
     el: "#app",
     methods: {
