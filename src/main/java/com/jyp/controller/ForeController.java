@@ -211,7 +211,7 @@ public class ForeController {
 
     @RequestMapping("changepassword/{uid}")
     public String changepassword() {
-        return "changepassword";
+        return "fore/changepassword";
     }
 
     @RequestMapping("changepwd")
