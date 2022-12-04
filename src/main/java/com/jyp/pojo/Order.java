@@ -1,5 +1,7 @@
 package com.jyp.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Order {
@@ -72,6 +74,7 @@ public class Order {
      *
      * @mbg.generated Tue Nov 22 18:09:25 CST 2022
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createDate;
 
     /**
@@ -81,6 +84,7 @@ public class Order {
      *
      * @mbg.generated Tue Nov 22 18:09:25 CST 2022
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date payDate;
 
     /**
@@ -90,6 +94,7 @@ public class Order {
      *
      * @mbg.generated Tue Nov 22 18:09:25 CST 2022
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date deliveryDate;
 
     /**
@@ -99,6 +104,7 @@ public class Order {
      *
      * @mbg.generated Tue Nov 22 18:09:25 CST 2022
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date confirmDate;
 
     /**

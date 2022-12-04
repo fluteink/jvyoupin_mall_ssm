@@ -176,12 +176,17 @@ public class ForeController {
         Order o = new Order();
         o.setUid(oi.getUid());
         orderService.addOrder(o);
-        return "redirect:/nppay/" + oi.getUid() + "/" + oi.getPid();
+        return "redirect:/confirmpay/" + oi.getUid() + "/" + oi.getPid();
+    }
+
+    @RequestMapping("confirmpay/{uid}/{pid}")
+    public String confirmpay1() {
+        return "fore/nodelivery";
     }
 
     @RequestMapping("nppay/{uid}/{pid}")
     public String nppay2() {
-        return "fore/confirmpay";
+        return "fore/nppay";
     }
 
     @RequestMapping("userlogin")
