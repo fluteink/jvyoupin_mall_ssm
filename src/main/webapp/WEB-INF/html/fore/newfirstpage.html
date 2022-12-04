@@ -18,7 +18,7 @@
             <div class="info_item"><a class="hd_a" href="regist">免费注册</a></div>
             <div class="info_item"></div>
             <div class="info_item"></div>
-            <div class="info_item"><a class="hd_a" href="#">我的订单</a></div>
+            <div class="info_item"><a class="hd_a" href="#" id="myorder">我的订单</a></div>
             <div class="info_item">
                 <a class="hd_a" href="/jvyoupin/Personalcenter" id="Personal">个人中心</a>
                 <!-- <img src="../img/购物车.png" alt="" class="hd_img" width="20%" height="20%"> -->
@@ -395,5 +395,7 @@
     elementById1.href = '/jvyoupin/Category1/' + uid + '/' + '2';
     var elementById3 = document.getElementById('product1');
     elementById3.href = '/jvyoupin/product1/' + uid + '/' + '1';
+    var elementById2 = document.getElementById('myorder');
+    elementById2.href = '/jvyoupin/forebought/' + uid;
 </script>
 </html>
