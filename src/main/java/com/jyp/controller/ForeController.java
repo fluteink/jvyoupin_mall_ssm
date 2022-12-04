@@ -224,6 +224,11 @@ public class ForeController {
         return "fore/goodsdetails";
     }
 
+    @RequestMapping("addOrderItem/{uid}/{pid}")
+    public String addOrderItem1() {
+        return "fore/gdcart";
+    }
+
     @RequestMapping("changepassword/{uid}")
     public String changepassword() {
         return "fore/changepassword";
