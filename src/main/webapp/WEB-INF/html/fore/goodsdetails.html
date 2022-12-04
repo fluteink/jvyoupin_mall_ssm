@@ -147,7 +147,11 @@
                     </div>
                     <div class="buy">
                         <div class="buy_item">
-                            <a class="buy_a" href=""><input class="buy_btn" type="button" value="立即购买"></a>
+                            <form action="../../addOrder" enctype="multipart/form-data" method="post">
+                                <input name="uid" type="hidden" value="1">
+                                <input name="pid" type="hidden" value="1">
+                                <a class="buy_a" href=""><input class="buy_btn" type="submit" value="立即购买"></a>
+                            </form>
                         </div>
                         <div class="addcart_item">
                             <a class="addcart_a" href="gdcart.html"><input class="addcart_btn" type="button"

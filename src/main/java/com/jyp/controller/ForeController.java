@@ -179,6 +179,11 @@ public class ForeController {
         return "redirect:/nppay/" + oi.getUid() + "/" + oi.getPid();
     }
 
+    @RequestMapping("nppay/{uid}/{pid}")
+    public String nppay2() {
+        return "fore/confirmpay";
+    }
+
     @RequestMapping("userlogin")
     public String UserLogin(User u) {
         List<User> loginselect = userService.loginselect(u);
