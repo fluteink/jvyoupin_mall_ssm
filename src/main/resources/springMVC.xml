@@ -39,7 +39,7 @@
             </bean>
         </property>
     </bean>
-    <mvc:view-controller path="/" view-name="index"/>
+    <mvc:view-controller path="/" view-name="/fore/newfirstpage"/>
 
     <!-- 对上传文件的解析-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
