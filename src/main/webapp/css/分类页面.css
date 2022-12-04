@@ -120,6 +120,14 @@
     /* box-shadow: #e97b7b 0 0 15px; */
 }
 
+.good .goddet {
+    color: black;
+    text-decoration: none;
+}
+
+.good .goddet:hover {
+    color: #619891;
+}
 
 .top-box {
     width: 1200px;

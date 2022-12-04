@@ -184,6 +184,11 @@ public class ForeController {
         return "fore/nodelivery";
     }
 
+    @RequestMapping("index")
+    public String index() {
+        return "index";
+    }
+
     @RequestMapping("nppay/{uid}/{pid}")
     public String nppay2() {
         return "fore/nppay";
