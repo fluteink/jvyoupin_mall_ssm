@@ -44,75 +44,80 @@
 
     </header>
 </div>
-<div class="pro" style="margin-top: -800px;">
-    <div><p>拍下商品</p><img alt="" src="/jvyoupin/img/site/进度条-完成.png">
-        <p>2022.1.1</p></div>
-    <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
-    <div><p>支付成功</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
-        <p>未知</p></div>
-    <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
-    <div><p>商家发货</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
-        <p>未知</p></div>
-    <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
-    <div><p>确认收货</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
-        <p>未知</p></div>
-    <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
-    <div><p>商品评价</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
-        <p>未知</p></div>
+<div id="order">
+    <div class="pro" style="margin-top: -800px;">
+        <div><p>拍下商品</p><img alt="" src="/jvyoupin/img/site/进度条-完成.png">
+            <p><a>{{order.createDate}}</a></p></div>
+        <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
+        <div><p>支付成功</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
+            <p>未知</p></div>
+        <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
+        <div><p>商家发货</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
+            <p>未知</p></div>
+        <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
+        <div><p>确认收货</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
+            <p>未知</p></div>
+        <img alt="" src="/jvyoupin/img/site/符号-进度条.png">
+        <div><p>商品评价</p><img alt="" src="/jvyoupin/img/site/进度条滑块.png">
+            <p>未知</p></div>
 
+    </div>
+    <h2>我已下单成功，同意支付宝付款</h2>
+    <div class="mainbody">
+        <hr>
+        <br>
+        <br>
+        <div style="border: 2px solid pink; width:1200px;">
+            <h2 style="color: red;">请收到货后再确认收货！&nbsp否则您可能会钱货两空</h2>
+            <br>
+            <form action="../../nppay/1/1" enctype="multipart/form-data" method="post">
+                <button type="submit">去付款</button>
+            </form>
+            <br>
+            <br>
+        </div>
+        <br>
+        <div class="" style="margin-left: -60%;">
+            <br>
+            <span>订单编号：</span><span id="order id"><a>{{order.id}}</a></span>
+            <br><br>
+            <span>卖家昵称：</span><span id="order "><a>{{order}}</a></span>
+            <br><br>
+            <span>收货信息：</span><span id="order status"><a>{{order.status}}</a></span>
+            <br><br>
+            <span>成交时间：</span><span id="order time"><a>{{order.createDate}}</a></span>
+        </div>
+        <br>
+        <br>
+        <hr style="background-color: pink;">
+        <h5>订单信息</h5>
+    </div>
 </div>
-<h2>我已下单成功，同意支付宝付款</h2>
-<div class="mainbody">
-    <hr>
-    <br>
-    <br>
-    <div style="border: 2px solid pink; width:1200px;">
-        <h2 style="color: red;">请收到货后再确认收货！&nbsp否则您可能会钱货两空</h2>
-        <br>
-        <form action="../../nppay/1/1" enctype="multipart/form-data" method="post">
-            <button type="submit">去付款</button>
-        </form>
-        <br>
-        <br>
-    </div>
-    <br>
-    <div class="" style="margin-left: -60%;">
-        <br>
-        <span>订单编号：</span><span id="order id">12312335456455</span>
-        <br><br>
-        <span>卖家昵称：</span><span id="order ">不知道</span>
-        <br><br>
-        <span>收货信息：</span><span id="order status">不知道</span>
-        <br><br>
-        <span>成交时间：</span><span id="order time">2022-11-17 12:15:35</span>
-    </div>
-    <br>
-    <br>
-    <hr style="background-color: pink;">
-    <h5>订单信息</h5>
+<div id="goods">
     <table border="1px">
         <tr style="background-color: rgb(232, 173, 183);">
             <td></td>
             <td>商品</td>
             <td>单价</td>
             <td>数量</td>
-            <td>优惠</td>
+            <td>优惠价</td>
         </tr>
 
         <tr>
             <td><img alt="" src="/jvyoupin/img/site/照片加载失败.png"></td>
-            <td width="800px"><a href="">商品名称</a></td>
-            <td>45元</td>
+            <td width="800px"><a href="">{{goods.name}}</a></td>
+            <td><a>{{goods.originalPrice}}</a>元</td>
             <td>1</td>
-            <td>0</td>
+            <td><a>{{goods.promotePrice}}</a></td>
         </tr>
 
     </table>
 
-    <h4>实付款：<span style="color: #e48686;">45</span>&nbsp&nbsp元</h4>
 
-
+    <h4>实付款：<span style="color: #e48686;"><a>{{goods.promotePrice}}</a></span>&nbsp&nbsp元</h4>
 </div>
+
+
 <div style="height: 250px;"></div>
 <div class="foot" style="width: 100%">
     <div class="foot1">
@@ -187,4 +192,10 @@
 </div>
 <a class="bac" href="#">返回<br/>顶部</a>
 </body>
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+<script src="/jvyoupin/js/forebought.js"></script>
+<script src="/jvyoupin/js/forebought2.js"></script>
+
 </html>

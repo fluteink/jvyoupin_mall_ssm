@@ -11,11 +11,12 @@
 
 <body>
 <div class="total">
-    <div class="goodinfo">
-        <img alt="" src="/聚1.png">
+    <div class="goodinfo" id="goods">
+        <img alt="" src="/jvyoupin/img/site//聚1.png">
         <div class="info">
-            <h3>商品详细名称</h3><br>
-            <div><span>价格：</span>&nbsp <span style="color: red;font-size: 25px">415</span>&nbsp元</div>
+            <h3><a>{{goods.name}}</a></h3><br>
+            <div><span>价格：</span>&nbsp <span style="color: red;font-size: 25px"><a>{{goods.promotePrice}}</a></span>&nbsp元
+            </div>
             <br>
             <div>
                 <span>配送：</span>&nbsp <span>快递：</span><span>0.00</span>元
@@ -104,93 +105,96 @@
 
         </div>
         <br><br>
-        <div class="evalutemain">
-            <div>
-                <H2 style="color: rgb(246, 148, 148);">其他买家，需要您的建议！</H2>
-                <br>
+        <form action="review" enctype="multipart/form-data" method="post">
+            <div class="evalutemain">
+                <div>
+                    <H2 style="color: rgb(246, 148, 148);">其他买家，需要您的建议！</H2>
+                    <br>
 
-                <div style="display: flex;flex-flow:row;">
-                    <div class="input">
-                        <span>商品评价:</span>&nbsp&nbsp
-                        <textarea cols="45" id="" maxlength="Surplus" name="" rows="6"></textarea>
-                        <br>
-                        <span>评价服务:</span>&nbsp&nbsp
-                        <input type="textarea">
-                        <span> 您的图片:</span>&nbsp&nbsp
-                    </div>
-                    <div id="wrap">
-                        <div id="mark">
-                            <div class="pic" id="pic1" onmouseover="comments(1)">
-                                <strong>描述相符</strong>
-                                <img data-index="1" name="star1" src="/五角星 (1).png">
-                                <img data-index="2" name="star2" src="/五角星 (1).png">
-                                <img data-index="3" name="star3" src="/五角星 (1).png">
-                                <img data-index="4" name="star4" src="/五角星 (1).png">
-                                <img data-index="5" name="star5" src="/五角星 (1).png">
-                                <span id="txt1">	</span>
-                            </div>
-                            <div class="pic" id="pic2" onmouseover="comments(2)">
-                                <strong>物流服务</strong>
-                                <img data-index="1" name="star1" src="/五角星 (1).png">
-                                <img data-index="2" name="star2" src="/五角星 (1).png">
-                                <img data-index="3" name="star3" src="/五角星 (1).png">
-                                <img data-index="4" name="star4" src="/五角星 (1).png">
-                                <img data-index="5" name="star5" src="/五角星 (1).png">
-                                <span id="txt2">	</span>
-                            </div>
-                            <div class="pic" id="pic3" onmouseover="comments(3)">
-                                <strong>服务评价</strong>
-                                <img data-index="1" name="star1" src="/五角星 (1).png">
-                                <img data-index="2" name="star2" src="/五角星 (1).png">
-                                <img data-index="3" name="star3" src="/五角星 (1).png">
-                                <img data-index="4" name="star4" src="/五角星 (1).png">
-                                <img data-index="5" name="star5" src="/五角星 (1).png">
-                                <span id="txt3"></span>
-                            </div>
-
+                    <div style="display: flex;flex-flow:row;">
+                        <div class="input">
+                            <span>商品评价:</span>&nbsp&nbsp
+                            <textarea cols="45" id="" maxlength="Surplus" name="content" rows="6"></textarea>
                             <br>
-                        </div><!--end mark-->
+                            <span>评价服务:</span>&nbsp&nbsp
+                            <input type="textarea">
+                            <span> 您的图片:</span>&nbsp&nbsp
+                        </div>
+                        <div id="wrap">
+                            <div id="mark">
+                                <div class="pic" id="pic1" onmouseover="comments(1)">
+                                    <strong>描述相符</strong>
+                                    <img data-index="1" name="star1" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="2" name="star2" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="3" name="star3" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="4" name="star4" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="5" name="star5" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <span id="txt1">	</span>
+                                </div>
+                                <div class="pic" id="pic2" onmouseover="comments(2)">
+                                    <strong>物流服务</strong>
+                                    <img data-index="1" name="star1" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="2" name="star2" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="3" name="star3" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="4" name="star4" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="5" name="star5" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <span id="txt2">	</span>
+                                </div>
+                                <div class="pic" id="pic3" onmouseover="comments(3)">
+                                    <strong>服务评价</strong>
+                                    <img data-index="1" name="star1" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="2" name="star2" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="3" name="star3" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="4" name="star4" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <img data-index="5" name="star5" src="/jvyoupin/img/site/五角星 (1).png">
+                                    <span id="txt3"></span>
+                                </div>
 
-                    </div>
-                </div>
-
-                <div style="height: auto; width:400px;margin-top: -50px;">
-                    <div class="top">
-                        <div class="left">
-                            <form enctype="multipart/form-data" method="get"><img src="/照片加载失败.png"
-                                                                                  style="height: 80px;"/>
-                                <label class="button" for="inputFile">
-                                    <div style="line-height: 40px; margin: auto; width: 300px;height: 40px;color: #FFFFFF;background: #eda3af;border: none;border-radius: 3px;">
-                                        点击选择文件
-                                    </div>
-                                </label>
-                                <input id="inputFile" multiple="multiple" style="display: none; " type="file"></form>
+                                <br>
+                            </div><!--end mark-->
 
                         </div>
-                        <div class="right"></div>
                     </div>
-                    <div style="width: 200px;height: 45px; background: #FFFFFF;border: 0px solid #CCCCCC;line-height: 45px;">
-                        <span id="wenjian"></span>
-                        <label class="button" for="inputFile">
-                            <span style="line-height: 40px; text-align: center; width: 70px;height: 40px; background: white;border: 1px solid #CCCCCC;border-radius: 3px;display: inline-block;">继续选择</span>
-                        </label>
-                        <input id="inputFile" multiple="multiple" style="display: none; " type="file">
-                        <button onclick="sub()"
-                                style="border:none;background:#eda3af ;color: white;width: 70px;height: 35px;">开始上传
-                        </button>
+
+                    <div style="height: auto; width:400px;margin-top: -50px;">
+                        <div class="top">
+                            <div class="left">
+                                <form enctype="multipart/form-data" method="get"><img
+                                        src="/jvyoupin/img/site/照片加载失败.png"
+                                        style="height: 80px;"/>
+                                    <label class="button" for="inputFile">
+                                        <div style="line-height: 40px; margin: auto; width: 300px;height: 40px;color: #FFFFFF;background: #eda3af;border: none;border-radius: 3px;">
+                                            点击选择文件
+                                        </div>
+                                    </label>
+                                    <input id="file" multiple="multiple" style="display: none; " type="file"></form>
+
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div style="width: 200px;height: 45px; background: #FFFFFF;border: 0px solid #CCCCCC;line-height: 45px;">
+                            <span id="wenjian"></span>
+                            <label class="button" for="inputFile">
+                                <span style="line-height: 40px; text-align: center; width: 70px;height: 40px; background: white;border: 1px solid #CCCCCC;border-radius: 3px;display: inline-block;">继续选择</span>
+                            </label>
+                            <input id="inputFile" multiple="multiple" style="display: none; " type="file">
+                            <button onclick="sub()"
+                                    style="border:none;background:#eda3af ;color: white;width: 70px;height: 35px;">开始上传
+                            </button>
+                        </div>
+                        <div id="imgDiv" style="margin-top: 20px;"></div>
                     </div>
-                    <div id="imgDiv" style="margin-top: 20px;"></div>
-                </div>
 
-                <div style="margin-top:0px">
-                    <input style="background-color: rgb(230, 96, 96); " type="radio">
-                    <span>匿名评价</span>
-                    <button class="float_r" onClick="submit()" type="button">提交评价</button>
-                </div>
+                    <div style="margin-top:0px">
+                        <input style="background-color: rgb(230, 96, 96); " type="radio">
+                        <span>匿名评价</span>
+                        <button class="float_r" onClick="submit()" type="submit">提交评价</button>
+                    </div>
 
+                </div>
             </div>
-        </div>
 
+        </form>
         <br><br>
 
         <div class="evalutepices">
@@ -224,7 +228,7 @@
                     <span>M</span>
                     <span style="margin-left: 100px;">昵称</span>
                 </div>
-                <span style="width: 600;">我也真的不知道</span>
+                <span style=" ">我也真的不知道</span>
                 <div>
                     <img alt="" src="/聚.png">
                     <img alt="" src="/聚1.png">
@@ -273,8 +277,8 @@
                 </div>
                 <span style="width: 600;">我也真的不知道</span>
                 <div>
-                    <img alt="" src="/聚.png">
-                    <img alt="" src="/聚1.png">
+                    <img alt="" src="/jvyoupin/img/site/聚.png">
+                    <img alt="" src="/jvyoupin/img/site/聚1.png">
                 </div>
                 <span style="margin-left: 800px;">2022-11-19</span>
                 <hr>
@@ -289,8 +293,8 @@
                 </div>
                 <span style="width: 600;">我也真的不知道</span>
                 <div>
-                    <img alt="" src="/聚.png">
-                    <img alt="" src="/聚1.png">
+                    <img alt="" src="/jvyoupin/img/site/聚.png">
+                    <img alt="" src="/jvyoupin/img/site/聚1.png">
                 </div>
                 <span style="margin-left: 800px;">2022-11-19</span>
                 <hr>
@@ -346,7 +350,7 @@
                 if (!flag) {
                     var index = this.getAttribute("data-index");
                     for (var j = 0; j < index; j++) {
-                        imgList[j].setAttribute("src", "/五角星.png");
+                        imgList[j].setAttribute("src", "/jvyoupin/img/site/五角星.png");
                     } //index之前的黄色星
 
                     txt.innerHTML = comments[index - 1];
@@ -358,7 +362,7 @@
                 if (!flag) {
                     var index = this.getAttribute("data-index");
                     for (var j = 0; j < imgList.length; j++) {
-                        imgList[j].src = "/五角星 (1).png";
+                        imgList[j].src = "/jvyoupin/img/site/五角星 (1).png";
                     }
                     txt.innerHTML = "";
                 } else {
@@ -369,7 +373,7 @@
                 flag = !flag;
                 var index = this.getAttribute("data-index");
                 for (var k = index; k < imgList.length; k++) {
-                    imgList[k].setAttribute("src", "/五角星 (1).png");
+                    imgList[k].setAttribute("src", "/jvyoupin/img/site/五角星 (1).png");
                 }  //index之后的置成白色星
             }
         }
@@ -382,4 +386,9 @@
 </script>
 
 </body>
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+<script src="/jvyoupin/js/forebought2.js"></script>
+
 </html>

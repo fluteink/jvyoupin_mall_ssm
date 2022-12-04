@@ -42,15 +42,16 @@
         </div>
 
     </header>
+
     <div class="total">
         <br>
         <br>
         <div>
-            <a href="./forebought.html">所有订单</a>&nbsp|&nbsp
-            <a href="./nppay.html">待付款</a>&nbsp|&nbsp
-            <a href="./nodelivery.html">待发货</a>&nbsp|&nbsp
+            <a href="/jvyoupin/forebought.html">所有订单</a>&nbsp|&nbsp
+            <a href="/jvyoupin/nppay.html">待付款</a>&nbsp|&nbsp
+            <a href="/jvyoupin/nodelivery.html">待发货</a>&nbsp|&nbsp
             <a href="" style="color: red;">待收货</a>&nbsp|&nbsp
-            <a href="./noevaluate.html">待评价</a>
+            <a href="/jvyoupin/noevaluate.html">待评价</a>
         </div>
         <br>
         <hr>
@@ -64,47 +65,68 @@
             <li style="width: 100px;">交易操作</li>
 
         </ul>
-        <br><br>
-        <ul class="firstline">
-            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-            <li>天猫商城</li>
-            <br>
 
-        </ul>
-        <ul>
-            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
-            <li style="width: 700px;">宝贝</li>
-            <li style="width: 100px;">
-                <s>$ <span class="start">500</span></s><br>
-                $ <span>415</span>
-            </li>
-            <li style="width: 100px;">1</li>
-            <li style="width: 100px;">415</li>
-            <li style="width: 100px;">
-                <button style="background-color: pink;">确认收货</button>
-            </li>
-        </ul>
-        <br><br>
-        <ul class="firstline">
-            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-            <li>天猫商城</li>
-            <br>
+        <br>
+        <div id="item" style="display: none"><a>{{item.pid}}</a></div>
+        <br>
+        <div id="order">
 
-        </ul>
-        <ul>
-            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
-            <li style="width: 700px;">宝贝</li>
-            <li style="width: 100px;">
-                <s>$ <span class="start">500</span></s><br>
-                $ <span>415</span>
-            </li>
-            <li style="width: 100px;">1</li>
-            <li style="width: 100px;">415</li>
-            <li style="width: 100px;">
-                <button style="background-color: pink;">确认收货</button>
-            </li>
-        </ul>
+            <ul class="firstline">
+                <li style="width: 750px;">
+                    <span><a href="#">{{order.createDate}}</a></span><span>订单号</span><span><a href="#">{{order.id}}</a></span>
+                </li>
+                <li>天猫商城</li>
+                <br>
+            </ul>
+
+        </div>
+        <div id="goods">
+            <ul>
+                <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
+                <li style="width: 700px;"><a href="#">{{goods.name}}</a></li>
+                <li style="width: 100px;">
+                    <s>$ <span class="start"><a>{{goods.originalPrice}}</a></span></s>
+                    <br>
+                    $ <span>{{goods.promotePrice}}</span>
+                </li>
+                <li style="width: 100px;">1</li>
+                <li style="width: 100px;"><a>{{goods.promotePrice}}</a></li>
+                <li style="width: 100px;"><a href="/jvyoupin/confirmreceip">
+                    <button>去收货</button>
+                </a></li>
+            </ul>
+        </div>
+
+        <br><br>
+        <!--        <div>-->
+        <!--            <ul class="firstline">-->
+        <!--                <li style="width: 750px;">-->
+        <!--                    <span><a>{{order.create_date}}</a></span><span>订单号</span><span><a>{{order.id}}</a></span></li>-->
+        <!--                <li>天猫商城</li>-->
+        <!--                <br>-->
+
+        <!--            </ul>-->
+        <!--            <ul>-->
+        <!--                <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>-->
+        <!--                <li style="width: 700px;">宝贝</li>-->
+        <!--                <li style="width: 100px;">-->
+        <!--                    <s>$ <span class="start">500</span></s><br>-->
+        <!--                    $ <span>415</span>-->
+        <!--                </li>-->
+        <!--                <li style="width: 100px;">1</li>-->
+        <!--                <li style="width: 100px;">415</li>-->
+        <!--                <li style="width: 100px;">-->
+        <!--                    <button style="background-color: pink;">确认收货</button>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
+    </div>
 </div>
-
 </body>
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+<script src="/jvyoupin/js/forebought.js"></script>
+<script src="/jvyoupin/js/forebought2.js"></script>
+<script src="/jvyoupin/js/forebought1.js"></script>
 </html>

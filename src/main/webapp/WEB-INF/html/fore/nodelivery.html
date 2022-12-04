@@ -47,11 +47,11 @@
         <br>
         <br>
         <div>
-            <a href="./forebought.html">所有订单</a>&nbsp|&nbsp
-            <a href="./nppay.html">待付款</a>&nbsp|&nbsp
+            <a href="/jvyoupin/forebought.html">所有订单</a>&nbsp|&nbsp
+            <a href="/jvyoupin/nppay.html">待付款</a>&nbsp|&nbsp
             <a href="" style="color: red;">待发货</a>&nbsp|&nbsp
-            <a href="./noreceipt.html">待收货</a>&nbsp|&nbsp
-            <a href="./noevaluate.html">待评价</a>
+            <a href="/jvyoupin/noreceipt.html">待收货</a>&nbsp|&nbsp
+            <a href="/jvyoupin/noevaluate.html">待评价</a>
         </div>
         <br>
         <hr>
@@ -65,118 +65,66 @@
             <li style="width: 100px;">交易操作</li>
 
         </ul>
-        <br><br>
-        <ul class="firstline">
-            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-            <li>天猫商城</li>
-            <br>
 
-        </ul>
-        <ul>
-            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
-            <li style="width: 700px;">宝贝</li>
-            <li style="width: 100px;">
-                <s>$ <span class="start">500</span></s><br>
-                $ <span>415</span>
-            </li>
-            <li style="width: 100px;">1</li>
-            <li style="width: 100px;">415</li>
-            <li style="width: 100px;">待发货</li>
-        </ul>
-        <br><br>
-        <ul class="firstline">
-            <li style="width: 750px;"><span>2022-11-19 15:51:02</span><span>订单号</span><span>1263589743796</span></li>
-            <li>天猫商城</li>
-            <br>
+        <br>
+        <div id="item" style="display: none"><a>{{item.pid}}</a></div>
+        <br>
+        <div id="order">
 
-        </ul>
-        <ul>
-            <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
-            <li style="width: 700px;">宝贝</li>
-            <li style="width: 100px;">
-                <s>$ <span class="start">500</span></s><br>
-                $ <span>415</span>
-            </li>
-            <li style="width: 100px;">1</li>
-            <li style="width: 100px;">415</li>
-            <li style="width: 100px;">待发货</li>
-        </ul>
-    </div>
-    <div style="height: 250px;"></div>
-    <div class="foot" style="width: 100%">
-        <div class="foot1">
-            <div class="item">
-                <dl>
-                    <dt>购物指南</dt>
-                    <dd>
-                        <a href="#">免费注册</a><br/>
-                        <a href="#">开通支付宝</a><br/>
-                        <a href="#">支付宝充值</a><br/>
-                    </dd>
-                </dl>
-            </div>
-            <div class="item">
-                <dl>
-                    <dt>聚优品保障</dt>
-                    <dd>
-                        <a href="#">发票保障</a><br/>
-                        <a href="#">售后规则</a><br/>
-                        <a href="#">物流时效保障</a><br/>
-                    </dd>
-                </dl>
-            </div>
-            <div class="item">
-                <dl>
-                    <dt>支付方式</dt>
-                    <dd>
-                        <a href="#">快捷支付</a><br/>
-                        <a href="#">信用卡</a><br/>
-                        <a href="#">余额宝</a><br/>
-                        <a href="#">蚂蚁花呗</a><br/>
-                    </dd>
-                </dl>
-            </div>
-            <div class="item">
-                <dl>
-                    <dt><span>商家服务</span></dt>
-                    <dd>
-                        <a href="#">聚优品规则</a><br/>
-                        <a href="#">商家入驻</a><br/>
-                        <a href="#">商家中心</a><br/>
-                        <a href="#">聚优品必修课</a><br/>
-                    </dd>
-                </dl>
-            </div>
+            <ul class="firstline">
+                <li style="width: 750px;">
+                    <span><a href="#">{{order.createDate}}</a></span><span>订单号</span><span><a href="#">{{order.id}}</a></span>
+                </li>
+                <li>天猫商城</li>
+                <br>
+            </ul>
+
         </div>
-        <hr/>
-        <div class="foot3">
-            <div class="foot31"><a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a>|
-                <a href="#">关于我们</a>|
-                <a href="#">联系我们</a></div>
-            <div class="foot32">
-                <p class="p2">地址：四川省宜宾市翠屏区白塔路一号四川轻化工大学</p>
-            </div>
-            <div class="foot33">
-                <span class="sp">联系电话  123-456-7898</span>
-            </div>
+        <div id="goods">
+            <ul>
+                <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>
+                <li style="width: 700px;"><a href="#">{{goods.name}}</a></li>
+                <li style="width: 100px;">
+                    <s>$ <span class="start"><a>{{goods.originalPrice}}</a></span></s>
+                    <br>
+                    $ <span>{{goods.promotePrice}}</span>
+                </li>
+                <li style="width: 100px;">1</li>
+                <li style="width: 100px;"><a>{{goods.promotePrice}}</a></li>
+                <li style="width: 100px;"><a>待发货</a></li>
+            </ul>
         </div>
+
+        <br><br>
+        <!--        <div>-->
+        <!--            <ul class="firstline">-->
+        <!--                <li style="width: 750px;">-->
+        <!--                    <span><a>{{order.create_date}}</a></span><span>订单号</span><span><a>{{order.id}}</a></span></li>-->
+        <!--                <li>天猫商城</li>-->
+        <!--                <br>-->
+
+        <!--            </ul>-->
+        <!--            <ul>-->
+        <!--                <li style="width: 100px;"><span><img alt="" src="/jvyoupin/img/site/聚.png"></span></li>-->
+        <!--                <li style="width: 700px;">宝贝</li>-->
+        <!--                <li style="width: 100px;">-->
+        <!--                    <s>$ <span class="start">500</span></s><br>-->
+        <!--                    $ <span>415</span>-->
+        <!--                </li>-->
+        <!--                <li style="width: 100px;">1</li>-->
+        <!--                <li style="width: 100px;">415</li>-->
+        <!--                <li style="width: 100px;">-->
+        <!--                    <button style="background-color: pink;">确认收货</button>-->
+        <!--                </li>-->
+        <!--            </ul>-->
+        <!--        </div>-->
     </div>
-    <a class="bac" href="#">返回<br/>顶部</a>
 </div>
-
-
 </body>
+<script src="/jvyoupin/js/jquery-1.8.2.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="/jvyoupin/js/vue2.js"></script>
+<script src="/jvyoupin/js/forebought.js"></script>
+<script src="/jvyoupin/js/forebought2.js"></script>
+<script src="/jvyoupin/js/forebought1.js"></script>
 </html>
