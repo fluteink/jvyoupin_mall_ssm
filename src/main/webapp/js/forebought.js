@@ -11,10 +11,7 @@ var vue = new Vue({
             uid = p[5];
             uid = parseInt(uid);
             console.log(uid);
-
-
             axios.post("/jvyoupin/findorderItem/" + uid).then(response => {
-
                 this.order = response.data;
                 console.log(this.order)
             });
